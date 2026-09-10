@@ -1,0 +1,392 @@
+{
+  "base_order": [
+    {
+      "policy": "OpenAI",
+      "source": "openai-base"
+    },
+    {
+      "policy": "常规境外",
+      "source": "youtube"
+    },
+    {
+      "policy": "常规境外",
+      "source": "netflix"
+    },
+    {
+      "policy": "常规境外",
+      "source": "disney"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,litix.io,常规境外"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,discomax.com,常规境外"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,brightline.tv,常规境外"
+    },
+    {
+      "policy": "常规境外",
+      "source": "hbo"
+    },
+    {
+      "policy": "常规境外",
+      "source": "spotify"
+    },
+    {
+      "policy": "常规境外",
+      "source": "telegram"
+    },
+    {
+      "policy": "常规境外",
+      "source": "paypal"
+    },
+    {
+      "policy": "常规境外",
+      "source": "twitter"
+    },
+    {
+      "policy": "常规境外",
+      "source": "facebook"
+    },
+    {
+      "policy": "常规境外",
+      "source": "amazon"
+    },
+    {
+      "policy": "常规境外",
+      "source": "sony"
+    },
+    {
+      "policy": "常规境外",
+      "source": "steamcn"
+    },
+    {
+      "policy": "常规境外",
+      "source": "game"
+    },
+    {
+      "policy": "常规境外",
+      "source": "github"
+    },
+    {
+      "policy": "常规境外",
+      "source": "microsoft"
+    },
+    {
+      "policy": "常规境外",
+      "source": "google"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "apple"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "bilibili"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "neteasemusic"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "baidu"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "douban"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "wechat"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "sina"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "zhihu"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "xiaohongshu"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "douyin"
+    },
+    {
+      "policy": "常规境外",
+      "source": "tiktok"
+    },
+    {
+      "policy": "常规境外",
+      "source": "global"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "china"
+    },
+    {
+      "policy": "DIRECT",
+      "source": "lan"
+    },
+    {
+      "rule": "GEOIP,CN,DIRECT"
+    },
+    {
+      "rule": "FINAL,常规境外"
+    }
+  ],
+  "excluded_references": [
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list"
+  ],
+  "schema": 1,
+  "sources": [
+    {
+      "format": "base",
+      "id": "base",
+      "path": "lazy_group.conf",
+      "ref": "main",
+      "repo": "lowertop/Shadowrocket"
+    },
+    {
+      "format": "chatgpt",
+      "id": "openai-base",
+      "path": "Rule/AI.txt",
+      "ref": "main",
+      "repo": "iab0x00/ProxyRules"
+    },
+    {
+      "format": "rules",
+      "id": "youtube",
+      "path": "rule/Shadowrocket/YouTube/YouTube.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "netflix",
+      "path": "rule/Shadowrocket/Netflix/Netflix.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "disney",
+      "path": "rule/Shadowrocket/Disney/Disney.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "hbo",
+      "path": "rule/Shadowrocket/HBO/HBO.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "spotify",
+      "path": "rule/Shadowrocket/Spotify/Spotify.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "telegram",
+      "path": "rule/Shadowrocket/Telegram/Telegram.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "paypal",
+      "path": "rule/Shadowrocket/PayPal/PayPal.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "twitter",
+      "path": "rule/Shadowrocket/Twitter/Twitter.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "facebook",
+      "path": "rule/Shadowrocket/Facebook/Facebook.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "amazon",
+      "path": "rule/Shadowrocket/Amazon/Amazon.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "sony",
+      "path": "rule/Shadowrocket/Sony/Sony.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "steamcn",
+      "path": "rule/Shadowrocket/SteamCN/SteamCN.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "game",
+      "path": "rule/Shadowrocket/Game/Game.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "github",
+      "path": "rule/Shadowrocket/GitHub/GitHub.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "microsoft",
+      "path": "rule/Shadowrocket/Microsoft/Microsoft.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "google",
+      "path": "rule/Shadowrocket/Google/Google.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "apple",
+      "path": "rule/QuantumultX/Apple/Apple.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "bilibili",
+      "path": "rule/Shadowrocket/BiliBili/BiliBili.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "neteasemusic",
+      "path": "rule/Shadowrocket/NetEaseMusic/NetEaseMusic.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "baidu",
+      "path": "rule/Shadowrocket/Baidu/Baidu.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "douban",
+      "path": "rule/Shadowrocket/DouBan/DouBan.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "wechat",
+      "path": "rule/QuantumultX/WeChat/WeChat.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "sina",
+      "path": "rule/Shadowrocket/Sina/Sina.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "zhihu",
+      "path": "rule/Shadowrocket/Zhihu/Zhihu.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "xiaohongshu",
+      "path": "rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "douyin",
+      "path": "rule/Shadowrocket/DouYin/DouYin.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "tiktok",
+      "path": "rule/Shadowrocket/TikTok/TikTok.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "global",
+      "path": "rule/QuantumultX/Global/Global.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "china",
+      "path": "rule/QuantumultX/China/China.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "lan",
+      "path": "rule/Shadowrocket/Lan/Lan.list",
+      "ref": "master",
+      "repo": "blackmatrix7/ios_rule_script"
+    },
+    {
+      "format": "rules",
+      "id": "openai-acl",
+      "path": "Clash/Ruleset/OpenAi.list",
+      "ref": "master",
+      "repo": "ACL4SSR/ACL4SSR"
+    },
+    {
+      "format": "claude",
+      "id": "claude-page",
+      "url": "https://ip.net.coffee/claude/site.html"
+    },
+    {
+      "format": "inbound",
+      "id": "claude-ips",
+      "url": "https://platform.claude.com/docs/en/api/ip-addresses"
+    }
+  ]
+}

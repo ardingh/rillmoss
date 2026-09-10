@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "id": "base",
+      "repo": "lowertop/Shadowrocket",
+      "ref": "main",
+      "path": "lazy_group.conf",
+      "format": "base"
+    },
+    {
+      "id": "openai-base",
+      "repo": "iab0x00/ProxyRules",
+      "ref": "main",
+      "path": "Rule/AI.txt",
+      "format": "chatgpt"
+    },
+    {
+      "id": "youtube",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/YouTube/YouTube.list",
+      "format": "rules"
+    },
+    {
+      "id": "netflix",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Netflix/Netflix.list",
+      "format": "rules"
+    },
+    {
+      "id": "disney",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Disney/Disney.list",
+      "format": "rules"
+    },
+    {
+      "id": "hbo",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/HBO/HBO.list",
+      "format": "rules"
+    },
+    {
+      "id": "spotify",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Spotify/Spotify.list",
+      "format": "rules"
+    },
+    {
+      "id": "telegram",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Telegram/Telegram.list",
+      "format": "rules"
+    },
+    {
+      "id": "paypal",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/PayPal/PayPal.list",
+      "format": "rules"
+    },
+    {
+      "id": "twitter",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Twitter/Twitter.list",
+      "format": "rules"
+    },
+    {
+      "id": "facebook",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Facebook/Facebook.list",
+      "format": "rules"
+    },
+    {
+      "id": "amazon",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Amazon/Amazon.list",
+      "format": "rules"
+    },
+    {
+      "id": "sony",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Sony/Sony.list",
+      "format": "rules"
+    },
+    {
+      "id": "steamcn",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/SteamCN/SteamCN.list",
+      "format": "rules"
+    },
+    {
+      "id": "game",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Game/Game.list",
+      "format": "rules"
+    },
+    {
+      "id": "github",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/GitHub/GitHub.list",
+      "format": "rules"
+    },
+    {
+      "id": "microsoft",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Microsoft/Microsoft.list",
+      "format": "rules"
+    },
+    {
+      "id": "google",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Google/Google.list",
+      "format": "rules"
+    },
+    {
+      "id": "apple",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/QuantumultX/Apple/Apple.list",
+      "format": "rules"
+    },
+    {
+      "id": "bilibili",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/BiliBili/BiliBili.list",
+      "format": "rules"
+    },
+    {
+      "id": "neteasemusic",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/NetEaseMusic/NetEaseMusic.list",
+      "format": "rules"
+    },
+    {
+      "id": "baidu",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Baidu/Baidu.list",
+      "format": "rules"
+    },
+    {
+      "id": "douban",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/DouBan/DouBan.list",
+      "format": "rules"
+    },
+    {
+      "id": "wechat",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/QuantumultX/WeChat/WeChat.list",
+      "format": "rules"
+    },
+    {
+      "id": "sina",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Sina/Sina.list",
+      "format": "rules"
+    },
+    {
+      "id": "zhihu",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Zhihu/Zhihu.list",
+      "format": "rules"
+    },
+    {
+      "id": "xiaohongshu",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list",
+      "format": "rules"
+    },
+    {
+      "id": "douyin",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/DouYin/DouYin.list",
+      "format": "rules"
+    },
+    {
+      "id": "tiktok",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/TikTok/TikTok.list",
+      "format": "rules"
+    },
+    {
+      "id": "global",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/QuantumultX/Global/Global.list",
+      "format": "rules"
+    },
+    {
+      "id": "china",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/QuantumultX/China/China.list",
+      "format": "rules"
+    },
+    {
+      "id": "lan",
+      "repo": "blackmatrix7/ios_rule_script",
+      "ref": "master",
+      "path": "rule/Shadowrocket/Lan/Lan.list",
+      "format": "rules"
+    },
+    {
+      "id": "openai-acl",
+      "repo": "ACL4SSR/ACL4SSR",
+      "ref": "master",
+      "path": "Clash/Ruleset/OpenAi.list",
+      "format": "rules"
+    },
+    {
+      "id": "claude-page",
+      "url": "https://ip.net.coffee/claude/site.html",
+      "format": "claude"
+    },
+    {
+      "id": "claude-ips",
+      "url": "https://platform.claude.com/docs/en/api/ip-addresses",
+      "format": "inbound"
+    }
+  ],
+  "base_order": [
+    {
+      "source": "openai-base",
+      "policy": "OpenAI"
+    },
+    {
+      "source": "youtube",
+      "policy": "常规境外"
+    },
+    {
+      "source": "netflix",
+      "policy": "常规境外"
+    },
+    {
+      "source": "disney",
+      "policy": "常规境外"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,litix.io,常规境外"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,discomax.com,常规境外"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,brightline.tv,常规境外"
+    },
+    {
+      "source": "hbo",
+      "policy": "常规境外"
+    },
+    {
+      "source": "spotify",
+      "policy": "常规境外"
+    },
+    {
+      "source": "telegram",
+      "policy": "常规境外"
+    },
+    {
+      "source": "paypal",
+      "policy": "常规境外"
+    },
+    {
+      "source": "twitter",
+      "policy": "常规境外"
+    },
+    {
+      "source": "facebook",
+      "policy": "常规境外"
+    },
+    {
+      "source": "amazon",
+      "policy": "常规境外"
+    },
+    {
+      "source": "sony",
+      "policy": "常规境外"
+    },
+    {
+      "source": "steamcn",
+      "policy": "常规境外"
+    },
+    {
+      "source": "game",
+      "policy": "常规境外"
+    },
+    {
+      "source": "github",
+      "policy": "常规境外"
+    },
+    {
+      "source": "microsoft",
+      "policy": "常规境外"
+    },
+    {
+      "source": "google",
+      "policy": "常规境外"
+    },
+    {
+      "source": "apple",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "bilibili",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "neteasemusic",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "baidu",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "douban",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "wechat",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "sina",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "zhihu",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "xiaohongshu",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "douyin",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "tiktok",
+      "policy": "常规境外"
+    },
+    {
+      "source": "global",
+      "policy": "常规境外"
+    },
+    {
+      "source": "china",
+      "policy": "DIRECT"
+    },
+    {
+      "source": "lan",
+      "policy": "DIRECT"
+    },
+    {
+      "rule": "GEOIP,CN,DIRECT"
+    },
+    {
+      "rule": "FINAL,常规境外"
+    }
+  ],
+  "excluded_references": [
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list"
+  ]
+}

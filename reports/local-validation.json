@@ -1,0 +1,60 @@
+{
+  "scope": "local candidate validation; no device or hosted GitHub Actions execution",
+  "checked_at": "2026-09-10T05:12:18.112146+00:00",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "rillmoss",
+        "ci-check"
+      ],
+      "exit_code": 0,
+      "stdout": "simulated upstream failure\n",
+      "stderr": "test_any_fetch_failure_leaves_entire_bundle_unchanged (test_rillmoss.BundleTests.test_any_fetch_failure_leaves_entire_bundle_unchanged) ... ok\ntest_complete_offline_rebuild (test_rillmoss.BundleTests.test_complete_offline_rebuild) ... ok\ntest_duplicate_task_lock_rejects_second_runner (test_rillmoss.BundleTests.test_duplicate_task_lock_rejects_second_runner) ... ok\ntest_failed_update_records_failure_without_touching_version (test_rillmoss.BundleTests.test_failed_update_records_failure_without_touching_version) ... ok\ntest_install_exception_rolls_back_all_files (test_rillmoss.BundleTests.test_install_exception_rolls_back_all_files) ... ok\ntest_oversized_source_fails_before_install (test_rillmoss.BundleTests.test_oversized_source_fails_before_install) ... ok\ntest_publication_requires_device_evidence (test_rillmoss.BundleTests.test_publication_requires_device_evidence) ... ok\ntest_rollback_pauses_publication_and_restores_whole_bundle (test_rillmoss.BundleTests.test_rollback_pauses_publication_and_restores_whole_bundle) ... ok\ntest_rollback_rejects_unaccepted_candidate (test_rillmoss.BundleTests.test_rollback_rejects_unaccepted_candidate) ... ok\ntest_success_while_paused_does_not_install_candidate (test_rillmoss.BundleTests.test_success_while_paused_does_not_install_candidate) ... ok\ntest_tampered_and_missing_raw_snapshot_fails (test_rillmoss.BundleTests.test_tampered_and_missing_raw_snapshot_fails) ... ok\ntest_unchanged_recheck_keeps_rules_timestamp (test_rillmoss.BundleTests.test_unchanged_recheck_keeps_rules_timestamp) ... ok\ntest_upstream_commit_change_is_not_a_fake_rule_version (test_rillmoss.BundleTests.test_upstream_commit_change_is_not_a_fake_rule_version) ... ok\ntest_https_only (test_rillmoss.DownloadTests.test_https_only) ... ok\ntest_one_commit_for_every_file_from_a_repo (test_rillmoss.DownloadTests.test_one_commit_for_every_file_from_a_repo) ... ok\ntest_transport_retries_and_verifies_tls (test_rillmoss.DownloadTests.test_transport_retries_and_verifies_tls) ... ok\ntest_one_real_commit_and_nonfastforward_race (test_rillmoss.GitPublicationTests.test_one_real_commit_and_nonfastforward_race) ... ok\ntest_remote_divergence_stops_before_commit (test_rillmoss.GitPublicationTests.test_remote_divergence_stops_before_commit) ... ok\ntest_chatgpt_section_only_not_comments_count (test_rillmoss.ParserTests.test_chatgpt_section_only_not_comments_count) ... ok\ntest_claude_typed_block_only (test_rillmoss.ParserTests.test_claude_typed_block_only) ... ok\ntest_empty_error_pages_and_binary_rejected (test_rillmoss.ParserTests.test_empty_error_pages_and_binary_rejected) ... ok\ntest_official_inbound_is_scoped_and_pinned (test_rillmoss.ParserTests.test_official_inbound_is_scoped_and_pinned) ... ok\ntest_qx_policy_and_ipv6_flags (test_rillmoss.ParserTests.test_qx_policy_and_ipv6_flags) ... ok\ntest_unknown_base_rules_cannot_be_silently_skipped (test_rillmoss.ParserTests.test_unknown_base_rules_cannot_be_silently_skipped) ... ok\ntest_unknown_formats_and_flags_are_errors (test_rillmoss.ParserTests.test_unknown_formats_and_flags_are_errors) ... ok\ntest_actual_snapshot_routes (test_rillmoss.PolicyTests.test_actual_snapshot_routes) ... ok\ntest_entire_bilibili_domain_set_is_direct (test_rillmoss.PolicyTests.test_entire_bilibili_domain_set_is_direct) ... ok\ntest_exact_ths_and_ai_shared_ownership (test_rillmoss.PolicyTests.test_exact_ths_and_ai_shared_ownership) ... ok\ntest_exit_constraints_cannot_be_bypassed_by_new_baseline (test_rillmoss.PolicyTests.test_exit_constraints_cannot_be_bypassed_by_new_baseline) ... ok\ntest_humb_is_direct_even_if_future_ai_source_adds_it (test_rillmoss.PolicyTests.test_humb_is_direct_even_if_future_ai_source_adds_it) ... ok\ntest_removes_foreign_snssdk_preserves_bytedapm (test_rillmoss.PolicyTests.test_removes_foreign_snssdk_preserves_bytedapm) ... ok\ntest_render_has_only_local_bindings_and_no_remote_rules (test_rillmoss.PolicyTests.test_render_has_only_local_bindings_and_no_remote_rules) ... ok\ntest_single_known_ai_endpoint_loss_blocks_update (test_rillmoss.PolicyTests.test_single_known_ai_endpoint_loss_blocks_update) ... ok\ntest_threshold_boundaries (test_rillmoss.PolicyTests.test_threshold_boundaries) ... ok\n\n----------------------------------------------------------------------\nRan 34 tests in 5.949s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "rillmoss",
+        "verify",
+        "--bundle",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "Verified 42367 rules; abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ruby",
+        "-ryaml",
+        "-e",
+        "ARGV.each { |p| YAML.load_file(p); puts \"YAML syntax OK: #{p}\" }",
+        ".github/workflows/check.yml",
+        ".github/workflows/update.yml"
+      ],
+      "exit_code": 0,
+      "stdout": "YAML syntax OK: .github/workflows/check.yml\nYAML syntax OK: .github/workflows/update.yml\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "rillmoss",
+        "rebuild",
+        "--bundle",
+        ".",
+        "--output",
+        ".work/rebuilt-guarded.conf"
+      ],
+      "exit_code": 0,
+      "stdout": "Verified 42367 rules; abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a\n",
+      "stderr": "",
+      "byte_identical": true
+    }
+  ],
+  "configuration_sha256": "03e7f13146cd9b6303d4b8c25c2f95dfd333f12566bec8cf255c3e2d28c55793"
+}

@@ -1,0 +1,9 @@
+{
+  "base_changes_not_imported": {},
+  "candidate_rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "checked_at": "2026-09-10T04:52:48+00:00",
+  "current_rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "publication_enabled": false,
+  "rules_changed": false,
+  "status": "passed_publication_paused"
+}

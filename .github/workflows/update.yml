@@ -1,0 +1,44 @@
+name: Daily source check and update
+on:
+  schedule:
+    - cron: '8 8 * * *'
+      timezone: Asia/Taipei
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: rillmoss-publish-main
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.repository == 'ardingh/rillmoss' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - name: Test, fetch, validate and stage a complete update
+        id: update
+        continue-on-error: true
+        run: python -m rillmoss ci-check
+      - name: Commit the real check result and any complete validated bundle
+        if: always() && steps.update.outcome != 'skipped'
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+        run: python -m rillmoss commit-update --expected-head "$EXPECTED_HEAD"
+      - name: Retain the complete checked candidate, including while publication is paused
+        if: always() && steps.update.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: checked-bundle-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .work/check-*/bundle/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve failure status for native GitHub notifications
+        if: always() && steps.update.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,2 @@
+# Upstream snapshots retain exact downloaded bytes, including their whitespace.
+snapshot/raw/** -whitespace

@@ -1,0 +1,7 @@
+.work/
+private/
+CODEX_STATE.md
+__pycache__/
+*.pyc
+.DS_Store
+.venv/

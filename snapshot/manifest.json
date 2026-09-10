@@ -1,0 +1,308 @@
+{
+  "checked_at": "2026-09-10T05:10:54+00:00",
+  "files": {
+    "policy/counts.json": "2c9b576c07cce19fbb2b6490be61a45775157598ce0469bd79995d22b52a617a",
+    "policy/personal.json": "17166cfaf053684f421075b17e5261fd5fa15e4b2e99ee08c63cef8dfd126c55",
+    "policy/sources.json": "95eab7a13f2834d2a4db272bec5bb16bdba4c068a6fdf5b100dabadef2626b45",
+    "reports/build.json": "587b565e2ea09fae4596dc9e049bcee7090b4c2fc7e9f0fc0b12ad7087478963",
+    "rillmoss.conf": "03e7f13146cd9b6303d4b8c25c2f95dfd333f12566bec8cf255c3e2d28c55793",
+    "snapshot/inputs/counts.json": "2c9b576c07cce19fbb2b6490be61a45775157598ce0469bd79995d22b52a617a",
+    "snapshot/inputs/personal.json": "17166cfaf053684f421075b17e5261fd5fa15e4b2e99ee08c63cef8dfd126c55",
+    "snapshot/inputs/sources.json": "c9aced71c28c8e5012a60dc7e40e81f3c9c88902abb0f62ea2b3847d0b2b29bd",
+    "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
+    "snapshot/raw/apple.txt": "aebb5fb314685d5377c0c3dedfb0f7d56e3e32cd052132a937e4e649b190ac6a",
+    "snapshot/raw/baidu.txt": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
+    "snapshot/raw/base.txt": "f951318998ee1bf410f0d7de8794249606d775b67e2ab37d582b086731f4a055",
+    "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
+    "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
+    "snapshot/raw/claude-ips.txt": "18c8a38d561f40ca11d7924b6903a545f48dfbf892776c0e702d279ee31cefed",
+    "snapshot/raw/claude-page.txt": "d27cf2b3a11e2a86c8a804fb6acc5bf0edb1d5368f169d3336ab46d841ae1a5c",
+    "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
+    "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
+    "snapshot/raw/douyin.txt": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
+    "snapshot/raw/facebook.txt": "747563c96825bbd5f868be955543b0ca1979064e7b094f8aab08aafbce577c36",
+    "snapshot/raw/game.txt": "a3f0323cffc9a86fd69d9fc7bff35374bd34d97cc651ee0e1d5b2bacbcc32b55",
+    "snapshot/raw/github.txt": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+    "snapshot/raw/global.txt": "532e63e7de7b0d93c05ab8bde3f68b29576af4740df826f8f1c8698d4e36191a",
+    "snapshot/raw/google.txt": "c6efe08ab4c0a12ddba20f5e75abfba2dd63a42b810f8cb5c303433a38e93b73",
+    "snapshot/raw/hbo.txt": "f89c50e9a1f433dc1acb8a75aa2cab27d4e2fd82f4fed6ba2820ce9b923680e2",
+    "snapshot/raw/lan.txt": "e524edec216ed7f2fa2f3eb3fe09fe70121acf88408c2394d19b3e2331c54de7",
+    "snapshot/raw/microsoft.txt": "22df1a1017ad5d41755bf020ca8eb9afeedc7bdc2c649ed2074b255227a7ed8e",
+    "snapshot/raw/neteasemusic.txt": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
+    "snapshot/raw/netflix.txt": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
+    "snapshot/raw/openai-acl.txt": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
+    "snapshot/raw/openai-base.txt": "764e56f680ed307a3d6648c9be5fc1e6e7842b3d12c70b8374c9f7c3d4b80297",
+    "snapshot/raw/paypal.txt": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
+    "snapshot/raw/sina.txt": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
+    "snapshot/raw/sony.txt": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
+    "snapshot/raw/spotify.txt": "577afc9442a38c578e0aa8769b192d2f935e808114c60cbd5afd2294c79b74d0",
+    "snapshot/raw/steamcn.txt": "82c144434e9199c524d95caa8e3659c9f6f1de9fd23b223a58b5d3c821923936",
+    "snapshot/raw/telegram.txt": "09f093cce5b3e2994147a2640e03040aac75e1db7bf2103fd1c9a2509b0176ab",
+    "snapshot/raw/tiktok.txt": "403dccb2d51606d73db9e669e82cc1d9030c7e697756ae13d9f8f5fea53c151a",
+    "snapshot/raw/twitter.txt": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
+    "snapshot/raw/wechat.txt": "f2b1097292162858845d3b4f99058f047e0715bef4a0e6202b40a10af5c38e2c",
+    "snapshot/raw/xiaohongshu.txt": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
+    "snapshot/raw/youtube.txt": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
+    "snapshot/raw/zhihu.txt": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33"
+  },
+  "rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "schema": 1,
+  "snapshot_id": "639ee00b12ea70445038c7ea60abbd383d343989354a11ebbb5e3397b60116ec",
+  "source_counts": {
+    "amazon": 205,
+    "apple": 1881,
+    "baidu": 251,
+    "base": 39,
+    "bilibili": 127,
+    "china": 3753,
+    "claude-ips": 2,
+    "claude-page": 19,
+    "disney": 173,
+    "douban": 3,
+    "douyin": 13,
+    "facebook": 570,
+    "game": 597,
+    "github": 31,
+    "global": 35781,
+    "google": 698,
+    "hbo": 49,
+    "lan": 140,
+    "microsoft": 671,
+    "neteasemusic": 30,
+    "netflix": 1157,
+    "openai-acl": 17,
+    "openai-base": 13,
+    "paypal": 248,
+    "sina": 108,
+    "sony": 116,
+    "spotify": 30,
+    "steamcn": 17,
+    "telegram": 40,
+    "tiktok": 32,
+    "twitter": 33,
+    "wechat": 43,
+    "xiaohongshu": 4,
+    "youtube": 190,
+    "zhihu": 7
+  },
+  "upstream": {
+    "pins": {
+      "acl4ssr/acl4ssr": "f7c4233b2bc706c89668753b18a9f899d7e9f9bf",
+      "blackmatrix7/ios_rule_script": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+      "iab0x00/proxyrules": "823762ae7ac2fe4a444a1244c66ec59f6a2a5abf",
+      "lowertop/shadowrocket": "16579202c6cd0e9d911c4048cdfb265820080fcc"
+    },
+    "sources": {
+      "amazon": {
+        "bytes": 6481,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Amazon/Amazon.list"
+      },
+      "apple": {
+        "bytes": 67283,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "aebb5fb314685d5377c0c3dedfb0f7d56e3e32cd052132a937e4e649b190ac6a",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/QuantumultX/Apple/Apple.list"
+      },
+      "baidu": {
+        "bytes": 6981,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Baidu/Baidu.list"
+      },
+      "base": {
+        "bytes": 28050,
+        "commit": "16579202c6cd0e9d911c4048cdfb265820080fcc",
+        "sha256": "f951318998ee1bf410f0d7de8794249606d775b67e2ab37d582b086731f4a055",
+        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/16579202c6cd0e9d911c4048cdfb265820080fcc/lazy_group.conf"
+      },
+      "bilibili": {
+        "bytes": 4523,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/BiliBili/BiliBili.list"
+      },
+      "china": {
+        "bytes": 115682,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/QuantumultX/China/China.list"
+      },
+      "claude-ips": {
+        "bytes": 372685,
+        "commit": null,
+        "sha256": "18c8a38d561f40ca11d7924b6903a545f48dfbf892776c0e702d279ee31cefed",
+        "url": "https://platform.claude.com/docs/en/api/ip-addresses"
+      },
+      "claude-page": {
+        "bytes": 32548,
+        "commit": null,
+        "sha256": "d27cf2b3a11e2a86c8a804fb6acc5bf0edb1d5368f169d3336ab46d841ae1a5c",
+        "url": "https://ip.net.coffee/claude/site.html"
+      },
+      "disney": {
+        "bytes": 5565,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Disney/Disney.list"
+      },
+      "douban": {
+        "bytes": 231,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/DouBan/DouBan.list"
+      },
+      "douyin": {
+        "bytes": 533,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/DouYin/DouYin.list"
+      },
+      "facebook": {
+        "bytes": 17399,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "747563c96825bbd5f868be955543b0ca1979064e7b094f8aab08aafbce577c36",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Facebook/Facebook.list"
+      },
+      "game": {
+        "bytes": 19223,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "a3f0323cffc9a86fd69d9fc7bff35374bd34d97cc651ee0e1d5b2bacbcc32b55",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Game/Game.list"
+      },
+      "github": {
+        "bytes": 1117,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/GitHub/GitHub.list"
+      },
+      "global": {
+        "bytes": 1209963,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "532e63e7de7b0d93c05ab8bde3f68b29576af4740df826f8f1c8698d4e36191a",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/QuantumultX/Global/Global.list"
+      },
+      "google": {
+        "bytes": 19777,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "c6efe08ab4c0a12ddba20f5e75abfba2dd63a42b810f8cb5c303433a38e93b73",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Google/Google.list"
+      },
+      "hbo": {
+        "bytes": 1738,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "f89c50e9a1f433dc1acb8a75aa2cab27d4e2fd82f4fed6ba2820ce9b923680e2",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/HBO/HBO.list"
+      },
+      "lan": {
+        "bytes": 4776,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "e524edec216ed7f2fa2f3eb3fe09fe70121acf88408c2394d19b3e2331c54de7",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Lan/Lan.list"
+      },
+      "microsoft": {
+        "bytes": 20536,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "22df1a1017ad5d41755bf020ca8eb9afeedc7bdc2c649ed2074b255227a7ed8e",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Microsoft/Microsoft.list"
+      },
+      "neteasemusic": {
+        "bytes": 1238,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/NetEaseMusic/NetEaseMusic.list"
+      },
+      "netflix": {
+        "bytes": 40351,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Netflix/Netflix.list"
+      },
+      "openai-acl": {
+        "bytes": 539,
+        "commit": "f7c4233b2bc706c89668753b18a9f899d7e9f9bf",
+        "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/f7c4233b2bc706c89668753b18a9f899d7e9f9bf/Clash/Ruleset/OpenAi.list"
+      },
+      "openai-base": {
+        "bytes": 1675,
+        "commit": "823762ae7ac2fe4a444a1244c66ec59f6a2a5abf",
+        "sha256": "764e56f680ed307a3d6648c9be5fc1e6e7842b3d12c70b8374c9f7c3d4b80297",
+        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/823762ae7ac2fe4a444a1244c66ec59f6a2a5abf/Rule/AI.txt"
+      },
+      "paypal": {
+        "bytes": 7859,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/PayPal/PayPal.list"
+      },
+      "sina": {
+        "bytes": 2994,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Sina/Sina.list"
+      },
+      "sony": {
+        "bytes": 3309,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Sony/Sony.list"
+      },
+      "spotify": {
+        "bytes": 1197,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "577afc9442a38c578e0aa8769b192d2f935e808114c60cbd5afd2294c79b74d0",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Spotify/Spotify.list"
+      },
+      "steamcn": {
+        "bytes": 662,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "82c144434e9199c524d95caa8e3659c9f6f1de9fd23b223a58b5d3c821923936",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/SteamCN/SteamCN.list"
+      },
+      "telegram": {
+        "bytes": 1338,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "09f093cce5b3e2994147a2640e03040aac75e1db7bf2103fd1c9a2509b0176ab",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Telegram/Telegram.list"
+      },
+      "tiktok": {
+        "bytes": 1100,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "403dccb2d51606d73db9e669e82cc1d9030c7e697756ae13d9f8f5fea53c151a",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/TikTok/TikTok.list"
+      },
+      "twitter": {
+        "bytes": 1116,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Twitter/Twitter.list"
+      },
+      "wechat": {
+        "bytes": 1556,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "f2b1097292162858845d3b4f99058f047e0715bef4a0e6202b40a10af5c38e2c",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/QuantumultX/WeChat/WeChat.list"
+      },
+      "xiaohongshu": {
+        "bytes": 272,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list"
+      },
+      "youtube": {
+        "bytes": 5436,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/YouTube/YouTube.list"
+      },
+      "zhihu": {
+        "bytes": 423,
+        "commit": "4112f8e7b3a9f23c9ccf381beaa5931a36df3781",
+        "sha256": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33",
+        "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4112f8e7b3a9f23c9ccf381beaa5931a36df3781/rule/Shadowrocket/Zhihu/Zhihu.list"
+      }
+    }
+  }
+}
