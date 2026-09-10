@@ -2,7 +2,7 @@
 
 ## 每日更新
 
-GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 Actions 页面手动 **Run workflow**。仓库尚未发布时不会运行。
+GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 [Actions 页面](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)手动 **Run workflow**。2026-09-10 已启用并成功手动运行；当前成品自动发布暂停，每日任务只检查、记录并保存候选。
 
 执行顺序：测试 → 固定各 GitHub 来源仓库的提交 → 同轮抓取全部 35 项 → 严格解析 → 检查条数与出口 → 暂存完整候选 → 记录真实检查 → 一次 Git 提交写回。HTTP 每次最多 30 秒、最多 3 次；HTTPS 下载和重定向均要求证书验证。网页保存原始字节与 SHA-256。
 
@@ -37,15 +37,15 @@ python3 -m unittest discover -s tests -v
 
 永久失效的来源单独替换或删减；此期间设备继续使用最后完整版本。不得自动改来源 URL、取消严格解析，或用未经验证的原始打底当作 AI 恢复配置。
 
-## 首次公开发布
+## 开发仓库与日常启用
 
-依次完成 Mac、iPhone 验收。`docs/ACCEPTANCE.md` 必须有脱敏结果，私密证据留在 `private/`。首次发布前审阅 Git 待公开清单、全部 diff、完整快照和测试结果；当前候选没有发布授权。
+2026-09-10 经用户明确确认，已使用 work 账号 `ardingh` 创建公开仓库 [ardingh/rillmoss](https://github.com/ardingh/rillmoss)，通过本项目 `github-work` 身份普通推送。公开范围为代码、开发候选、个人策略选择、公开来源快照和脱敏检查结果，没有节点凭据、设备备份或原始连接日志，也没有创建 GitHub Release。具体范围和验证见 [仓库交付记录](PUBLICATION_REVIEW.md)。
 
-确认后才使用 work 账号 `ardingh` 创建公开仓库 `ardingh/rillmoss`，使用本地 `github-work` 身份；不要切换全局默认账号。只公开代码、规则、个人策略选择、公开来源原文与脱敏检查结果。不要建 GitHub Release。
+开发仓库公开不代表日常版本验收通过。故障复测按用户要求暂缓，`publish_enabled: false`、`acceptance: null` 保持不变。后续经用户要求恢复验收时，先解决已知住宅缺失回退，再按 Mac、iPhone 的实际结果推进；VPN 操作均由用户手动完成。
 
-完成验证后填写 `policy/release.json` 的 `acceptance`：`mac`、`iphone`、`ai_faults`、`ipv4`、`ipv6`、`udp`、`device_update` 为 `passed`，并记录 `rules_version` 与 `evidence`。软件不能判断人为填写是否真实，严禁凭静态测试填写设备结果。首次采用仍保持 `publish_enabled: false`，首次公开后按确认范围改为 true，启用成品自动写回。
+全部必需项目真实通过后才能填写 `policy/release.json` 的 `acceptance`：`mac`、`iphone`、`ai_faults`、`ipv4`、`ipv6`、`udp`、`device_update` 为 `passed`，并记录 `rules_version` 与 `evidence`。软件不能判断人为填写是否真实，严禁凭静态测试填写设备结果。成品自动写回须在验收完成、取得对应确认后才改为 `publish_enabled: true`。
 
-设备从本人稳定地址加载，手动更新核对版本。再核对 work 账号的 Actions 通知接收设置及接收者；修改通知设置另按账号权限边界确认。第一版仅用 GitHub 原生失败通知，不添加独立监测服务。[通知机制](https://docs.github.com/en/actions/concepts/workflows-and-actions/notifications-for-workflow-runs)
+2026-09-10 已只读核对 work 账号的 Actions 通知：站内和默认通知邮箱均已配置为仅失败工作流；没有修改账号设置，也未验证邮件实际送达。第一版仅用 GitHub 原生失败通知，不添加独立监测服务；完全漏跑不会主动报警。[通知机制](https://docs.github.com/en/actions/concepts/workflows-and-actions/notifications-for-workflow-runs)
 
 ## 回退
 

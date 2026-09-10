@@ -2,7 +2,7 @@
 
 只供本人使用的 Shadowrocket 分流配置，共用于 iPhone 与 Mac。配置由个人决定和选定的公开规则来源生成，设备只需要一份完整的 `rillmoss.conf`。
 
-**当前候选已在 Mac 的住宅节点缺失测试中失败，不可作为日常配置启用。尚未公开发布、未启用自动发布。** 正常连接初测通过，但两个 AI 分组在节点名称不存在时实际回退到普通 V3。修复与复测完成前保持发布暂停；具体证据见设备验收记录。
+**已公开开发候选仓库，每日来源检查已启用；成品自动发布保持关闭。** 当前候选在 Mac 的住宅节点缺失测试中回退到普通 V3，不可作为已验收的日常配置。用户已暂缓后续故障复测；正常连接初测与已知失败分别保留，见[设备验收](docs/ACCEPTANCE.md)和[仓库交付记录](docs/PUBLICATION_REVIEW.md)。
 
 | 策略组 | 唯一节点 |
 |---|---|
@@ -46,15 +46,15 @@ python3 -m rillmoss rebuild --bundle . --output .work/rebuilt.conf
 | `version.json` | 当前规则版本、生成时间和快照标识 |
 | `checks/` | 每轮真实检查记录；失败或无变化不伪造新规则版本 |
 | [个人决定](docs/DECISIONS.md) | 对打底的保留、替换与删减 |
-| [设备验收](docs/ACCEPTANCE.md) | Mac → iPhone → 首次公开发布的验收顺序 |
+| [设备验收](docs/ACCEPTANCE.md) | 日常启用前的 Mac / iPhone 验收及实际结果 |
 | [维护与恢复](docs/MAINTENANCE.md) | 每日任务、手动更新、来源失效、回退 |
 | [来源说明](docs/SOURCES.md) | 来源与引用范围 |
 
 ## 日常使用（验收、发布后）
 
-本人仓库的稳定地址将是：
+本人仓库的[完整配置地址](https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf)已可访问，目前内容仍是开发候选。
 
-`https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf`
+[每日来源检查](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)也可点击 **Run workflow** 手动运行。当前只写回检查记录并保存完整候选，不替换上述配置。
 
 两端均使用配置模式、保持 VPN 开启，核对没有更高优先级模块覆盖。设置配置后台更新间隔为 1 天，也可手动“更新配置”。GitHub 每日台北时间 08:08 触发，设备后台加载不保证同步或准点。
 

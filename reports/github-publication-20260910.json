@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-09-10T12:26:54.425641+00:00",
+  "repository": "https://github.com/ardingh/rillmoss",
+  "visibility": "public",
+  "default_branch": "main",
+  "initial_published_commit": "b2171475b8bf0c5f9f4b73c0e70b9375d0290962",
+  "initial_reviewed_file_count": 76,
+  "initial_remote_inventory_matched": true,
+  "publication_scope": "Development candidate, code, selected public sources, sanitized results; daily checks only",
+  "generated_config_publication_enabled": false,
+  "device_acceptance": null,
+  "config_rule_count": 42367,
+  "selected_sources": 35,
+  "local_recheck": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "tests": 34,
+    "elapsed_seconds": 5.966
+  },
+  "github_runs": [
+    {
+      "id": 34476489456,
+      "name": "Validate code and stored configuration",
+      "head_sha": "3d917a89ad20437dba3c03272a5280d0108168d1",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ardingh/rillmoss/actions/runs/34476489456",
+      "created_at": "2026-09-10T12:23:55Z",
+      "updated_at": "2026-09-10T12:24:18Z"
+    },
+    {
+      "id": 34475893320,
+      "name": "Daily source check and update",
+      "head_sha": "b2171475b8bf0c5f9f4b73c0e70b9375d0290962",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/ardingh/rillmoss/actions/runs/34475893320",
+      "created_at": "2026-09-10T12:17:26Z",
+      "updated_at": "2026-09-10T12:18:07Z"
+    },
+    {
+      "id": 34475810231,
+      "name": "Validate code and stored configuration",
+      "head_sha": "b2171475b8bf0c5f9f4b73c0e70b9375d0290962",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/ardingh/rillmoss/actions/runs/34475810231",
+      "created_at": "2026-09-10T12:16:33Z",
+      "updated_at": "2026-09-10T12:16:59Z"
+    }
+  ],
+  "ci_failure_resolution": {
+    "commit": "3d917a89ad20437dba3c03272a5280d0108168d1",
+    "cause": "The same GitHub run ID and same-second timestamp produced identical test records, so no staged diff reached the intended racing push.",
+    "change": "Fixed run ID and clock; explicit different record contents and a nonempty-diff assertion. Real non-fast-forward rejection is still required.",
+    "routing_changed": false
+  },
+  "daily_check_writeback_commit": "b0d19f1482233a8c7efdf69ac5879e0e5ce3d5ea",
+  "daily_check_writeback_paths": [
+    "checks/34475893320-1.json",
+    "checks/latest.json"
+  ],
+  "daily_check_result": {
+    "base_changes_not_imported": {},
+    "candidate_rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+    "checked_at": "2026-09-10T12:17:58+00:00",
+    "current_rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+    "publication_enabled": false,
+    "rules_changed": false,
+    "run_url": "https://github.com/ardingh/rillmoss/actions/runs/34475893320",
+    "status": "passed_publication_paused"
+  },
+  "schedule": {
+    "cron": "8 8 * * *",
+    "timezone": "Asia/Taipei",
+    "manual_dispatch_verified": true,
+    "scheduled_event_observed": false
+  },
+  "checked_artifact": {
+    "id": 10151454231,
+    "name": "checked-bundle-34475893320-1",
+    "size_in_bytes": 625247,
+    "digest": "sha256:68d61264283169a971ffd5f7eeb5ad713b5a4b25360dc5d4671ca34a7bf62b75",
+    "created_at": "2026-09-10T12:18:03Z",
+    "expires_at": "2026-10-10T12:18:01Z"
+  },
+  "artifact_offline_verification": {
+    "command": "python3 -m rillmoss verify --bundle private/publication/first-cloud-bundle/checked-bundle-34475893320-1/check-n5xor1q6/bundle",
+    "exit_code": 0,
+    "rule_count": 42367
+  },
+  "raw_config": {
+    "url": "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf",
+    "sha256": "03e7f13146cd9b6303d4b8c25c2f95dfd333f12566bec8cf255c3e2d28c55793",
+    "matches_reviewed_local_config": true,
+    "size_bytes": 1738909
+  },
+  "notifications": {
+    "account": "ardingh",
+    "verified_date": "2026-09-10",
+    "method": "read-only GitHub notification settings in in-app browser",
+    "actions_channels": [
+      "github",
+      "email"
+    ],
+    "failed_workflows_only": true,
+    "default_notification_email_configured": true,
+    "email_address_recorded": false,
+    "settings_modified": false,
+    "actual_delivery_verified": false
+  },
+  "remaining_acceptance": "Residential-missing fallback remains unresolved; fault experiments paused at user request. iPhone, real app functions and device-update recovery remain unverified."
+}
