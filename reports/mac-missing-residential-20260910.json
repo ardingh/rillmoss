@@ -1,0 +1,153 @@
+{
+  "started_at": "20260910T114356.434428Z",
+  "finished_at": "2026-09-10T11:44:00.050685+00:00",
+  "parent_rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "test_sha256": "6dd00de21083ab9569a253a28e52152c81af23a1e5fa4f128033a763416efa41",
+  "outcome": "FAIL_OPEN",
+  "runtime_before": {
+    "active_config": "rillmoss-test-missing-residential-7a4d.db",
+    "groups": {
+      "OPENAI": {
+        "items": [
+          "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D"
+        ],
+        "type": "select",
+        "name": "OpenAI",
+        "parameters": {
+          "policy-select-name": "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D"
+        }
+      },
+      "CLAUDE": {
+        "items": [
+          "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D"
+        ],
+        "type": "select",
+        "name": "Claude",
+        "parameters": {
+          "policy-select-name": "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D"
+        }
+      },
+      "常规境外": {
+        "items": [
+          "V3（VLESS+VISION+REALITY）"
+        ],
+        "type": "select",
+        "name": "常规境外",
+        "parameters": {
+          "policy-select-name": "V3（vless+vision+reality）"
+        }
+      }
+    },
+    "chain_missing_protection": true
+  },
+  "native_logs": [
+    {
+      "database": "proxy-2026-09-10-194344.db",
+      "rowid": 25,
+      "target": "one.one.one.one:443",
+      "result": "DOMAIN,one.one.one.one,常规境外 # V3（vless+vision+reality）",
+      "type": "PROXY",
+      "created": "2026-09-10 19:43:56"
+    },
+    {
+      "database": "proxy-2026-09-10-194344.db",
+      "rowid": 26,
+      "target": "www.cloudflare.com:443",
+      "result": "DOMAIN,www.cloudflare.com,OpenAI # V3（vless+vision+reality）",
+      "type": "PROXY",
+      "created": "2026-09-10 19:43:57"
+    },
+    {
+      "database": "proxy-2026-09-10-194344.db",
+      "rowid": 27,
+      "target": "cloudflare.com:443",
+      "result": "DOMAIN,cloudflare.com,Claude # V3（vless+vision+reality）",
+      "type": "PROXY",
+      "created": "2026-09-10 19:43:58"
+    },
+    {
+      "database": "proxy-2026-09-10-194344.db",
+      "rowid": 28,
+      "target": "one.one.one.one:443",
+      "result": "DOMAIN,one.one.one.one,常规境外 # V3（vless+vision+reality）",
+      "type": "PROXY",
+      "created": "2026-09-10 19:43:59"
+    }
+  ],
+  "scope": "Mac IPv4 TCP; named residential member absent; anonymous trace targets only",
+  "client": "Shadowrocket 2.2.90 (3378)",
+  "results": {
+    "control-before": {
+      "host": "one.one.one.one",
+      "curl_exit": 0,
+      "http_status": "200",
+      "http_connect_status": "200",
+      "ip_family": 4,
+      "trace_host": "one.one.one.one",
+      "tls": "TLSv1.3",
+      "trace_valid": true,
+      "exit_matches": {
+        "V3（vless+vision+reality）": true,
+        "V3 Static Residential": false
+      },
+      "observation": "REACHED_ORIGIN"
+    },
+    "OpenAI": {
+      "host": "www.cloudflare.com",
+      "curl_exit": 0,
+      "http_status": "200",
+      "http_connect_status": "200",
+      "ip_family": 4,
+      "trace_host": "www.cloudflare.com",
+      "tls": "TLSv1.3",
+      "trace_valid": true,
+      "exit_matches": {
+        "V3（vless+vision+reality）": true,
+        "V3 Static Residential": false
+      },
+      "observation": "REACHED_ORIGIN"
+    },
+    "Claude": {
+      "host": "cloudflare.com",
+      "curl_exit": 0,
+      "http_status": "200",
+      "http_connect_status": "200",
+      "ip_family": 4,
+      "trace_host": "cloudflare.com",
+      "tls": "TLSv1.3",
+      "trace_valid": true,
+      "exit_matches": {
+        "V3（vless+vision+reality）": true,
+        "V3 Static Residential": false
+      },
+      "observation": "REACHED_ORIGIN"
+    },
+    "control-after": {
+      "host": "one.one.one.one",
+      "curl_exit": 0,
+      "http_status": "200",
+      "http_connect_status": "200",
+      "ip_family": 4,
+      "trace_host": "one.one.one.one",
+      "tls": "TLSv1.3",
+      "trace_valid": true,
+      "exit_matches": {
+        "V3（vless+vision+reality）": true,
+        "V3 Static Residential": false
+      },
+      "observation": "REACHED_ORIGIN"
+    }
+  },
+  "reviewed_at": "2026-09-10T11:55:11.067169+00:00",
+  "evidence_checks": {
+    "test_fixture_hash_matches": true,
+    "parent_config_hash_matches": true,
+    "native_original_log_matches_saved_rows": true,
+    "missing_alias_still_absent": true
+  },
+  "restored_config": "inkpaw-route.conf",
+  "device_configuration_changes_by_assistant": false,
+  "publication_permitted": false,
+  "next_change_scope": "Experimental missing-member rejection in AI groups only; no domain/source changes",
+  "raw_evidence": "Local ignored private/acceptance/missing-residential-20260910T114356.434428Z/ only"
+}

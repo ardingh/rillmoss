@@ -1,5 +1,5 @@
 {
   "publish_enabled": false,
-  "reason": "首次 Mac / iPhone 验收与公开发布尚未完成",
+  "reason": "Mac 住宅节点缺失测试失败：两个 AI 分组回退普通 V3。修复并完成必需设备验收前禁止启用与公开发布；证据见 reports/mac-missing-residential-20260910.json",
   "acceptance": null
 }

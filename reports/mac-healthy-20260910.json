@@ -1,0 +1,190 @@
+{
+  "status": "mac_healthy_path_only_passed",
+  "checked_at": "2026-09-10T05:38:01.020331+00:00",
+  "rule_checks_at_taipei": "2026-09-10 13:42:04",
+  "device": "Mac",
+  "client": "Shadowrocket 2.2.90 (3378)",
+  "rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "active_config": "rillmoss.conf",
+  "https_method": "Fresh unauthenticated HTTPS /cdn-cgi/trace requests via local Shadowrocket HTTP proxy; TLS verification enabled; no redirects, cookies or tokens",
+  "egress_family": "IPv4",
+  "egress_results": [
+    {
+      "host": "chatgpt.com",
+      "exit_code": 0,
+      "http_status": "200",
+      "trace_available": true,
+      "ip_matches_residential_endpoint": true,
+      "ip_matches_normal_endpoint": false,
+      "tls": "TLSv1.3"
+    },
+    {
+      "host": "claude.ai",
+      "exit_code": 0,
+      "http_status": "200",
+      "trace_available": true,
+      "ip_matches_residential_endpoint": true,
+      "ip_matches_normal_endpoint": false,
+      "tls": "TLSv1.3"
+    },
+    {
+      "host": "www.cloudflare.com",
+      "exit_code": 0,
+      "http_status": "200",
+      "trace_available": true,
+      "ip_matches_residential_endpoint": false,
+      "ip_matches_normal_endpoint": true,
+      "tls": "TLSv1.3"
+    }
+  ],
+  "native_rule_method": "Fresh HTTP CONNECT requests with no application payload; inspected native client routing logs",
+  "native_rule_results": [
+    {
+      "host": "humb.apple.com",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 190,
+          "result": "DOMAIN,humb.apple.com,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "p01-ckdatabase.icloud.com",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 189,
+          "result": "DOMAIN-SUFFIX,icloud.com,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "guzzoni.apple.com",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 191,
+          "result": "DOMAIN-SUFFIX,apple.com,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "data.10jqka.com.cn",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 188,
+          "result": "DOMAIN-SUFFIX,10jqka.com.cn,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "apimg.qunliao.info",
+      "expected": "REJECT",
+      "logs": [
+        {
+          "rowid": 192,
+          "result": "DOMAIN-KEYWORD,apimg.qunliao.info,REJECT",
+          "type": "REJECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "bytedapm.com",
+      "expected": "常规境外",
+      "logs": [
+        {
+          "rowid": 193,
+          "result": "DOMAIN-SUFFIX,bytedapm.com,常规境外 # V3（vless+vision+reality）",
+          "type": "PROXY",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "snssdk.com",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 194,
+          "result": "DOMAIN-SUFFIX,snssdk.com,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "www.bilibili.com",
+      "expected": "DIRECT",
+      "logs": [
+        {
+          "rowid": 195,
+          "result": "DOMAIN-SUFFIX,bilibili.com,DIRECT",
+          "type": "DIRECT",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "github.com",
+      "expected": "常规境外",
+      "logs": [
+        {
+          "rowid": 196,
+          "result": "DOMAIN-SUFFIX,github.com,常规境外 # V3（vless+vision+reality）",
+          "type": "PROXY",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "api.openai.com",
+      "expected": "OpenAI",
+      "logs": [
+        {
+          "rowid": 197,
+          "result": "DOMAIN-SUFFIX,openai.com,OpenAI # V3 Static Residential",
+          "type": "PROXY",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    },
+    {
+      "host": "api.anthropic.com",
+      "expected": "Claude",
+      "logs": [
+        {
+          "rowid": 198,
+          "result": "DOMAIN-SUFFIX,anthropic.com,Claude # V3 Static Residential",
+          "type": "PROXY",
+          "time": "2026-09-10 13:42:04"
+        }
+      ]
+    }
+  ],
+  "base_rule_changes": false,
+  "not_tested": [
+    "missing_or_unreachable_residential",
+    "missing_or_unreachable_transit",
+    "home_node_change",
+    "IPv6_egress",
+    "UDP_and_QUIC",
+    "authenticated_AI_functions",
+    "notes_sync",
+    "real_app_functions_and_ad_removal",
+    "iPhone",
+    "configuration_update_and_recovery"
+  ],
+  "raw_evidence": "Local ignored private/acceptance/healthy-20260910 only; not included in repository",
+  "release_authorization": false
+}

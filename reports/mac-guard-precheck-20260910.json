@@ -1,0 +1,44 @@
+{
+  "reviewed_at": "2026-09-10T12:00:40.548857+00:00",
+  "status": "PRECHECK_FAILED",
+  "network_probes": 0,
+  "connection_test_result": "not_executed",
+  "current_config": "inkpaw-route.db",
+  "examined_inactive_config": "rillmoss-test-reject-guard-7a4d.db",
+  "native_groups": {
+    "OPENAI": {
+      "items": [],
+      "type": "select",
+      "name": "OpenAI",
+      "parameters": {
+        "policy-select-name": "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D",
+        "policy-regex-filter": "^RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D$",
+        "select": "0"
+      }
+    },
+    "CLAUDE": {
+      "items": [],
+      "type": "select",
+      "name": "Claude",
+      "parameters": {
+        "policy-select-name": "RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D",
+        "policy-regex-filter": "^RILLMOSS-MISSING-RESIDENTIAL-20260910-7A4D$",
+        "select": "0"
+      }
+    },
+    "常规境外": {
+      "items": [
+        "V3（VLESS+VISION+REALITY）"
+      ],
+      "type": "select",
+      "name": "常规境外",
+      "parameters": {
+        "policy-select-name": "V3（vless+vision+reality）"
+      }
+    }
+  },
+  "test_file_unchanged": true,
+  "reason": "Both AI group member lists were empty; REJECT did not survive this combined syntax in the stored native configuration. Precheck was not weakened.",
+  "user_direction": "Further device fault experiments deferred; continue project engineering and repository delivery.",
+  "private_evidence": "Local ignored private/acceptance/reject-guard-precheck-20260910/ only"
+}

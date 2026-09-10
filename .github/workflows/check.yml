@@ -6,6 +6,10 @@ on:
       - 'policy/**'
       - 'tests/**'
       - '.github/workflows/**'
+      - 'rillmoss.conf'
+      - 'snapshot/**'
+      - 'version.json'
+      - 'reports/build.json'
   pull_request:
 permissions:
   contents: read

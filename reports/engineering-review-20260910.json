@@ -1,0 +1,42 @@
+{
+  "reviewed_at": "2026-09-10T12:10:21.914240+00:00",
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "tests_run": 34,
+    "result": "OK",
+    "elapsed_seconds": 6.816,
+    "note": "simulated upstream failure is expected output from the failure-isolation test, not a failed real update"
+  },
+  "snapshot_verification": {
+    "command": "python3 -m rillmoss verify --bundle .",
+    "exit_code": 0,
+    "rule_count": 42367,
+    "rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a"
+  },
+  "live_source_check": {
+    "command": "python3 -m rillmoss update",
+    "exit_code": 0,
+    "source_count": 35,
+    "checked_at": "2026-09-10T12:06:58+00:00",
+    "status": "passed_publication_paused",
+    "rules_changed": false
+  },
+  "workflow_review": {
+    "schedule": "08:08 Asia/Taipei daily",
+    "manual_dispatch": true,
+    "same_repository_commit_pinning": true,
+    "all_sources_required": true,
+    "no_force_push": true,
+    "concurrency_serialized": true,
+    "hosted_run_executed": false,
+    "validation_trigger_includes_generated_bundle": true
+  },
+  "github_work_readonly": {
+    "authenticated_login": "ardingh",
+    "repository": "not_found",
+    "writes_performed": false
+  },
+  "device_acceptance": "not_passed; original missing-member test failed; further experiments deferred by user",
+  "publication_enabled": false
+}
