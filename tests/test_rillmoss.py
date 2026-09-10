@@ -329,7 +329,9 @@ class GitPublicationTests(unittest.TestCase):
                 runner.commit_update(Path("."), "a" * 40)
             self.assertEqual(git.call_count, 2)
 
-    def test_one_real_commit_and_nonfastforward_race(self):
+    @patch.dict("os.environ", {"GITHUB_RUN_ID": "123456", "GITHUB_RUN_ATTEMPT": "1"})
+    @patch("rillmoss.runner.utc", return_value="2026-01-01T00:00:00+00:00")
+    def test_one_real_commit_and_nonfastforward_race(self, _clock):
         with tempfile.TemporaryDirectory() as temp:
             remote, work, other = [Path(temp) / name for name in ("remote.git", "work", "other")]
             def command(cwd, *args):
@@ -350,13 +352,15 @@ class GitPublicationTests(unittest.TestCase):
             command(work, "remote", "add", "origin", str(remote))
             command(work, "push", "origin", "HEAD:main")
             head = command(work, "rev-parse", "HEAD")
-            runner.record_check(work, dict(status="passed"))
+            runner.record_check(work, dict(status="passed", rules_changed=False))
             runner.commit_update(work, head)
             published = command(work, "rev-parse", "HEAD")
             self.assertEqual(command(remote, "rev-parse", "main"), published)
             self.assertEqual(command(work, "rev-list", "--count", f"{head}..{published}"), "1")
             command(Path(temp), "clone", str(remote), str(other))
-            runner.record_check(work, dict(status="passed"))
+            # A reused CI run ID and the same second must still stage a real change.
+            runner.record_check(work, dict(status="passed", rules_changed=True))
+            self.assertIn("checks/latest.json", command(work, "diff", "--name-only").splitlines())
             real_git = runner.git
             def racing_git(root, *args):
                 result = real_git(root, *args)
