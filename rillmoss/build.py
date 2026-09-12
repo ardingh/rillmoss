@@ -76,6 +76,10 @@ def compose(parsed, manifest, personal):
         entries.append((r, policy, origin))
 
     add(Rule("DOMAIN", "humb.apple.com"), "DIRECT", "R01")
+    probe = personal["claude_check_probe"]
+    if probe != {"domain": "api64.ipify.org", "policy": "V3 Static Residential"}:
+        raise Invalid("Claude Check probe must retain its exact residential route")
+    add(Rule("DOMAIN", probe["domain"]), probe["policy"], "Claude Check probe", required=True)
     # AI first; broad Apple/China sources must not override shared dependencies.
     for sid in ("openai-base", "openai-acl", "claude-page", "claude-ips"):
         for r in parsed[sid]:
@@ -148,6 +152,7 @@ def constraints(entries, personal, parsed):
         "^https?://(www.)?google.cn https://www.google.com 302"]:
         raise Invalid("Google rewrite / MITM declaration changed")
     expected = {
+        "api64.ipify.org": "V3 Static Residential",
         "chatgpt.com": "OpenAI", "api.openai.com": "OpenAI", "chatgpt.com/backend-api": "OpenAI",
         "cdn.oaistatic.com": "OpenAI", "files.oaiusercontent.com": "OpenAI",
         "auth0.com": "OpenAI", "api.statsig.com": "OpenAI", "sentry.io": "OpenAI",

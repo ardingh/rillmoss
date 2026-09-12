@@ -167,14 +167,25 @@ def install(root, bundle, replace=os.replace):
             raise
 
 
-def can_publish(root):
-    control = read(root / "policy/release.json")
-    if not control["publish_enabled"]:
-        return False
+def require_device_acceptance(control):
     acceptance = control.get("acceptance") or {}
     required = ("mac", "iphone", "ai_faults", "ipv4", "ipv6", "udp", "device_update")
     if any(acceptance.get(k) != "passed" for k in required) or not acceptance.get("evidence") or not acceptance.get("rules_version"):
         raise Invalid("Publication requires documented device acceptance")
+
+
+def can_publish(root):
+    control = read(root / "policy/release.json")
+    if not control["publish_enabled"]:
+        return False
+    authorization = control.get("user_authorization")
+    if authorization is not None:
+        if (not isinstance(authorization, dict)
+                or authorization.get("scope") != "current_policy_and_daily_source_updates"
+                or not authorization.get("confirmed_at") or not authorization.get("evidence")):
+            raise Invalid("Publication requires a documented user authorization with explicit scope")
+        return True
+    require_device_acceptance(control)
     return True
 
 
@@ -182,6 +193,8 @@ def rollback(root, bundle):
     _, report = verify(bundle)
     if not can_publish(bundle):
         raise Invalid("Rollback target has no completed device acceptance")
+    # Permission to use an unverified release does not make it a known-good rollback target.
+    require_device_acceptance(read(bundle / "policy/release.json"))
     acceptance = read(bundle / "policy/release.json")["acceptance"]
     if acceptance["rules_version"] != report["rules_version"]:
         raise Invalid("Rollback target version has not been explicitly confirmed usable")

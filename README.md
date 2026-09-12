@@ -2,7 +2,7 @@
 
 只供本人使用的 Shadowrocket 分流配置，共用于 iPhone 与 Mac。配置由个人决定和选定的公开规则来源生成，设备只需要一份完整的 `rillmoss.conf`。
 
-**已公开开发候选仓库，每日来源检查已启用；成品自动发布保持关闭。** 当前候选在 Mac 的住宅节点缺失测试中回退到普通 V3，不可作为已验收的日常配置。用户已暂缓后续故障复测；正常连接初测与已知失败分别保留，见[设备验收](docs/ACCEPTANCE.md)和[仓库交付记录](docs/PUBLICATION_REVIEW.md)。
+**本版本按用户决定启用日常使用与自动发布。** 每日任务在全部来源、规则约束和完整校验通过后更新同一个 `rillmoss.conf` 地址。住宅节点缺失时可能回退普通 V3，部分设备与协议尚未完成验收；这些限制保留，详见[启用决定](docs/RELEASE_DECISION.md)和[设备验收](docs/ACCEPTANCE.md)。
 
 | 策略组 | 唯一节点 |
 |---|---|
@@ -50,11 +50,11 @@ python3 -m rillmoss rebuild --bundle . --output .work/rebuilt.conf
 | [维护与恢复](docs/MAINTENANCE.md) | 每日任务、手动更新、来源失效、回退 |
 | [来源说明](docs/SOURCES.md) | 来源与引用范围 |
 
-## 日常使用（验收、发布后）
+## 日常使用
 
-本人仓库的[完整配置地址](https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf)已可访问，目前内容仍是开发候选。
+本人仓库的[完整配置地址](https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf)用于取得本次发布后的日常配置。
 
-[每日来源检查](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)也可点击 **Run workflow** 手动运行。当前只写回检查记录并保存完整候选，不替换上述配置。
+[每日来源检查](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)也可点击 **Run workflow** 手动运行。本版本开启发布后，全部检查通过才替换上述配置；任一失败保留原配置。
 
 两端均使用配置模式、保持 VPN 开启，核对没有更高优先级模块覆盖。设置配置后台更新间隔为 1 天，也可手动“更新配置”。GitHub 每日台北时间 08:08 触发，设备后台加载不保证同步或准点。
 

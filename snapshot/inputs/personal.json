@@ -110,6 +110,10 @@
       "^https?://(www.)?google.cn https://www.google.com 302"
     ]
   },
+  "claude_check_probe": {
+    "domain": "api64.ipify.org",
+    "policy": "V3 Static Residential"
+  },
   "claude_inbound": [
     "160.79.104.0/23",
     "2607:6bc0::/48"

@@ -9,6 +9,13 @@
       "target": "img.dongqiudi.com"
     },
     {
+      "actual": "V3 Static Residential",
+      "expected": "V3 Static Residential",
+      "matched": "api64.ipify.org",
+      "source": "Claude Check probe",
+      "target": "api64.ipify.org"
+    },
+    {
       "actual": "OpenAI",
       "expected": "OpenAI",
       "matched": "chatgpt.com",
@@ -23926,6 +23933,7 @@
     "DIRECT": 6213,
     "OpenAI": 25,
     "REJECT": 1,
+    "V3 Static Residential": 1,
     "常规境外": 36108
   },
   "removed": [
@@ -23935,8 +23943,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42367,
-  "rules_version": "abc9e9e5766e7d8f9b7e54dda269878519e640d09df36fcd198afe7c1f01439a",
+  "rule_count": 42368,
+  "rules_version": "36fec7683b5140dd0bc70518f06e285bac6ccfe004aaaadddfc7acbcdbbf7553",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

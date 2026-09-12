@@ -7,6 +7,7 @@
 | R01 苹果 | 保留完整 Apple 列表并固定 DIRECT；补充 Apple / iCloud / CloudKit 同步域名，`humb.apple.com` 明确直连。Apple 原始列表仍在原来的相对位置，只有明确核心例外前置。普通 Siri、听写、搜索不再进入混合 AI 分组。 |
 | R02 OpenAI | 替换混合 AI 入口：仅提取打底 AI 文件的 ChatGPT 段，合并 ACL4SSR OpenAi.list；统一 OpenAI 住宅分组，覆盖 ChatGPT / OpenAI / Codex 共用端点。 |
 | R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用官方入站 IPv4 `/23` 与 IPv6 `/48`、加 `no-resolve`。 |
+| Claude Check 检测 | 恢复旧规则的 `DOMAIN,api64.ipify.org,V3 Static Residential` 精确前置例外；只改变此检测域名，其他 ipify.org 域名仍按通用规则分流。个人输入保存为 `claude_check_probe`，本次不改 Claude Check 配置。 |
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
 | R04 懂球帝 | 补充 `DOMAIN-KEYWORD,apimg.qunliao.info,REJECT` 作为去广告起点。后续按广告和正常内容实测增补，不承诺单条规则去尽全部广告。 |
 | R05 国内 | 沿用打底国内专用、通用 China、GEOIP CN；哔哩哔哩固定 DIRECT。重点名单保存在 personal.json，第一版不为每个应用添加独立来源。 |

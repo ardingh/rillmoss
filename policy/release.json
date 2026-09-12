@@ -1,5 +1,10 @@
 {
-  "publish_enabled": false,
-  "reason": "Mac 住宅节点缺失测试失败：两个 AI 分组回退普通 V3。修复并完成必需设备验收前禁止日常启用与成品自动发布；开发候选仓库及每日来源检查已获用户确认。证据见 reports/mac-missing-residential-20260910.json",
-  "acceptance": null
+  "acceptance": null,
+  "publish_enabled": true,
+  "reason": "用户明确决定先正式启用并自动发布，后续遇到问题再修复；已知限制与未完成验收保留，不声明设备验收通过。",
+  "user_authorization": {
+    "confirmed_at": "2026-09-12T15:41:10+00:00",
+    "evidence": "docs/RELEASE_DECISION.md",
+    "scope": "current_policy_and_daily_source_updates"
+  }
 }

@@ -2,7 +2,7 @@
 
 ## 每日更新
 
-GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 [Actions 页面](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)手动 **Run workflow**。2026-09-10 已启用并成功手动运行；当前成品自动发布暂停，每日任务只检查、记录并保存候选。
+GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 [Actions 页面](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)手动 **Run workflow**。每日任务已于 2026-09-10 启用。本版本按 2026-09-12 用户决定开启成品自动发布：全部检查成功才采用候选，失败时保留原成品。
 
 执行顺序：测试 → 固定各 GitHub 来源仓库的提交 → 同轮抓取全部 35 项 → 严格解析 → 检查条数与出口 → 暂存完整候选 → 记录真实检查 → 一次 Git 提交写回。HTTP 每次最多 30 秒、最多 3 次；HTTPS 下载和重定向均要求证书验证。网页保存原始字节与 SHA-256。
 
@@ -41,9 +41,9 @@ python3 -m unittest discover -s tests -v
 
 2026-09-10 经用户明确确认，已使用 work 账号 `ardingh` 创建公开仓库 [ardingh/rillmoss](https://github.com/ardingh/rillmoss)，通过本项目 `github-work` 身份普通推送。公开范围为代码、开发候选、个人策略选择、公开来源快照和脱敏检查结果，没有节点凭据、设备备份或原始连接日志，也没有创建 GitHub Release。具体范围和验证见 [仓库交付记录](PUBLICATION_REVIEW.md)。
 
-开发仓库公开不代表日常版本验收通过。故障复测按用户要求暂缓，`publish_enabled: false`、`acceptance: null` 保持不变。后续经用户要求恢复验收时，先解决已知住宅缺失回退，再按 Mac、iPhone 的实际结果推进；VPN 操作均由用户手动完成。
+开发仓库公开不代表日常版本验收通过。故障复测按用户要求暂缓，该初次交付的暂停状态现由[启用决定](RELEASE_DECISION.md)取代；当前 `acceptance: null` 保留，发布依据为明确的 `user_authorization`。VPN 操作均由用户手动完成。
 
-全部必需项目真实通过后才能填写 `policy/release.json` 的 `acceptance`：`mac`、`iphone`、`ai_faults`、`ipv4`、`ipv6`、`udp`、`device_update` 为 `passed`，并记录 `rules_version` 与 `evidence`。软件不能判断人为填写是否真实，严禁凭静态测试填写设备结果。成品自动写回须在验收完成、取得对应确认后才改为 `publish_enabled: true`。
+采用设备验收作为发布依据时，全部必需项目真实通过后才能填写 `policy/release.json` 的 `acceptance`：`mac`、`iphone`、`ai_faults`、`ipv4`、`ipv6`、`udp`、`device_update` 为 `passed`，并记录 `rules_version` 与 `evidence`。软件不能判断人为填写是否真实，严禁凭静态测试填写设备结果。本次用户已明确选择先启用，使用 `user_authorization` 记录范围、时间和证据，并保留 `acceptance: null`；这不跳过来源、条数、规则约束或完整快照校验。
 
 2026-09-10 已只读核对 work 账号的 Actions 通知：站内和默认通知邮箱均已配置为仅失败工作流；没有修改账号设置，也未验证邮件实际送达。第一版仅用 GitHub 原生失败通知，不添加独立监测服务；完全漏跑不会主动报警。[通知机制](https://docs.github.com/en/actions/concepts/workflows-and-actions/notifications-for-workflow-runs)
 

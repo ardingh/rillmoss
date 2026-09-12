@@ -114,6 +114,24 @@ class PolicyTests(unittest.TestCase):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
 
+    def test_claude_check_probe_is_exact_and_precedes_general_ipify(self):
+        self.assertEqual(build.route(self.entries, host="api64.ipify.org")[0], "V3 Static Residential")
+        for host in ("ipify.org", "api.ipify.org", "other.api64.ipify.org"):
+            with self.subTest(host=host):
+                self.assertEqual(build.route(self.entries, host=host)[0], "常规境外")
+        bad = [(r, p, origin) for r, p, origin in self.entries
+               if r != Rule("DOMAIN", "api64.ipify.org")]
+        with self.assertRaisesRegex(Invalid, "Routing constraint failed: api64.ipify.org"):
+            build.constraints(bad, self.personal, self.parsed)
+
+    def test_claude_check_probe_rejects_unapproved_target_or_exit(self):
+        for key, value in (("domain", "ipify.org"), ("policy", "常规境外"), ("policy", "DIRECT")):
+            with self.subTest(key=key, value=value):
+                personal = copy.deepcopy(self.personal)
+                personal["claude_check_probe"][key] = value
+                with self.assertRaisesRegex(Invalid, "Claude Check probe"):
+                    build.compose(self.parsed, self.manifest, personal)
+
     def test_exact_ths_and_ai_shared_ownership(self):
         ths = [r.value for r, p, origin in self.entries if origin == "R03" and p == "DIRECT"]
         self.assertEqual(ths, build.THS)
@@ -192,6 +210,8 @@ class BundleTests(unittest.TestCase):
                 shutil.copytree(source, target)
             else:
                 shutil.copy2(source, target)
+        # Each fixture starts paused regardless of the deployed repository's release setting.
+        runner.write(self.root / "policy/release.json", dict(publish_enabled=False, acceptance=None))
 
     def fingerprint(self):
         return {str(p.relative_to(self.root)): fetch.digest(p.read_bytes()) for p in self.root.rglob("*")
@@ -258,6 +278,57 @@ class BundleTests(unittest.TestCase):
         with self.assertRaises(Invalid):
             runner.rollback(self.root, ROOT)
         self.assertEqual(before, self.fingerprint())
+
+    def authorize_publication(self):
+        runner.write(self.root / "policy/release.json", dict(
+            publish_enabled=True, acceptance=None,
+            user_authorization=dict(scope="current_policy_and_daily_source_updates",
+                                    confirmed_at="2026-09-12T00:00:00+00:00",
+                                    evidence="synthetic test fixture")))
+
+    def test_user_authorization_preserves_unverified_acceptance_and_pause(self):
+        self.authorize_publication()
+        self.assertTrue(runner.can_publish(self.root))
+        control = runner.read(self.root / "policy/release.json")
+        self.assertIsNone(control["acceptance"])
+        control["publish_enabled"] = False
+        runner.write(self.root / "policy/release.json", control)
+        self.assertFalse(runner.can_publish(self.root))
+
+    def test_incomplete_user_authorization_cannot_publish(self):
+        for field in ("scope", "confirmed_at", "evidence"):
+            with self.subTest(field=field):
+                self.authorize_publication()
+                control = runner.read(self.root / "policy/release.json")
+                control["user_authorization"][field] = ""
+                runner.write(self.root / "policy/release.json", control)
+                with self.assertRaisesRegex(Invalid, "user authorization"):
+                    runner.can_publish(self.root)
+
+    def test_authorized_update_installs_complete_bundle_with_probe_rule(self):
+        self.authorize_publication()
+        real_stage = runner.stage
+        def collector(manifest, raw):
+            shutil.copytree(self.root / "snapshot/raw", raw)
+            return runner.read(self.root / "snapshot/manifest.json")["upstream"]
+        def stage(root, candidate):
+            return real_stage(root, candidate, collector=collector)
+        with patch("rillmoss.runner.stage", side_effect=stage), patch(
+                "rillmoss.runner.install", wraps=runner.install) as installed:
+            self.assertEqual(runner.update(self.root), 0)
+            installed.assert_called_once()
+        conf, _ = runner.verify(self.root)
+        self.assertIn("DOMAIN,api64.ipify.org,V3 Static Residential", conf)
+        self.assertTrue(runner.read(self.root / "checks/latest.json")["publication_enabled"])
+        self.assertIsNone(runner.read(self.root / "policy/release.json")["acceptance"])
+
+    def test_authorized_failed_update_preserves_current_bundle(self):
+        self.authorize_publication()
+        before = self.fingerprint()
+        with patch("rillmoss.runner.stage", side_effect=Invalid("simulated upstream failure")):
+            self.assertEqual(runner.update(self.root), 1)
+        self.assertEqual(before, self.fingerprint())
+        self.assertFalse(runner.read(self.root / "checks/latest.json")["bundle_applied"])
 
     def test_rollback_pauses_publication_and_restores_whole_bundle(self):
         source = Path(self.temp.name) / "accepted"
