@@ -9,7 +9,7 @@ from .parse import Invalid, Rule
 from .fetch import digest
 
 
-GROUPS = {"常规境外": "V3（vless+vision+reality）", "OpenAI": "V3 Static Residential",
+GROUPS = {"Overseas": "V3（vless+vision+reality）", "OpenAI": "V3 Static Residential",
           "Claude": "V3 Static Residential"}
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
@@ -92,7 +92,7 @@ def compose(parsed, manifest, personal):
     for domain in personal["tonghuashun"]:
         add(Rule("DOMAIN-SUFFIX", domain), "DIRECT", "R03", required=True)
     add(Rule("DOMAIN-KEYWORD", "apimg.qunliao.info"), "REJECT", "R04", required=True)
-    add(Rule("DOMAIN-SUFFIX", "bytedapm.com"), "常规境外", "TikTok exception", required=True)
+    add(Rule("DOMAIN-SUFFIX", "bytedapm.com"), "Overseas", "TikTok exception", required=True)
     add(Rule("DOMAIN-SUFFIX", "snssdk.com"), "DIRECT", "DouYin exception", required=True)
     for row in manifest["base_order"]:
         if "source" in row:
@@ -132,7 +132,7 @@ def route(entries, host=None, address=None):
             return policy, origin, r.value
         if ip and r.kind in {"IP-CIDR", "IP-CIDR6"} and ip in ipaddress.ip_network(r.value):
             return policy, origin, r.value
-    return "常规境外", "FINAL", "FINAL"
+    return "Overseas", "FINAL", "FINAL"
 
 
 def constraints(entries, personal, parsed):
@@ -163,9 +163,9 @@ def constraints(entries, personal, parsed):
         "p01-ckdatabasews.icloud.com": "DIRECT", "p01-content.icloud-content.com": "DIRECT",
         "api.apple-cloudkit.com": "DIRECT", "courier.push.apple.com": "DIRECT",
         "apimg.qunliao.info": "REJECT",
-        "bytedapm.com": "常规境外", "a.bytedapm.com": "常规境外", "snssdk.com": "DIRECT",
+        "bytedapm.com": "Overseas", "a.bytedapm.com": "Overseas", "snssdk.com": "DIRECT",
         "api.snssdk.com": "DIRECT", "www.bilibili.com": "DIRECT", "api.bilibili.com": "DIRECT",
-        "github.com": "常规境外", "registry.npmjs.org": "常规境外", "www.google.com": "常规境外",
+        "github.com": "Overseas", "registry.npmjs.org": "Overseas", "www.google.com": "Overseas",
         "weixin.qq.com": "DIRECT", "www.zhihu.com": "DIRECT", "www.douban.com": "DIRECT",
     }
     expected.update({d: "DIRECT" for d in THS})
@@ -229,7 +229,7 @@ def render(entries, personal):
             blocks.append(f"# {origin}")
             previous = origin
         blocks.append(r.render(policy))
-    blocks.extend(["GEOIP,CN,DIRECT", "FINAL,常规境外"])
+    blocks.extend(["GEOIP,CN,DIRECT", "FINAL,Overseas"])
     for section in ("Host", "URL Rewrite", "MITM"):
         blocks.extend(["", f"[{section}]", *personal["sections"][section]])
     body = "\n".join(blocks) + "\n"

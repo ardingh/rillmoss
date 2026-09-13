@@ -2,7 +2,7 @@
   "base_changes_not_imported": {},
   "checks": [
     {
-      "actual": "常规境外",
+      "actual": "Overseas",
       "expected": "not REJECT (GeoIP needs device resolution)",
       "matched": "FINAL",
       "source": "FINAL",
@@ -177,15 +177,15 @@
       "target": "apimg.qunliao.info"
     },
     {
-      "actual": "常规境外",
-      "expected": "常规境外",
+      "actual": "Overseas",
+      "expected": "Overseas",
       "matched": "bytedapm.com",
       "source": "TikTok exception",
       "target": "bytedapm.com"
     },
     {
-      "actual": "常规境外",
-      "expected": "常规境外",
+      "actual": "Overseas",
+      "expected": "Overseas",
       "matched": "bytedapm.com",
       "source": "TikTok exception",
       "target": "a.bytedapm.com"
@@ -219,22 +219,22 @@
       "target": "api.bilibili.com"
     },
     {
-      "actual": "常规境外",
-      "expected": "常规境外",
+      "actual": "Overseas",
+      "expected": "Overseas",
       "matched": "github.com",
       "source": "github",
       "target": "github.com"
     },
     {
-      "actual": "常规境外",
-      "expected": "常规境外",
+      "actual": "Overseas",
+      "expected": "Overseas",
       "matched": "npmjs.org",
       "source": "github",
       "target": "registry.npmjs.org"
     },
     {
-      "actual": "常规境外",
-      "expected": "常规境外",
+      "actual": "Overseas",
+      "expected": "Overseas",
       "matched": "google.com",
       "source": "google",
       "target": "www.google.com"
@@ -23932,9 +23932,9 @@
     "Claude": 18,
     "DIRECT": 6213,
     "OpenAI": 25,
+    "Overseas": 36108,
     "REJECT": 1,
-    "V3 Static Residential": 1,
-    "常规境外": 36108
+    "V3 Static Residential": 1
   },
   "removed": [
     {
@@ -23944,7 +23944,7 @@
     }
   ],
   "rule_count": 42368,
-  "rules_version": "bb0a6bff9c6f29b15b4a01708dd2dc28c76d85b64aac359a58d6d7cf05ec7e74",
+  "rules_version": "15253892e229b03f3c594a3dcb536de96e93856841d12991fc8347dab9d6bf67",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

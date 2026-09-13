@@ -5,76 +5,76 @@
       "source": "openai-base"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "youtube"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "netflix"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "disney"
     },
     {
-      "rule": "DOMAIN-SUFFIX,litix.io,常规境外"
+      "rule": "DOMAIN-SUFFIX,litix.io,Overseas"
     },
     {
-      "rule": "DOMAIN-SUFFIX,discomax.com,常规境外"
+      "rule": "DOMAIN-SUFFIX,discomax.com,Overseas"
     },
     {
-      "rule": "DOMAIN-SUFFIX,brightline.tv,常规境外"
+      "rule": "DOMAIN-SUFFIX,brightline.tv,Overseas"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "hbo"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "spotify"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "telegram"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "paypal"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "twitter"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "facebook"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "amazon"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "sony"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "steamcn"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "game"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "github"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "microsoft"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "google"
     },
     {
@@ -118,11 +118,11 @@
       "source": "douyin"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "tiktok"
     },
     {
-      "policy": "常规境外",
+      "policy": "Overseas",
       "source": "global"
     },
     {
@@ -137,7 +137,7 @@
       "rule": "GEOIP,CN,DIRECT"
     },
     {
-      "rule": "FINAL,常规境外"
+      "rule": "FINAL,Overseas"
     }
   ],
   "excluded_references": [

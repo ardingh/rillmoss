@@ -151,7 +151,7 @@
   "groups": {
     "Claude": "V3 Static Residential",
     "OpenAI": "V3 Static Residential",
-    "常规境外": "V3（vless+vision+reality）"
+    "Overseas": "V3（vless+vision+reality）"
   },
   "required_ai_targets": [
     "anthropic-com.ghost.io",

@@ -6,7 +6,7 @@
 
 | 策略组 | 唯一节点 |
 |---|---|
-| 常规境外 | `V3（vless+vision+reality）` |
+| Overseas | `V3（vless+vision+reality）` |
 | OpenAI | `V3 Static Residential` |
 | Claude | `V3 Static Residential` |
 

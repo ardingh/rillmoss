@@ -11,7 +11,7 @@
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
 | R04 懂球帝 | 补充 `DOMAIN-KEYWORD,apimg.qunliao.info,REJECT` 作为去广告起点。后续按广告和正常内容实测增补，不承诺单条规则去尽全部广告。 |
 | R05 国内 | 沿用打底国内专用、通用 China、GEOIP CN；哔哩哔哩固定 DIRECT。重点名单保存在 personal.json，第一版不为每个应用添加独立来源。 |
-| 海外服务 | 保留 YouTube、Netflix、Disney、HBO/Max、Spotify、Telegram、PayPal、Twitter、Facebook、Amazon、GitHub、Microsoft、Google、TikTok，策略归并为常规境外。 |
+| 海外服务 | 保留 YouTube、Netflix、Disney、HBO/Max、Spotify、Telegram、PayPal、Twitter、Facebook、Amazon、GitHub、Microsoft、Google、TikTok，策略归并为Overseas。 |
 | 游戏 | 保留 Sony、SteamCN、Game；删除被 Game 覆盖的 Nintendo、Epic、Steam 独立引用。SteamCN 仍代理。 |
 | 字节跳动例外 | `bytedapm.com` 及子域明确代理，早于国内通用规则；`snssdk.com` 及子域直连，移除代理侧重复。 |
 | 策略组 | 删除地区测速组与合并后的服务组，只保留三个精确绑定的固定 select 组。 |
@@ -33,3 +33,5 @@ close-if-proxy-chain-missing = true
 ```
 
 最后一项是新增的中转缺失保护，不能替代住宅节点本身异常的实际验收。未知的新 AI 端点仍可能没有被静态列表覆盖，必须在真实功能测试中核对。
+
+2026-09-13：用户确认将境外策略组名称统一改为 `Overseas`。所有规则引用与 FINAL 同步改名，仍绑定原普通 V3；分流顺序、目标、节点及住宅策略不变。

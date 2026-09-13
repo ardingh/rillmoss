@@ -118,14 +118,14 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(build.route(self.entries, host="api64.ipify.org")[0], "V3 Static Residential")
         for host in ("ipify.org", "api.ipify.org", "other.api64.ipify.org"):
             with self.subTest(host=host):
-                self.assertEqual(build.route(self.entries, host=host)[0], "常规境外")
+                self.assertEqual(build.route(self.entries, host=host)[0], "Overseas")
         bad = [(r, p, origin) for r, p, origin in self.entries
                if r != Rule("DOMAIN", "api64.ipify.org")]
         with self.assertRaisesRegex(Invalid, "Routing constraint failed: api64.ipify.org"):
             build.constraints(bad, self.personal, self.parsed)
 
     def test_claude_check_probe_rejects_unapproved_target_or_exit(self):
-        for key, value in (("domain", "ipify.org"), ("policy", "常规境外"), ("policy", "DIRECT")):
+        for key, value in (("domain", "ipify.org"), ("policy", "Overseas"), ("policy", "DIRECT")):
             with self.subTest(key=key, value=value):
                 personal = copy.deepcopy(self.personal)
                 personal["claude_check_probe"][key] = value
@@ -148,7 +148,7 @@ class PolicyTests(unittest.TestCase):
 
     def test_exit_constraints_cannot_be_bypassed_by_new_baseline(self):
         personal = copy.deepcopy(self.personal)
-        personal["groups"]["OpenAI"] = build.GROUPS["常规境外"]
+        personal["groups"]["OpenAI"] = build.GROUPS["Overseas"]
         with self.assertRaises(Invalid):
             build.build(self.raw, self.manifest, personal, self.counts)
         bad = [(r, "DIRECT" if origin.startswith("openai") else p, origin)
@@ -172,7 +172,7 @@ class PolicyTests(unittest.TestCase):
                     self.assertEqual(build.route(self.entries, host=r.value)[0], "DIRECT")
 
     def test_removes_foreign_snssdk_preserves_bytedapm(self):
-        self.assertEqual(build.route(self.entries, host="a.bytedapm.com")[0], "常规境外")
+        self.assertEqual(build.route(self.entries, host="a.bytedapm.com")[0], "Overseas")
         self.assertEqual(build.route(self.entries, host="a.snssdk.com")[0], "DIRECT")
         self.assertFalse(any(p != "DIRECT" and (r.value == "snssdk.com" or r.value.endswith(".snssdk.com"))
                              for r, p, _ in self.entries))
