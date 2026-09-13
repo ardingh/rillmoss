@@ -12,6 +12,8 @@ GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:0
 
 成功候选还保留在本地 `.work/check-*/bundle/`；GitHub 工作流保存完整候选 Artifact 30 天，便于暂停发布时核对。已采用版本的永久历史由 Git 提交保存，包括对应快照。若需要长期保存尚未采用的候选，下载其完整 Artifact，不能只保存其中某份来源。
 
+月度完整归档由独立 `backup.yml` 处理：每月 15 日固定当时已发布的完整提交，日期标签长期保留，不依赖 Artifact 的 30 天期限。每日来源检查结束后也会检查当月是否需要补做；上游失败仍可归档最后成功版本。归档日期、实际执行时间和规则生成时间分别记录，恢复步骤见[完整备份](BACKUP.md)。此流程随工作流发布到 main 后生效，本地文件存在不代表云端已经启用。
+
 工作流使用仓库 `GITHUB_TOKEN` 的 `contents: write`，不需要个人 token。只暂存明确的成品、对应输入、快照和检查记录。任务并发组串行化，脚本另有本地排他锁。开始提交前确认远端 main 未变；提交后 push 如遇竞态或分叉立即失败，不 rebase、不 force。
 
 GitHub 的计划任务可能延迟、漏跑，公开仓库长期无活动也可能暂停。08:08 仅是触发时间。设备后台更新还受系统调度、应用退出与网络影响。[GitHub 调度说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)

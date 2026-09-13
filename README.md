@@ -48,6 +48,7 @@ python3 -m rillmoss rebuild --bundle . --output .work/rebuilt.conf
 | [个人决定](docs/DECISIONS.md) | 对打底的保留、替换与删减 |
 | [设备验收](docs/ACCEPTANCE.md) | 日常启用前的 Mac / iPhone 验收及实际结果 |
 | [维护与恢复](docs/MAINTENANCE.md) | 每日任务、手动更新、来源失效、回退 |
+| [完整备份](docs/BACKUP.md) | 每月 15 日日期归档、漏跑补做与离线恢复 |
 | [来源说明](docs/SOURCES.md) | 来源与引用范围 |
 
 ## 日常使用
