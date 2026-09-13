@@ -680,7 +680,27 @@
     {
       "kept": "R01",
       "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud-content.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple-dns.net"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
     },
     {
       "kept": "R01",
@@ -700,27 +720,7 @@
     {
       "kept": "R01",
       "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud-content.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,icloud-content.com.cn"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
     },
     {
       "kept": "DouYin exception",
@@ -23944,7 +23944,7 @@
     }
   ],
   "rule_count": 42368,
-  "rules_version": "36fec7683b5140dd0bc70518f06e285bac6ccfe004aaaadddfc7acbcdbbf7553",
+  "rules_version": "bb0a6bff9c6f29b15b4a01708dd2dc28c76d85b64aac359a58d6d7cf05ec7e74",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
