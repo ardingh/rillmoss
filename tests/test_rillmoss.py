@@ -371,8 +371,17 @@ class BundleTests(unittest.TestCase):
             return runner.read(self.root / "snapshot/manifest.json")["upstream"]
         output = self.root / ".work/rechecked"
         runner.stage(self.root, output, collector=collector)
-        self.assertEqual(runner.read(output / "version.json"), runner.read(self.root / "version.json"))
+        old, new = runner.read(self.root / "version.json"), runner.read(output / "version.json")
+        # A successful count change refreshes the next snapshot's baseline input,
+        # even when its rule content and upstream provenance are unchanged.
+        self.assertEqual(old["rules_version"], new["rules_version"])
+        self.assertEqual(old["rules_built_at"], new["rules_built_at"])
         self.assertEqual((output / "rillmoss.conf").read_bytes(), (self.root / "rillmoss.conf").read_bytes())
+        runner.install(self.root, output)
+        repeated = self.root / ".work/rechecked-again"
+        runner.stage(self.root, repeated, collector=collector)
+        self.assertEqual(runner.read(repeated / "version.json"), new)
+        self.assertEqual((repeated / "rillmoss.conf").read_bytes(), (output / "rillmoss.conf").read_bytes())
 
     def test_upstream_commit_change_is_not_a_fake_rule_version(self):
         def collector(manifest, raw):
