@@ -132,12 +132,76 @@ class PolicyTests(unittest.TestCase):
                 with self.assertRaisesRegex(Invalid, "Claude Check probe"):
                     build.compose(self.parsed, self.manifest, personal)
 
-    def test_exact_ths_and_ai_shared_ownership(self):
+    def test_exact_ths_and_independent_claude_shared_rules(self):
         ths = [r.value for r, p, origin in self.entries if origin == "R03" and p == "DIRECT"]
         self.assertEqual(ths, build.THS)
         for domain in ("sentry.io", "intercom.io", "intercomcdn.com"):
             matches = [(r, p) for r, p, _ in self.entries if r == Rule("DOMAIN-SUFFIX", domain)]
-            self.assertEqual(matches, [(Rule("DOMAIN-SUFFIX", domain), "OpenAI")])
+            self.assertEqual(matches, [(Rule("DOMAIN-SUFFIX", domain), p) for p in ("Claude", "OpenAI")])
+
+    def test_either_ai_group_survives_removing_the_other_sources(self):
+        for remaining, removed in (("Claude", "OpenAI"), ("OpenAI", "Claude")):
+            parsed = copy.deepcopy(self.parsed)
+            for sid in build.AI_SOURCES[removed]:
+                parsed[sid] = []
+            entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+            for text in self.personal[f"{remaining.lower()}_required_rules"]:
+                r = parse.rule(text)
+                hosts = [r.value]
+                if r.kind == "DOMAIN-SUFFIX":
+                    hosts.append("probe." + r.value)
+                for host in hosts:
+                    with self.subTest(remaining=remaining, host=host):
+                        self.assertEqual(build.route(entries, host=host)[0], remaining)
+
+    def test_openai_cannot_mask_loss_of_a_required_claude_rule(self):
+        for domain in ("sentry.io", "intercom.io", "intercomcdn.com", "anthropic.auth0.com", "statsigapi.net"):
+            with self.subTest(domain=domain):
+                parsed = copy.deepcopy(self.parsed)
+                parsed["claude-page"] = [r for r in parsed["claude-page"] if r.value != domain]
+                entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+                with self.assertRaisesRegex(Invalid, "Required Claude rule missing|Routing constraint failed"):
+                    build.constraints(entries, self.personal, parsed)
+
+    def test_claude_cannot_mask_loss_of_a_required_openai_rule(self):
+        for domain in ("sentry.io", "intercom.io", "intercomcdn.com", "events.statsigapi.net",
+                       "api-iam.intercom.io", "o33249.ingest.sentry.io"):
+            with self.subTest(domain=domain):
+                parsed = copy.deepcopy(self.parsed)
+                for sid in build.AI_SOURCES["OpenAI"]:
+                    parsed[sid] = [r for r in parsed[sid] if r.value != domain]
+                entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+                with self.assertRaisesRegex(Invalid, "Required OpenAI rule missing"):
+                    build.constraints(entries, self.personal, parsed)
+
+    def test_claude_first_resolves_shared_dependencies_and_keeps_openai_core(self):
+        for host in ("sentry.io", "intercom.io", "intercomcdn.com", "anthropic.auth0.com", "events.statsigapi.net",
+                     "api-iam.intercom.io", "o33249.ingest.sentry.io", "api.anthropic.com",
+                     "api.statsigapi.net", "browser-intake-us5-datadoghq.com"):
+            with self.subTest(host=host):
+                self.assertEqual(build.route(self.entries, host=host)[0], "Claude")
+        for host in ("api.openai.com", "chatgpt.com", "cdn.oaistatic.com", "files.oaiusercontent.com",
+                     "auth0.com", "api.statsig.com", "challenges.cloudflare.com", "stripe.com"):
+            with self.subTest(host=host):
+                self.assertEqual(build.route(self.entries, host=host)[0], "OpenAI")
+
+    def test_new_claude_source_domain_cannot_be_shadowed_by_openai(self):
+        parsed = copy.deepcopy(self.parsed)
+        parsed["claude-page"].append(Rule("DOMAIN", "new-claude.auth0.com"))
+        entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+        build.constraints(entries, self.personal, parsed)
+        # An accidental earlier OpenAI wildcard must fail even for a new endpoint.
+        entries.insert(0, (Rule("DOMAIN-SUFFIX", "new-claude.auth0.com"), "OpenAI", "test"))
+        with self.assertRaisesRegex(Invalid, "Claude domain lost its routing priority"):
+            build.constraints(entries, self.personal, parsed)
+
+    def test_invalid_ai_order_cannot_drop_duplicate_or_reverse_groups(self):
+        for order in ([], ["Claude"], ["Claude", "Claude"], ["OpenAI", "Claude"], ["Claude", "Other"]):
+            with self.subTest(order=order):
+                personal = copy.deepcopy(self.personal)
+                personal["ai_rule_order"] = order
+                with self.assertRaisesRegex(Invalid, "AI rule order"):
+                    build.compose(self.parsed, self.manifest, personal)
 
     def test_humb_is_direct_even_if_future_ai_source_adds_it(self):
         parsed = copy.deepcopy(self.parsed)
@@ -162,7 +226,7 @@ class PolicyTests(unittest.TestCase):
         # One removal is within the 20% count threshold; the route guard still blocks it.
         build.check_counts({"openai-base": 12}, {"openai-base": 13})
         entries, _, _ = build.compose(parsed, self.manifest, self.personal)
-        with self.assertRaisesRegex(Invalid, "Known AI endpoint"):
+        with self.assertRaisesRegex(Invalid, "Required OpenAI rule missing"):
             build.constraints(entries, self.personal, parsed)
 
     def test_entire_bilibili_domain_set_is_direct(self):

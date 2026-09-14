@@ -11,6 +11,8 @@ from .fetch import digest
 
 GROUPS = {"Overseas": "V3（vless+vision+reality）", "OpenAI": "V3 Static Residential",
           "Claude": "V3 Static Residential"}
+AI_SOURCES = {"Claude": ("claude-page", "claude-ips"),
+              "OpenAI": ("openai-base", "openai-acl")}
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
@@ -64,15 +66,20 @@ def check_counts(counts, baseline):
 
 def compose(parsed, manifest, personal):
     entries, seen, duplicates, removed = [], {}, [], []
+    retained_policies = set()
 
     def add(r, policy, origin, required=False):
         # Parent-domain compaction is intentionally absent: THS keeps all 12 rows.
-        if r in seen:
+        # AI groups keep separate copies of shared rules regardless of priority.
+        # Removing either group must not remove the other's coverage.
+        keep_ai_copy = policy in {"OpenAI", "Claude"} and (r, policy) not in retained_policies
+        if r in seen and not keep_ai_copy:
             duplicates.append(dict(rule=f"{r.kind},{r.value}", kept=seen[r], removed=origin))
             if required:
                 raise Invalid("Duplicate required personal rule")
             return
-        seen[r] = origin
+        seen.setdefault(r, origin)
+        retained_policies.add((r, policy))
         entries.append((r, policy, origin))
 
     add(Rule("DOMAIN", "humb.apple.com"), "DIRECT", "R01")
@@ -81,12 +88,16 @@ def compose(parsed, manifest, personal):
         raise Invalid("Claude Check probe must retain its exact residential route")
     add(Rule("DOMAIN", probe["domain"]), probe["policy"], "Claude Check probe", required=True)
     # AI first; broad Apple/China sources must not override shared dependencies.
-    for sid in ("openai-base", "openai-acl", "claude-page", "claude-ips"):
-        for r in parsed[sid]:
-            if r.value == "humb.apple.com":
-                removed.append(dict(source=sid, rule=r.value, reason="Apple DIRECT exception"))
-                continue
-            add(r, "OpenAI" if sid.startswith("openai") else "Claude", sid)
+    order = personal["ai_rule_order"]
+    if order != ["Claude", "OpenAI"]:
+        raise Invalid("AI rule order must preserve the approved Claude-first priority")
+    for policy in order:
+        for sid in AI_SOURCES[policy]:
+            for r in parsed[sid]:
+                if r.value == "humb.apple.com":
+                    removed.append(dict(source=sid, rule=r.value, reason="Apple DIRECT exception"))
+                    continue
+                add(r, policy, sid)
     for domain in personal["apple_sync"]:
         add(Rule("DOMAIN-SUFFIX", domain), "DIRECT", "R01", required=True)
     for domain in personal["tonghuashun"]:
@@ -155,7 +166,10 @@ def constraints(entries, personal, parsed):
         "api64.ipify.org": "V3 Static Residential",
         "chatgpt.com": "OpenAI", "api.openai.com": "OpenAI", "chatgpt.com/backend-api": "OpenAI",
         "cdn.oaistatic.com": "OpenAI", "files.oaiusercontent.com": "OpenAI",
-        "auth0.com": "OpenAI", "api.statsig.com": "OpenAI", "sentry.io": "OpenAI",
+        "auth0.com": "OpenAI", "api.statsig.com": "OpenAI", "sentry.io": "Claude",
+        "anthropic.auth0.com": "Claude", "events.statsigapi.net": "Claude",
+        "intercom.io": "Claude", "intercomcdn.com": "Claude",
+        "api-iam.intercom.io": "Claude", "o33249.ingest.sentry.io": "Claude",
         "claude.ai": "Claude", "api.anthropic.com": "Claude", "claudeusercontent.com": "Claude",
         "browser-intake-us5-datadoghq.com": "Claude", "api.sift.com": "Claude",
         "humb.apple.com": "DIRECT", "guzzoni.apple.com": "DIRECT", "smoot.apple.com": "DIRECT",
@@ -193,19 +207,32 @@ def constraints(entries, personal, parsed):
             address = str(ipaddress.ip_network(r.value).network_address)
             if route(entries, address=address)[0] != "DIRECT":
                 raise Invalid("BiliBili IP range is shadowed by a proxy rule")
-    # Every source AI rule survives with an AI policy; exact cross-group duplicates use OpenAI.
-    by_rule = {r: p for r, p, _ in entries}
-    for sid in ("openai-base", "openai-acl", "claude-page", "claude-ips"):
-        for r in parsed[sid]:
-            if r.value == "humb.apple.com":
-                continue
-            if by_rule.get(r) not in {"OpenAI", "Claude"}:
-                raise Invalid("AI source rule lost its residential policy")
-            # A synthetic subdomain also catches broader earlier DIRECT/foreign matches.
-            if r.kind in {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD"}:
-                probe = "check." + r.value if r.kind == "DOMAIN-SUFFIX" else r.value
-                if route(entries, host=probe)[0] not in {"OpenAI", "Claude"}:
-                    raise Invalid("AI domain shadowed by an earlier non-residential rule")
+    # Separate inventories prevent one AI group from masking missing rules in
+    # the other. Shared domains still follow the approved first-match priority.
+    for policy, sources in AI_SOURCES.items():
+        own_rules = {r for r, p, _ in entries if p == policy}
+        required = personal[f"{policy.lower()}_required_rules"]
+        if not required:
+            raise Invalid(f"Known {policy} rule guard must not be empty")
+        for text in required:
+            if parse.rule(text) not in own_rules:
+                raise Invalid(f"Required {policy} rule missing from {policy} policy: {text}")
+        for sid in sources:
+            for r in parsed[sid]:
+                if r.value == "humb.apple.com":
+                    continue
+                if r not in own_rules:
+                    raise Invalid(f"{policy} source rule lost its own policy")
+                if r.kind in {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD"}:
+                    probes = [r.value]
+                    if r.kind == "DOMAIN-SUFFIX":
+                        probes.append("check." + r.value)
+                    for probe in probes:
+                        actual = route(entries, host=probe)[0]
+                        if actual not in {"OpenAI", "Claude"}:
+                            raise Invalid("AI domain shadowed by an earlier non-residential rule")
+                        if policy == "Claude" and actual != "Claude":
+                            raise Invalid(f"Claude domain lost its routing priority: {probe}")
     # Counts alone do not catch the loss of a single important known endpoint.
     if not personal["required_ai_targets"]:
         raise Invalid("Known AI endpoint guard must not be empty")

@@ -65,11 +65,53 @@
       "target": "api.statsig.com"
     },
     {
-      "actual": "OpenAI",
-      "expected": "OpenAI",
+      "actual": "Claude",
+      "expected": "Claude",
       "matched": "sentry.io",
-      "source": "openai-acl",
+      "source": "claude-page",
       "target": "sentry.io"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "anthropic.auth0.com",
+      "source": "claude-page",
+      "target": "anthropic.auth0.com"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "statsigapi.net",
+      "source": "claude-page",
+      "target": "events.statsigapi.net"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "intercom.io",
+      "source": "claude-page",
+      "target": "intercom.io"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "intercomcdn.com",
+      "source": "claude-page",
+      "target": "intercomcdn.com"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "intercom.io",
+      "source": "claude-page",
+      "target": "api-iam.intercom.io"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "sentry.io",
+      "source": "claude-page",
+      "target": "o33249.ingest.sentry.io"
     },
     {
       "actual": "Claude",
@@ -360,7 +402,7 @@
     }
   ],
   "device_acceptance": "pending; static checks only",
-  "duplicate_count": 4713,
+  "duplicate_count": 4710,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -386,21 +428,6 @@
       "kept": "openai-base",
       "removed": "openai-acl",
       "rule": "DOMAIN-SUFFIX,sora.com"
-    },
-    {
-      "kept": "openai-acl",
-      "removed": "claude-page",
-      "rule": "DOMAIN-SUFFIX,sentry.io"
-    },
-    {
-      "kept": "openai-acl",
-      "removed": "claude-page",
-      "rule": "DOMAIN-SUFFIX,intercom.io"
-    },
-    {
-      "kept": "openai-acl",
-      "removed": "claude-page",
-      "rule": "DOMAIN-SUFFIX,intercomcdn.com"
     },
     {
       "kept": "disney",
@@ -11558,12 +11585,12 @@
       "rule": "DOMAIN-SUFFIX,intagrm.com"
     },
     {
-      "kept": "openai-acl",
+      "kept": "claude-page",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,intercom.io"
     },
     {
-      "kept": "openai-acl",
+      "kept": "claude-page",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,intercomcdn.com"
     },
@@ -23929,7 +23956,7 @@
     }
   ],
   "policy_counts": {
-    "Claude": 18,
+    "Claude": 21,
     "DIRECT": 6213,
     "OpenAI": 25,
     "Overseas": 36109,
@@ -23943,8 +23970,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42369,
-  "rules_version": "78794fc4b412767a58343dfdf264fb9d0e7a7da1204893de961833af8612a35c",
+  "rule_count": 42372,
+  "rules_version": "9ee35fdabb7f8f0238292e32c8ac4bfb103aa51e61b7f2e06f0e2d70ad284c59",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
