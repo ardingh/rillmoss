@@ -680,21 +680,6 @@
     {
       "kept": "R01",
       "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud-content.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple-dns.net"
     },
     {
@@ -720,7 +705,22 @@
     {
       "kept": "R01",
       "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud-content.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,icloud-content.com.cn"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
     },
     {
       "kept": "DouYin exception",
@@ -23932,7 +23932,7 @@
     "Claude": 18,
     "DIRECT": 6213,
     "OpenAI": 25,
-    "Overseas": 36108,
+    "Overseas": 36109,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -23943,8 +23943,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42368,
-  "rules_version": "15253892e229b03f3c594a3dcb536de96e93856841d12991fc8347dab9d6bf67",
+  "rule_count": 42369,
+  "rules_version": "78794fc4b412767a58343dfdf264fb9d0e7a7da1204893de961833af8612a35c",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -23961,7 +23961,7 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35781,
+    "global": 35782,
     "google": 698,
     "hbo": 49,
     "lan": 140,
