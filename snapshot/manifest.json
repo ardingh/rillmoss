@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-14T04:44:05+00:00",
+  "checked_at": "2026-09-15T00:28:28+00:00",
   "files": {
     "policy/counts.json": "d2108973893c2a962a5cfb31075be9728d5ccca945c99ba16d41936762eb5c21",
     "policy/personal.json": "d66764ab53eb56a5ff809488aca10b72cce68350fe94d5ea8168957ae7eade86",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "f951318998ee1bf410f0d7de8794249606d775b67e2ab37d582b086731f4a055",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "9536477cd924a3494456b54ebbad5c3c3fc69c59daf1b4b887205afb6f68a415",
+    "snapshot/raw/claude-ips.txt": "faa0075f2dc7c06edb98ed1b0c2d918b8bc4e6effa4d54d5e0d2edeba4db853f",
     "snapshot/raw/claude-page.txt": "d27cf2b3a11e2a86c8a804fb6acc5bf0edb1d5368f169d3336ab46d841ae1a5c",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -47,7 +47,7 @@
   },
   "rules_version": "9ee35fdabb7f8f0238292e32c8ac4bfb103aa51e61b7f2e06f0e2d70ad284c59",
   "schema": 1,
-  "snapshot_id": "9dad13bc7a29a9b4047c9dd91cd8a92468d22e7034099b7e4809a7f868e7eff8",
+  "snapshot_id": "974370937e105a7a6342197b4be99091c676acde62e0073c244903623163fd72",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5f74cf186fccb58a1e328007361723776165027e/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 372972,
+        "bytes": 363971,
         "commit": null,
-        "sha256": "9536477cd924a3494456b54ebbad5c3c3fc69c59daf1b4b887205afb6f68a415",
+        "sha256": "faa0075f2dc7c06edb98ed1b0c2d918b8bc4e6effa4d54d5e0d2edeba4db853f",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
