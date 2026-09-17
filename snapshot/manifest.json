@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-16T00:26:16+00:00",
+  "checked_at": "2026-09-17T00:26:13+00:00",
   "files": {
     "policy/counts.json": "d2108973893c2a962a5cfb31075be9728d5ccca945c99ba16d41936762eb5c21",
     "policy/personal.json": "d66764ab53eb56a5ff809488aca10b72cce68350fe94d5ea8168957ae7eade86",
@@ -15,8 +15,8 @@
     "snapshot/raw/base.txt": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "c70517c1ed14a8263aba127c7bf785fe6e3b1c669ff4245cba338978ff4e6dcd",
-    "snapshot/raw/claude-page.txt": "d27cf2b3a11e2a86c8a804fb6acc5bf0edb1d5368f169d3336ab46d841ae1a5c",
+    "snapshot/raw/claude-ips.txt": "aea2ae05d1030d927bc467c36df6952b1a3eef7a4ee4ab93e92179d7a08d35c8",
+    "snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
     "snapshot/raw/douyin.txt": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
@@ -31,7 +31,7 @@
     "snapshot/raw/neteasemusic.txt": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
     "snapshot/raw/netflix.txt": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
     "snapshot/raw/openai-acl.txt": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-    "snapshot/raw/openai-base.txt": "764e56f680ed307a3d6648c9be5fc1e6e7842b3d12c70b8374c9f7c3d4b80297",
+    "snapshot/raw/openai-base.txt": "9e35a2548a810ed7e8d5e7bee8a916ec0992e54248ab1b27e4d8cf6a5fa3069e",
     "snapshot/raw/paypal.txt": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
     "snapshot/raw/sina.txt": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
     "snapshot/raw/sony.txt": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
@@ -47,7 +47,7 @@
   },
   "rules_version": "e21ea746e99a430706a4a6ca42a94e3978b9785bcf6df71769c69840ee3962f4",
   "schema": 1,
-  "snapshot_id": "4f9d251779bd9332d1892ba79599ee8c36eb942c16c8fbdd6fb85e7eb0c53d84",
+  "snapshot_id": "c1853ab4fb878df3dce02a1ab7e4cb19add3fa92e2c0516a0a650ba81f824187",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -89,8 +89,8 @@
     "pins": {
       "acl4ssr/acl4ssr": "75f0101039d71724b6e998b34604c2e053580e0c",
       "blackmatrix7/ios_rule_script": "4435ba4141d82aab94e541e29023fc6a1f627723",
-      "iab0x00/proxyrules": "823762ae7ac2fe4a444a1244c66ec59f6a2a5abf",
-      "lowertop/shadowrocket": "59d5d441b1640d26e0c686eb6515b9b7f3c48762"
+      "iab0x00/proxyrules": "7cbb2834ce05c32e48e50f8a6c160ba8490490d0",
+      "lowertop/shadowrocket": "965b05e6149914c046963d635770ca8b9ac1c1a4"
     },
     "sources": {
       "amazon": {
@@ -113,9 +113,9 @@
       },
       "base": {
         "bytes": 28052,
-        "commit": "59d5d441b1640d26e0c686eb6515b9b7f3c48762",
+        "commit": "965b05e6149914c046963d635770ca8b9ac1c1a4",
         "sha256": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
-        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/59d5d441b1640d26e0c686eb6515b9b7f3c48762/lazy_group.conf"
+        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/965b05e6149914c046963d635770ca8b9ac1c1a4/lazy_group.conf"
       },
       "bilibili": {
         "bytes": 4523,
@@ -130,15 +130,15 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/4435ba4141d82aab94e541e29023fc6a1f627723/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 730107,
+        "bytes": 362835,
         "commit": null,
-        "sha256": "c70517c1ed14a8263aba127c7bf785fe6e3b1c669ff4245cba338978ff4e6dcd",
+        "sha256": "aea2ae05d1030d927bc467c36df6952b1a3eef7a4ee4ab93e92179d7a08d35c8",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
-        "bytes": 32548,
+        "bytes": 32737,
         "commit": null,
-        "sha256": "d27cf2b3a11e2a86c8a804fb6acc5bf0edb1d5368f169d3336ab46d841ae1a5c",
+        "sha256": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
         "url": "https://ip.net.coffee/claude/site.html"
       },
       "disney": {
@@ -226,10 +226,10 @@
         "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/75f0101039d71724b6e998b34604c2e053580e0c/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
-        "bytes": 1675,
-        "commit": "823762ae7ac2fe4a444a1244c66ec59f6a2a5abf",
-        "sha256": "764e56f680ed307a3d6648c9be5fc1e6e7842b3d12c70b8374c9f7c3d4b80297",
-        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/823762ae7ac2fe4a444a1244c66ec59f6a2a5abf/Rule/AI.txt"
+        "bytes": 1779,
+        "commit": "7cbb2834ce05c32e48e50f8a6c160ba8490490d0",
+        "sha256": "9e35a2548a810ed7e8d5e7bee8a916ec0992e54248ab1b27e4d8cf6a5fa3069e",
+        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/7cbb2834ce05c32e48e50f8a6c160ba8490490d0/Rule/AI.txt"
       },
       "paypal": {
         "bytes": 7859,
