@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-26T00:25:54+00:00",
+  "checked_at": "2026-09-27T00:28:22+00:00",
   "files": {
     "policy/counts.json": "95b7ff851cbac4956a1bedeb86ad5b44356458c4c0937cfb7d3ea2a6af799ab7",
     "policy/personal.json": "d66764ab53eb56a5ff809488aca10b72cce68350fe94d5ea8168957ae7eade86",
     "policy/sources.json": "822277245633dffd5580548de7ddb96524aa65cf6e2de3451f06bb2872c3b3ad",
     "reports/build.json": "ba93e86334c87cfec50850660f428ea7cb9653f9f5003a5111fe973314769ecc",
     "rillmoss.conf": "df7cea00bb72c2884507f01104a55e8d3766e210b687c4be074cdde3fcdda76f",
-    "snapshot/inputs/counts.json": "1234873dc8f5628d09df183e5ef683f4761ab98b4c8b3cc1b32dffa5e39740f3",
+    "snapshot/inputs/counts.json": "95b7ff851cbac4956a1bedeb86ad5b44356458c4c0937cfb7d3ea2a6af799ab7",
     "snapshot/inputs/personal.json": "d66764ab53eb56a5ff809488aca10b72cce68350fe94d5ea8168957ae7eade86",
     "snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
     "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "37b8410eb66d95f2adc20360cc8ff34e374b7ebc7873c3098637e2b26a12c429",
+    "snapshot/raw/claude-ips.txt": "18b76316d5a10eb4912ae9f8cadcd7530abbc8456d186a6de8830abb593b51f1",
     "snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -47,7 +47,7 @@
   },
   "rules_version": "73426a48c4b3792b352d0aac9c1de4aa522eb42f866d21b03556f612f4d1f43c",
   "schema": 1,
-  "snapshot_id": "bf3bf7857a9dcae71e0e7b09882112968c8063937d786058404d13d6a34f08ff",
+  "snapshot_id": "9c9fd6b1551d2ee9cdfd30085e647e086c4cfa1534b81a38ba70b3c2bf785a65",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -87,10 +87,10 @@
   },
   "upstream": {
     "pins": {
-      "acl4ssr/acl4ssr": "8e4d4cc395f141823f0eb4243c852dcddcba0314",
+      "acl4ssr/acl4ssr": "46ce840aa8cbfccce071558bfc1ad57704e32219",
       "blackmatrix7/ios_rule_script": "9ff3629c1bf539b65767cf62db87a16f5e60a32a",
       "iab0x00/proxyrules": "d4ffceeca2776df44a0bb86a6530267516070349",
-      "lowertop/shadowrocket": "6336a2e010660b5ef70cb2a0d77e5f5988dc1501"
+      "lowertop/shadowrocket": "3537f928451038ba74258eccbb6d9bd7865628dd"
     },
     "sources": {
       "amazon": {
@@ -113,9 +113,9 @@
       },
       "base": {
         "bytes": 28052,
-        "commit": "6336a2e010660b5ef70cb2a0d77e5f5988dc1501",
+        "commit": "3537f928451038ba74258eccbb6d9bd7865628dd",
         "sha256": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
-        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/6336a2e010660b5ef70cb2a0d77e5f5988dc1501/lazy_group.conf"
+        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/3537f928451038ba74258eccbb6d9bd7865628dd/lazy_group.conf"
       },
       "bilibili": {
         "bytes": 4523,
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/9ff3629c1bf539b65767cf62db87a16f5e60a32a/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 377030,
+        "bytes": 377110,
         "commit": null,
-        "sha256": "37b8410eb66d95f2adc20360cc8ff34e374b7ebc7873c3098637e2b26a12c429",
+        "sha256": "18b76316d5a10eb4912ae9f8cadcd7530abbc8456d186a6de8830abb593b51f1",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
@@ -221,9 +221,9 @@
       },
       "openai-acl": {
         "bytes": 539,
-        "commit": "8e4d4cc395f141823f0eb4243c852dcddcba0314",
+        "commit": "46ce840aa8cbfccce071558bfc1ad57704e32219",
         "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/8e4d4cc395f141823f0eb4243c852dcddcba0314/Clash/Ruleset/OpenAi.list"
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/46ce840aa8cbfccce071558bfc1ad57704e32219/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
         "bytes": 1779,
