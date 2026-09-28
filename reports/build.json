@@ -409,7 +409,7 @@
     }
   ],
   "device_acceptance": "pending; static checks only",
-  "duplicate_count": 4710,
+  "duplicate_count": 4708,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -8424,11 +8424,6 @@
     {
       "kept": "facebook",
       "removed": "global",
-      "rule": "DOMAIN-SUFFIX,facebook.org"
-    },
-    {
-      "kept": "facebook",
-      "removed": "global",
       "rule": "DOMAIN-SUFFIX,facebook.shop"
     },
     {
@@ -8510,11 +8505,6 @@
       "kept": "facebook",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,facebookblueprint.net"
-    },
-    {
-      "kept": "facebook",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,facebookbrand.com"
     },
     {
       "kept": "facebook",
@@ -10082,41 +10072,6 @@
       "rule": "DOMAIN-SUFFIX,giratina.com"
     },
     {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,github.community"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,github.dev"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,githubhackathon.com"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,githubnext.com"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,githubpreview.dev"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,githubstatus.com"
-    },
-    {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,githubuniverse.com"
-    },
-    {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,globaledu.org"
@@ -10249,11 +10204,6 @@
     {
       "kept": "google",
       "removed": "global",
-      "rule": "DOMAIN-SUFFIX,google.net"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
       "rule": "DOMAIN-SUFFIX,google.ventures"
     },
     {
@@ -10270,11 +10220,6 @@
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,googleadservices-cn.com"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,googleadservices.com"
     },
     {
       "kept": "google",
@@ -10314,11 +10259,6 @@
     {
       "kept": "google",
       "removed": "global",
-      "rule": "DOMAIN-SUFFIX,googlefiber.com"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
       "rule": "DOMAIN-SUFFIX,googlefinland.com"
     },
     {
@@ -10329,27 +10269,12 @@
     {
       "kept": "google",
       "removed": "global",
-      "rule": "DOMAIN-SUFFIX,googlemaps.com"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
       "rule": "DOMAIN-SUFFIX,googleoptimize-cn.com"
     },
     {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,googleoptimize.com"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,googlephotos.com"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,googlestore.com"
     },
     {
       "kept": "google",
@@ -18117,11 +18042,6 @@
       "rule": "DOMAIN-SUFFIX,thefind.com"
     },
     {
-      "kept": "github",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,thegithubshop.com"
-    },
-    {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,thegooglestore.com"
@@ -18325,36 +18245,6 @@
       "kept": "apple",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,tvappstore.net"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twitter.biz"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twittercommunity.com"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twitterflightschool.com"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twitterinc.com"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twitteroauth.com"
-    },
-    {
-      "kept": "twitter",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,twitterstat.us"
     },
     {
       "kept": "twitter",
@@ -18830,11 +18720,6 @@
       "kept": "facebook",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,whatsapp.tv"
-    },
-    {
-      "kept": "facebook",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,whatsappbrand.com"
     },
     {
       "kept": "sony",
@@ -20409,11 +20294,6 @@
     {
       "kept": "google",
       "removed": "global",
-      "rule": "DOMAIN-SUFFIX,blog.google"
-    },
-    {
-      "kept": "google",
-      "removed": "global",
       "rule": "DOMAIN-SUFFIX,blogblog.com"
     },
     {
@@ -20924,7 +20804,17 @@
     {
       "kept": "facebook",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,facebook.org"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,facebook.se"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,facebookbrand.com"
     },
     {
       "kept": "facebook",
@@ -21089,6 +20979,16 @@
     {
       "kept": "github",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,github.community"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,github.dev"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,github.io"
     },
     {
@@ -21105,6 +21005,31 @@
       "kept": "github",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,githubcopilot.com"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,githubhackathon.com"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,githubnext.com"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,githubpreview.dev"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,githubstatus.com"
+    },
+    {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,githubuniverse.com"
     },
     {
       "kept": "github",
@@ -21939,6 +21864,11 @@
     {
       "kept": "google",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,google.net"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,google.nl"
     },
     {
@@ -22104,6 +22034,11 @@
     {
       "kept": "google",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,googleadservices.com"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,googleanalytics.com"
     },
     {
@@ -22154,6 +22089,11 @@
     {
       "kept": "google",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,googlefiber.com"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,googlefiber.net"
     },
     {
@@ -22164,12 +22104,22 @@
     {
       "kept": "google",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,googlemaps.com"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,googlemashups.com"
     },
     {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,googlepagecreator.com"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,googlephotos.com"
     },
     {
       "kept": "google",
@@ -22190,6 +22140,11 @@
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,googlesource.com"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,googlestore.com"
     },
     {
       "kept": "google",
@@ -22622,11 +22577,6 @@
       "rule": "DOMAIN-SUFFIX,redhotlabs.com"
     },
     {
-      "kept": "google",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,registry.google"
-    },
-    {
       "kept": "game",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,riotcdn.net"
@@ -22792,6 +22742,11 @@
       "rule": "DOMAIN-SUFFIX,thefacebook.com"
     },
     {
+      "kept": "github",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,thegithubshop.com"
+    },
+    {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,thinkwithgoogle.com"
@@ -22859,12 +22814,42 @@
     {
       "kept": "twitter",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twitter.biz"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,twitter.com"
     },
     {
       "kept": "twitter",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,twitter.jp"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twittercommunity.com"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twitterflightschool.com"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twitterinc.com"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twitteroauth.com"
+    },
+    {
+      "kept": "twitter",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,twitterstat.us"
     },
     {
       "kept": "twitter",
@@ -22945,6 +22930,11 @@
       "kept": "facebook",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,whatsapp.net"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,whatsappbrand.com"
     },
     {
       "kept": "google",
@@ -23966,7 +23956,7 @@
     "Claude": 21,
     "DIRECT": 6213,
     "OpenAI": 25,
-    "Overseas": 36120,
+    "Overseas": 36113,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -23977,8 +23967,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42383,
-  "rules_version": "73426a48c4b3792b352d0aac9c1de4aa522eb42f866d21b03556f612f4d1f43c",
+  "rule_count": 42376,
+  "rules_version": "c625ba4de71beb34f3c4e2b71ef81847f5c7cc2bd5a85ef6f42cca524a17de07",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -23995,7 +23985,7 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35793,
+    "global": 35784,
     "google": 698,
     "hbo": 49,
     "lan": 140,
