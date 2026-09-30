@@ -406,10 +406,2552 @@
       "matched": "2607:6bc0::/48",
       "source": "claude-ips",
       "target": "2607:6bc0::1"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "adcdownload.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "adcdownload.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "appldnld.apple.com.edgesuite.net",
+      "source": "Direct exception",
+      "target": "appldnld.apple.com.edgesuite.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bag-cdn.itunes-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "bag-cdn.itunes-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cds.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "cds.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "certs-lb.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "certs-lb.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cl1-cdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "cl1-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cl3-cdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "cl3-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cl4-cdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "cl4-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cl5-cdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "cl5-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "clientflow.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "clientflow.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "configuration.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "configuration.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "courier-push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "courier-push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "crl-lb.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "crl-lb.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "dd-cdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "dd-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "e16991.b.akamaiedge.net",
+      "source": "Direct exception",
+      "target": "e16991.b.akamaiedge.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net",
+      "source": "Direct exception",
+      "target": "gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "gspe19-2-cn-ssl.ls-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "gspe19-2-cn-ssl.ls-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "gspe19-cn.ls-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "gspe19-cn.ls-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "icloud-cdn.icloud.com.akadns.net",
+      "source": "Direct exception",
+      "target": "icloud-cdn.icloud.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "images.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "images.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "images.apple.com.edgekey.net.globalredir.akadns.net",
+      "source": "Direct exception",
+      "target": "images.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "init-p01md-lb.push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "init-p01md-lb.push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "init-p01st-lb.push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "init-p01st-lb.push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "init-s01st-lb.push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "init-s01st-lb.push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "iphone-ld.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "iphone-ld.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "itunes-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "itunes-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "mesu-cdn.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "mesu-cdn.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "mesu-china.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "mesu-china.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ocsp-lb.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "ocsp-lb.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ocsp2-lb.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "ocsp2-lb.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "oscdn.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "oscdn.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "pancake.cdn-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "pancake.cdn-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "prod-support.apple-support.akadns.net",
+      "source": "Direct exception",
+      "target": "prod-support.apple-support.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "stocks-sparkline-lb.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "stocks-sparkline-lb.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "store.apple.com.edgekey.net.globalredir.akadns.net",
+      "source": "Direct exception",
+      "target": "store.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "store.storeimages.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "store.storeimages.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "support-china.apple-support.akadns.net",
+      "source": "Direct exception",
+      "target": "support-china.apple-support.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "swcatalog-cdn.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "swcatalog-cdn.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "swdist.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "swdist.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "swscan-cdn.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "swscan-cdn.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "updates-http.cdn-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "updates-http.cdn-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "valid.origin-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "valid.origin-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weather-data.apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "weather-data.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "www.apple.com.edgekey.net.globalredir.akadns.net",
+      "source": "Direct exception",
+      "target": "www.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "www-cdn.icloud.com.akadns.net",
+      "source": "Direct exception",
+      "target": "www-cdn.icloud.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "appldnld.apple.com.edgesuite.net",
+      "source": "Direct exception",
+      "target": "appldnld.apple.com.edgesuite.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "appldnld.apple.com.edgesuite.net",
+      "source": "Direct exception",
+      "target": "rillmoss-check.appldnld.apple.com.edgesuite.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ls.apple.com.edgesuite.net",
+      "source": "Direct exception",
+      "target": "ls.apple.com.edgesuite.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ls.apple.com.edgesuite.net",
+      "source": "Direct exception",
+      "target": "rillmoss-check.ls.apple.com.edgesuite.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "init*.push-apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "initrillmoss-check.push-apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qingmail.cn",
+      "source": "Direct exception",
+      "target": "qingmail.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qingmail.cn",
+      "source": "Direct exception",
+      "target": "rillmoss-check.qingmail.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qingmail.com",
+      "source": "Direct exception",
+      "target": "qingmail.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qingmail.com",
+      "source": "Direct exception",
+      "target": "rillmoss-check.qingmail.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "local.adguard.org",
+      "source": "Direct exception",
+      "target": "local.adguard.org"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "router.asus.com",
+      "source": "Direct exception",
+      "target": "router.asus.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hiwifi.com",
+      "source": "Direct exception",
+      "target": "hiwifi.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hiwifi.com",
+      "source": "Direct exception",
+      "target": "rillmoss-check.hiwifi.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ts.net",
+      "source": "Direct exception",
+      "target": "ts.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ts.net",
+      "source": "Direct exception",
+      "target": "rillmoss-check.ts.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "h-adashx.ut.hzshudian.com",
+      "source": "Direct exception",
+      "target": "h-adashx.ut.hzshudian.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "apple.com.akadns.net",
+      "source": "Direct exception",
+      "target": "rillmoss-check.apple.com.akadns.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "115.com",
+      "source": "china",
+      "target": "115.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "115.com",
+      "source": "china",
+      "target": "rillmoss-check.115.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "12306.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.12306.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "eastmoney.com",
+      "source": "china",
+      "target": "eastmoney.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "eastmoney.com",
+      "source": "china",
+      "target": "rillmoss-check.eastmoney.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "dfcfw.com",
+      "source": "china",
+      "target": "dfcfw.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "dfcfw.com",
+      "source": "china",
+      "target": "rillmoss-check.dfcfw.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "chinatelecom.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.chinatelecom.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "189.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.189.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "chinamobile.com",
+      "source": "china",
+      "target": "chinamobile.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "chinamobile.com",
+      "source": "china",
+      "target": "rillmoss-check.chinamobile.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "10086.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.10086.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "jd.com",
+      "source": "china",
+      "target": "jd.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "jd.com",
+      "source": "china",
+      "target": "rillmoss-check.jd.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "360buyimg.com",
+      "source": "china",
+      "target": "360buyimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "360buyimg.com",
+      "source": "china",
+      "target": "rillmoss-check.360buyimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "smzdm.com",
+      "source": "china",
+      "target": "smzdm.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "smzdm.com",
+      "source": "china",
+      "target": "rillmoss-check.smzdm.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bilibili.com",
+      "source": "bilibili",
+      "target": "bilibili.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bilibili.com",
+      "source": "bilibili",
+      "target": "rillmoss-check.bilibili.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "b23.tv",
+      "source": "bilibili",
+      "target": "b23.tv"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "b23.tv",
+      "source": "bilibili",
+      "target": "rillmoss-check.b23.tv"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ximalaya.com",
+      "source": "china",
+      "target": "ximalaya.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ximalaya.com",
+      "source": "china",
+      "target": "rillmoss-check.ximalaya.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xmcdn.com",
+      "source": "china",
+      "target": "xmcdn.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xmcdn.com",
+      "source": "china",
+      "target": "rillmoss-check.xmcdn.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "douyin.com",
+      "source": "china",
+      "target": "douyin.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "douyin.com",
+      "source": "china",
+      "target": "rillmoss-check.douyin.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "amemv.com",
+      "source": "douyin",
+      "target": "amemv.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "amemv.com",
+      "source": "douyin",
+      "target": "rillmoss-check.amemv.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "snssdk.com",
+      "source": "DouYin exception",
+      "target": "snssdk.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "snssdk.com",
+      "source": "DouYin exception",
+      "target": "rillmoss-check.snssdk.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xiaohongshu.com",
+      "source": "xiaohongshu",
+      "target": "xiaohongshu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xiaohongshu.com",
+      "source": "xiaohongshu",
+      "target": "rillmoss-check.xiaohongshu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xhscdn.com",
+      "source": "xiaohongshu",
+      "target": "xhscdn.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xhscdn.com",
+      "source": "xiaohongshu",
+      "target": "rillmoss-check.xhscdn.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "icbc.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.icbc.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ccb.com",
+      "source": "china",
+      "target": "ccb.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ccb.com",
+      "source": "china",
+      "target": "rillmoss-check.ccb.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weixin.qq.com",
+      "source": "wechat",
+      "target": "weixin.qq.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weixin.qq.com",
+      "source": "wechat",
+      "target": "rillmoss-check.weixin.qq.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weixin.com",
+      "source": "wechat",
+      "target": "weixin.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weixin.com",
+      "source": "wechat",
+      "target": "rillmoss-check.weixin.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "wechat.com",
+      "source": "wechat",
+      "target": "wechat.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "wechat.com",
+      "source": "wechat",
+      "target": "rillmoss-check.wechat.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qq.com",
+      "source": "china",
+      "target": "wetype.qq.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "qq.com",
+      "source": "china",
+      "target": "rillmoss-check.wetype.qq.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weibo.com",
+      "source": "sina",
+      "target": "weibo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weibo.com",
+      "source": "sina",
+      "target": "rillmoss-check.weibo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weibo.cn",
+      "source": "sina",
+      "target": "weibo.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "weibo.cn",
+      "source": "sina",
+      "target": "rillmoss-check.weibo.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "sina.com.cn",
+      "source": "sina",
+      "target": "sina.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "sina.com.cn",
+      "source": "sina",
+      "target": "rillmoss-check.sina.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cmbchina.com",
+      "source": "china",
+      "target": "cmbchina.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cmbchina.com",
+      "source": "china",
+      "target": "rillmoss-check.cmbchina.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "pinduoduo.com",
+      "source": "china",
+      "target": "pinduoduo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "pinduoduo.com",
+      "source": "china",
+      "target": "rillmoss-check.pinduoduo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "yangkeduo.com",
+      "source": "china",
+      "target": "yangkeduo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "yangkeduo.com",
+      "source": "china",
+      "target": "rillmoss-check.yangkeduo.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ctrip.com",
+      "source": "china",
+      "target": "ctrip.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "ctrip.com",
+      "source": "china",
+      "target": "rillmoss-check.ctrip.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "alipay.com",
+      "source": "china",
+      "target": "alipay.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "alipay.com",
+      "source": "china",
+      "target": "rillmoss-check.alipay.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "alipayobjects.com",
+      "source": "china",
+      "target": "alipayobjects.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "alipayobjects.com",
+      "source": "china",
+      "target": "rillmoss-check.alipayobjects.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "didiglobal.com",
+      "source": "china",
+      "target": "didiglobal.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "didiglobal.com",
+      "source": "china",
+      "target": "rillmoss-check.didiglobal.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xiaojukeji.com",
+      "source": "china",
+      "target": "xiaojukeji.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "xiaojukeji.com",
+      "source": "china",
+      "target": "rillmoss-check.xiaojukeji.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "baidu.com",
+      "source": "baidu",
+      "target": "baidu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "baidu.com",
+      "source": "baidu",
+      "target": "rillmoss-check.baidu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bdimg.com",
+      "source": "baidu",
+      "target": "bdimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bdimg.com",
+      "source": "baidu",
+      "target": "rillmoss-check.bdimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bdstatic.com",
+      "source": "baidu",
+      "target": "bdstatic.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "bdstatic.com",
+      "source": "baidu",
+      "target": "rillmoss-check.bdstatic.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "freshhema.com",
+      "source": "china",
+      "target": "freshhema.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "freshhema.com",
+      "source": "china",
+      "target": "rillmoss-check.freshhema.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hemaos.com",
+      "source": "china",
+      "target": "hemaos.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hemaos.com",
+      "source": "china",
+      "target": "rillmoss-check.hemaos.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hemamax.com",
+      "source": "china",
+      "target": "hemamax.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "hemamax.com",
+      "source": "china",
+      "target": "rillmoss-check.hemamax.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "shyhhema.com",
+      "source": "china",
+      "target": "shyhhema.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "shyhhema.com",
+      "source": "china",
+      "target": "rillmoss-check.shyhhema.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "zhihu.com",
+      "source": "zhihu",
+      "target": "zhihu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "zhihu.com",
+      "source": "zhihu",
+      "target": "rillmoss-check.zhihu.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "zhimg.com",
+      "source": "zhihu",
+      "target": "zhimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "zhimg.com",
+      "source": "zhihu",
+      "target": "rillmoss-check.zhimg.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "music.163.com",
+      "source": "neteasemusic",
+      "target": "music.163.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "music.163.com",
+      "source": "neteasemusic",
+      "target": "rillmoss-check.music.163.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "music.126.net",
+      "source": "neteasemusic",
+      "target": "music.126.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "music.126.net",
+      "source": "neteasemusic",
+      "target": "rillmoss-check.music.126.net"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "meituan.com",
+      "source": "china",
+      "target": "meituan.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "meituan.com",
+      "source": "china",
+      "target": "rillmoss-check.meituan.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "dianping.com",
+      "source": "china",
+      "target": "dianping.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "dianping.com",
+      "source": "china",
+      "target": "rillmoss-check.dianping.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cainiao.com",
+      "source": "china",
+      "target": "cainiao.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cainiao.com",
+      "source": "china",
+      "target": "rillmoss-check.cainiao.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "cainiao.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "cn",
+      "source": "china",
+      "target": "rillmoss-check.cainiao.com.cn"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "douban.com",
+      "source": "douban",
+      "target": "douban.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "douban.com",
+      "source": "douban",
+      "target": "rillmoss-check.douban.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "doubanio.com",
+      "source": "douban",
+      "target": "doubanio.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "doubanio.com",
+      "source": "douban",
+      "target": "rillmoss-check.doubanio.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "goofish.com",
+      "source": "china",
+      "target": "goofish.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "goofish.com",
+      "source": "china",
+      "target": "rillmoss-check.goofish.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "taobao.com",
+      "source": "china",
+      "target": "taobao.com"
+    },
+    {
+      "actual": "DIRECT",
+      "expected": "DIRECT",
+      "matched": "taobao.com",
+      "source": "china",
+      "target": "rillmoss-check.taobao.com"
     }
   ],
   "device_acceptance": "pending; static checks only",
-  "duplicate_count": 4708,
+  "direct_routing": {
+    "checked_source_domain_probes": 12025,
+    "claude_conflicts": [],
+    "conflicts": [
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,akadns.net,Overseas",
+        "origin": "microsoft",
+        "reason": "共享 CDN / Google 监控服务沿用既有代理；只前置可明确归属 Apple 的目标。",
+        "rule": "DOMAIN-SUFFIX,akadns.net,DIRECT",
+        "source": "apple"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,crashlytics.com,Overseas",
+        "origin": "google",
+        "reason": "共享 CDN / Google 监控服务沿用既有代理；只前置可明确归属 Apple 的目标。",
+        "rule": "DOMAIN-SUFFIX,crashlytics.com,DIRECT",
+        "source": "apple"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,blzddist1-a.akamaihd.net,Overseas",
+        "origin": "game",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,blzddist1-a.akamaihd.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,cdn.angruo.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,cdn.angruo.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,amplifi.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,client.amplifi.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,jetbrains.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,download.jetbrains.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,download.microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ssl-images-amazon.com,Overseas",
+        "origin": "amazon",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,images-cn.ssl-images-amazon.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,ntservicepack.microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,origin-a.akamaihd.net,Overseas",
+        "origin": "game",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,origin-a.akamaihd.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,Overseas",
+        "origin": "game",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN,steamcommunity-a.akamaihd.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-KEYWORD,microsoft,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-KEYWORD,microsoft,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,akadns.net,Overseas",
+        "origin": "microsoft",
+        "reason": "共享 CDN / Google 监控服务沿用既有代理；只前置可明确归属 Apple 的目标。",
+        "rule": "DOMAIN-SUFFIX,akadns.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,crisp.chat,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,api.crisp.chat,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-KEYWORD,jav,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,blogjava.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,bytedapm.com,Overseas",
+        "origin": "TikTok exception",
+        "reason": "已明确要求 bytedapm.com 代理。",
+        "rule": "DOMAIN-SUFFIX,bytedapm.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-KEYWORD,porn,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,empornium.me,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,hotmail.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,hotmail.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,images-amazon.com,Overseas",
+        "origin": "amazon",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,images-amazon.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-KEYWORD,jav,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,java.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoftonline.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,microsoftonline.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,msauth.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,msauth.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,msecnd.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,msecnd.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,msocdn.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,msocdn.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,office.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,office.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,office.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,office.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,office365.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,office365.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,onenote.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,onenote.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,outlook.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,outlook.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,s-microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,s-microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sharepoint.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,sharepoint.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sony.com,Overseas",
+        "origin": "sony",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,sony.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sonyentertainmentnetwork.com,Overseas",
+        "origin": "sony",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,sonyentertainmentnetwork.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,tiktokd.net,Overseas",
+        "origin": "tiktok",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,tiktokd.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,tiktokd.org,Overseas",
+        "origin": "tiktok",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,tiktokd.org,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,update.microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,visualstudio.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,visualstudio.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,windows.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,windows.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,windows.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,windows.net,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,windowsupdate.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,windowsupdate.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,microsoft.com,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,windowsupdate.microsoft.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,xbox.com,Overseas",
+        "origin": "game",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,xbox.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,xboxlive.com,Overseas",
+        "origin": "game",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "DOMAIN-SUFFIX,xboxlive.com,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "IP-CIDR,101.32.96.0/20,Overseas",
+        "origin": "global",
+        "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
+        "rule": "IP-CIDR,101.32.104.0/21,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "IP-CIDR,101.32.118.0/23,Overseas",
+        "origin": "global",
+        "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
+        "rule": "IP-CIDR,101.32.118.0/23,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "IP-CIDR,101.32.96.0/20,Overseas",
+        "origin": "global",
+        "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
+        "rule": "IP-CIDR,101.32.96.0/20,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "IP-CIDR,129.226.0.0/16,Overseas",
+        "origin": "global",
+        "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
+        "rule": "IP-CIDR,129.226.0.0/16,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "USER-AGENT,Microsoft*,Overseas",
+        "origin": "microsoft",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "USER-AGENT,Microsoft*,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "USER-AGENT,hearthstone*,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的海外服务分类；此精确冲突固定登记，后续变化须审阅。",
+        "rule": "USER-AGENT,hearthstone*,DIRECT",
+        "source": "china"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,akadns.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-KEYWORD,apple.com.akadns.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,2019baidu.xyz,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-KEYWORD,baidu,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,baidu.jp,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-KEYWORD,baidu,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,officecdn-microsoft-com.akamaized.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-KEYWORD,officecdn,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,blz.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,diablo3.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,hearthstone.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,overwatch.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sc2.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,wow.nosdn.127.net,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,127.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,bnet.163.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,163.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,steampowered.com.8686c.com,Overseas",
+        "origin": "steamcn",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,8686c.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,steamstatic.com.8686c.com,Overseas",
+        "origin": "steamcn",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,8686c.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,steampowered.com.8686c.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,8686c.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,steamstatic.com.8686c.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,8686c.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,gitlab-assets.oss-cn-hongkong.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,github-avatars.oss-cn-hongkong.aliyuncs.com,Overseas",
+        "origin": "github",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,majsoul-hk-client.cn-hongkong.log.aliyuncs.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-northeast-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-northeast-2.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-south-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-2.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-3.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-5.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-6.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-ap-southeast-7.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-cn-hongkong.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-eu-central-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-eu-west-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-me-east-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-us-east-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,oss-us-west-1.aliyuncs.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ru.ccb.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的境外分支或香港测速目标代理，不扩大国内主域直连范围。",
+        "rule": "DOMAIN-SUFFIX,ccb.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,speedtest.hk.chinamobile.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的境外分支或香港测速目标代理，不扩大国内主域直连范围。",
+        "rule": "DOMAIN-SUFFIX,chinamobile.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,speedtestbb.hk.chinamobile.com,Overseas",
+        "origin": "global",
+        "reason": "保留已发布的境外分支或香港测速目标代理，不扩大国内主域直连范围。",
+        "rule": "DOMAIN-SUFFIX,chinamobile.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,bx.in.th,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,in.th,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,tw.iqiyi.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,iqiyi.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,muse.jhu.edu,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,jhu.edu,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,c.mi.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,mi.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,1drv.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,aka.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,appcenter.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,aria.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ch9.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,dictate.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,gfx.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,google.ms,Overseas",
+        "origin": "google",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,hummingbird.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,jwt.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,mstea.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,nico.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ntp.nat.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,nyti.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,onestore.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,outlookgroups.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,rsg.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sfx.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sm.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,staffhub.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,svc.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,techhub.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,visa.com.ms,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,wbd.ms,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,ms,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-bangkok.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-hongkong.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-jakarta.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-mumbai.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-seoul.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-singapore.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-tokyo.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ca.file.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,cosca.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,cosger.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,coshk.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,cossgp.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,eu-frankfurt.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,eu-moscow.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ger.file.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,hk.file.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-ashburn.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-siliconvalley.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-toronto.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sa-saopaulo.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sgp.file.myqcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,di.res.netease.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,netease.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,heroes.nos.netease.com,Overseas",
+        "origin": "game",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,netease.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,community.oneplus.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,oneplus.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,cloud.oracle.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,oracle.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,shortconn.im.qcloud.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,qcloud.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,wetv.qq.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,qq.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,gouhuo.qq.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,qq.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,roblox.qq.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,qq.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,roco.qq.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,qq.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-bangkok.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-hongkong.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-jakarta.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-mumbai.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-seoul.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-singapore.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,ap-tokyo.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,eu-frankfurt.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,eu-moscow.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-ashburn.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-siliconvalley.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,na-toronto.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,sa-saopaulo.tencentcos.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,tencentcos.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN,databank.worldbank.org,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,worldbank.org,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,global.market.xiaomi.com,Overseas",
+        "origin": "global",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-SUFFIX,xiaomi.com,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,windows-int.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-WILDCARD,windows-*.net,DIRECT",
+        "source": "protected-subdomain"
+      },
+      {
+        "actual": "Overseas",
+        "matched": "DOMAIN-SUFFIX,windows-ppe.net,Overseas",
+        "origin": "microsoft",
+        "reason": "保留发布基线已有的境外服务具体目标；不把该直连父域内的新代理子域自动视为同意。",
+        "rule": "DOMAIN-WILDCARD,windows-*.net,DIRECT",
+        "source": "protected-subdomain"
+      }
+    ],
+    "domestic_target_count": 56,
+    "protected_priority_rules": 59
+  },
+  "duplicate_count": 4765,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -692,14 +3234,264 @@
       "rule": "IP-CIDR6,2620:120:e000::/40"
     },
     {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,adcdownload.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,appldnld.apple.com.edgesuite.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,bag-cdn.itunes-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,cds.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,certs-lb.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,cl1-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,cl3-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,cl4-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,cl5-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,clientflow.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,configuration.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,courier-push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,crl-lb.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,dd-cdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,e16991.b.akamaiedge.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,gspe19-2-cn-ssl.ls-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,gspe19-cn.ls-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,icloud-cdn.icloud.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,images.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,images.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,init-p01md-lb.push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,init-p01st-lb.push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,init-s01st-lb.push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,iphone-ld.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,itunes-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,mesu-cdn.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,mesu-china.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,ocsp-lb.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,ocsp2-lb.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,oscdn.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,pancake.cdn-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,prod-support.apple-support.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,stocks-sparkline-lb.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,store.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,store.storeimages.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,support-china.apple-support.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,swcatalog-cdn.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,swdist.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,swscan-cdn.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,updates-http.cdn-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,valid.origin-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,weather-data.apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,www.apple.com.edgekey.net.globalredir.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN,www-cdn.icloud.com.akadns.net"
+    },
+    {
       "kept": "microsoft",
       "removed": "apple",
       "rule": "DOMAIN-SUFFIX,akadns.net"
     },
     {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,appldnld.apple.com.edgesuite.net"
+    },
+    {
       "kept": "R01",
       "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple.com"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,ls.apple.com.edgesuite.net"
     },
     {
       "kept": "R01",
@@ -757,6 +3549,21 @@
       "rule": "DOMAIN-SUFFIX,icloud.com.cn"
     },
     {
+      "kept": "Direct exception",
+      "removed": "apple",
+      "rule": "DOMAIN-WILDCARD,init*.push-apple.com.akadns.net"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "sina",
+      "rule": "DOMAIN-SUFFIX,qingmail.cn"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "sina",
+      "rule": "DOMAIN-SUFFIX,qingmail.com"
+    },
+    {
       "kept": "DouYin exception",
       "removed": "douyin",
       "rule": "DOMAIN-SUFFIX,snssdk.com"
@@ -767,7 +3574,7 @@
       "rule": "DOMAIN-SUFFIX,bytedapm.com"
     },
     {
-      "kept": "apple",
+      "kept": "Direct exception",
       "removed": "global",
       "rule": "DOMAIN,apple.com.akadns.net"
     },
@@ -807,7 +3614,7 @@
       "rule": "DOMAIN,cdn-spotify-experiments.conductrics.com"
     },
     {
-      "kept": "apple",
+      "kept": "Direct exception",
       "removed": "global",
       "rule": "DOMAIN,courier-push-apple.com.akadns.net"
     },
@@ -872,7 +3679,7 @@
       "rule": "DOMAIN,p16-tiktokcdn-com.akamaized.net"
     },
     {
-      "kept": "apple",
+      "kept": "Direct exception",
       "removed": "global",
       "rule": "DOMAIN,push-apple.com.akadns.net"
     },
@@ -907,7 +3714,7 @@
       "rule": "DOMAIN,vsmarketplacebadge.apphb.com"
     },
     {
-      "kept": "apple",
+      "kept": "Direct exception",
       "removed": "global",
       "rule": "DOMAIN,www-cdn.icloud.com.akadns.net"
     },
@@ -18237,6 +21044,11 @@
       "rule": "DOMAIN-SUFFIX,tryrating.com"
     },
     {
+      "kept": "Direct exception",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,ts.net"
+    },
+    {
       "kept": "apple",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,tteshop.com"
@@ -22212,6 +25024,11 @@
       "rule": "DOMAIN-SUFFIX,here.com"
     },
     {
+      "kept": "Direct exception",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,hiwifi.com"
+    },
+    {
       "kept": "microsoft",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,hockeyapp.net"
@@ -23942,21 +26759,31 @@
       "rule": "IP-CIDR,129.226.0.0/16"
     },
     {
-      "kept": "global",
+      "kept": "Direct exception",
+      "removed": "lan",
+      "rule": "DOMAIN,local.adguard.org"
+    },
+    {
+      "kept": "Direct exception",
+      "removed": "lan",
+      "rule": "DOMAIN,router.asus.com"
+    },
+    {
+      "kept": "Direct exception",
       "removed": "lan",
       "rule": "DOMAIN-SUFFIX,hiwifi.com"
     },
     {
-      "kept": "global",
+      "kept": "Direct exception",
       "removed": "lan",
       "rule": "DOMAIN-SUFFIX,ts.net"
     }
   ],
   "policy_counts": {
     "Claude": 21,
-    "DIRECT": 6213,
+    "DIRECT": 6217,
     "OpenAI": 25,
-    "Overseas": 36113,
+    "Overseas": 36111,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -23967,8 +26794,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42376,
-  "rules_version": "b926c7600bac476c721431e75e7a6c7dd3c97ce5c94b20be0cbb3c3b292bf938",
+  "rule_count": 42378,
+  "rules_version": "83acfa46dcc9036bead152794d9a026d452468ad866f384744cf7169417c795a",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

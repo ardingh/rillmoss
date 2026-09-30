@@ -39,3 +39,12 @@ close-if-proxy-chain-missing = true
 2026-09-14（第一阶段，后续顺序决定见下）：补齐 Claude 的 sentry.io、intercom.io、intercomcdn.com 三条独立规则。policy/personal.json 的 claude_required_rules 固定已审阅的 19 条域名及关键词规则；缺失时停止生成，不能以 OpenAI 仍有同类规则判为完整。仍从既定网页来源更新，不新增来源、ASN、NTP 或扩大 IP 段。本次仅完善规则内容，尚未调整匹配顺序：anthropic.auth0.com、events.statsigapi.net 和共享服务仍先命中 OpenAI。两组独立内容不等于共享域名能按调用应用区分出口；优先级调整需另作决定。
 
 2026-09-14（最终决定）：用户采纳 Claude 规则前置，并要求 OpenAI / Claude 两套独立、不互相补齐。policy/personal.json 的 ai_rule_order 固定为 Claude、OpenAI；claude_required_rules 保留 19 条域名/关键词，openai_required_rules 保留 25 条已审阅规则，另保留官方 Claude 入站 IP 校验。两组分别保留所有来源规则，组内去重、组间不去重；任何一组缺失规则均停止生成，即使另一组仍能匹配该域名。验证分别移除另一组来源后剩余组的目标仍归本组，并核对合并配置的 Claude 优先级及 OpenAI 核心端点。共享域名优先归 Claude，也适用于 OpenAI 发出的同域名请求；这是用户接受的域名优先级取舍，不承诺按应用隔离。节点绑定、其他规则、DNS、NTP、ASN 与 IP 范围不变。
+
+2026-09-30：修复直连规则被宽泛代理规则抢先匹配的问题，并保护每日生成。用户明确要求 Claude 内容不变；Claude / OpenAI 的内容、优先级和精确节点绑定保留。新的个人直连例外放在两组 AI 之后，遇到 AI 冲突停止生成并说明冲突，不通过提高 DIRECT 优先级覆盖 Claude。
+
+- `direct_routing.priority_rules` 前置 59 条规则：51 条原 Apple 来源的具体 CDN 域名表达式、补充 Apple 已有关键词覆盖的 `apple.com.akadns.net` 子域、2 条 qingmail 后缀、4 条原 Lan 来源规则，以及 `DOMAIN,h-adashx.ut.hzshudian.com`。共享的 `akadns.net`、`edgesuite.net`、`crashlytics.com` 沿用原分类；不把整个共享 CDN 直连。
+- `direct_routing.domestic_targets` 为原 28 个重点 App 加盒马保存 56 个已核对的核心直连域名。校验主域、子域探针及代理侧的具体子域，不能仅靠 App 名称或条数判断正确。
+- 全部选定 DIRECT 来源的域名表达式、IP 范围交叉覆盖及非域名精确重复另行检查。`direct_routing.reviewed_conflicts` 固定登记保留的既有代理冲突，包含境外服务取舍、未改出口的 IP 重叠、建行境外分支和中国移动香港测速。登记精确的来源、规则、实际策略、命中规则和原因；新的冲突或原冲突出口变化停止候选采用，不自动扩大豁免。
+- Microsoft、海外游戏、`bytedapm.com` 与共享 AI 依赖继续按既定取舍代理；四条 Global/China IP 范围冲突未在缺少设备与用途证据时改成整段直连。DNS 失败代理兜底、IPv6、Google 重写、MITM 与发布开关不变。
+
+这些检查不代替手机实际解析、GeoIP、模块及 App 功能验收。更严格的检查可能使合理的上游新分类进入待审阅状态；失败保留上一完整版本。仅本地候选存在不代表 GitHub 每日任务和手机已经更新。

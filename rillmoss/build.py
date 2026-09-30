@@ -4,7 +4,7 @@ import fnmatch
 import ipaddress
 import json
 
-from . import parse
+from . import guard, parse
 from .parse import Invalid, Rule
 from .fetch import digest
 
@@ -98,6 +98,18 @@ def compose(parsed, manifest, personal):
                     removed.append(dict(source=sid, rule=r.value, reason="Apple DIRECT exception"))
                     continue
                 add(r, policy, sid)
+    # Exact personal exceptions follow both AI groups. A conflict with Claude
+    # must be reported by the guard, never solved by overriding its priority.
+    ai_routes = guard.DomainRoutes(entries)
+    for text in personal["direct_routing"]["priority_rules"]:
+        r = parse.rule(text)
+        if r.kind not in {"DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-WILDCARD"}:
+            raise Invalid("Direct priority exceptions must be domain rules")
+        for host in guard.domain_probes(r):
+            winner = ai_routes.match(host)
+            if winner and winner[1] in {"Claude", "OpenAI"}:
+                raise Invalid(f"Direct exception conflicts with {winner[1]}; AI unchanged: {text}")
+        add(r, "DIRECT", "Direct exception", required=True)
     for domain in personal["apple_sync"]:
         add(Rule("DOMAIN-SUFFIX", domain), "DIRECT", "R01", required=True)
     for domain in personal["tonghuashun"]:
@@ -269,6 +281,8 @@ def build(raw, manifest, personal, baseline):
     check_counts(counts, baseline)
     entries, duplicates, removed = compose(parsed, manifest, personal)
     checks = constraints(entries, personal, parsed)
+    direct_report, direct_checks = guard.validate(entries, parsed, manifest, personal)
+    checks.extend(direct_checks)
     conf, version = render(entries, personal)
     actual_sections = parse.sections(conf)
     if any(x in conf for x in ("RULE-SET,", "DOMAIN-SET,", "[Proxy]", "private-key", "password=")):
@@ -285,4 +299,5 @@ def build(raw, manifest, personal, baseline):
                   policy_counts=dict(Counter(p for _, p, _ in entries)), checks=checks,
                   duplicate_count=len(duplicates), duplicates=duplicates, removed=removed,
                   base_changes_not_imported=drift, device_acceptance="pending; static checks only")
+    report["direct_routing"] = direct_report
     return conf, report
