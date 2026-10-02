@@ -26783,7 +26783,7 @@
     "Claude": 21,
     "DIRECT": 6217,
     "OpenAI": 25,
-    "Overseas": 36111,
+    "Overseas": 36118,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -26794,8 +26794,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42378,
-  "rules_version": "83acfa46dcc9036bead152794d9a026d452468ad866f384744cf7169417c795a",
+  "rule_count": 42385,
+  "rules_version": "da031b375a2a317a8b767805fb14e0cbaf233abdb2e9ef10a4e99cc654277775",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -26812,7 +26812,7 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35784,
+    "global": 35791,
     "google": 698,
     "hbo": 49,
     "lan": 140,
