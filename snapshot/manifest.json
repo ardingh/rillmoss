@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-04T05:43:36+00:00",
+  "checked_at": "2026-10-05T05:27:27+00:00",
   "files": {
     "policy/counts.json": "1234873dc8f5628d09df183e5ef683f4761ab98b4c8b3cc1b32dffa5e39740f3",
     "policy/personal.json": "cc24fd7041044c6e9a0cf156d89f5d3da71cfbbc529bd75290d08fb374223c23",
     "policy/sources.json": "822277245633dffd5580548de7ddb96524aa65cf6e2de3451f06bb2872c3b3ad",
     "reports/build.json": "3f2fa55aea0e7f475028bc7a86d4792f1b50afc5bb6cfb41ee806052cf94371b",
     "rillmoss.conf": "31b5c639386739c06fb16950262e5e7bef61a96a64475187ba1e1afc93a5f0dd",
-    "snapshot/inputs/counts.json": "80d092b3cef53c51635defe130835717115f791991c002cfd1937dca64907d89",
+    "snapshot/inputs/counts.json": "1234873dc8f5628d09df183e5ef683f4761ab98b4c8b3cc1b32dffa5e39740f3",
     "snapshot/inputs/personal.json": "cc24fd7041044c6e9a0cf156d89f5d3da71cfbbc529bd75290d08fb374223c23",
     "snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
     "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "c4b4f6ec292afe94df9ac6ea95a2197e3f78329e63a9f90568d89e80db0ea47d",
+    "snapshot/raw/claude-ips.txt": "ed61e479409497163145987b146159ec801a7a783282fc76184c10235fae95e0",
     "snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -47,7 +47,7 @@
   },
   "rules_version": "5a087add13d3f873afd5e8384ea941cda7384b0f2709502206dbc9d54b5e52de",
   "schema": 1,
-  "snapshot_id": "93f8a077d1bf679aa364a8aceb15a9420ae95fb142a8fdc446608faf42760c5d",
+  "snapshot_id": "e15d75c9e6dcefa6d1ba830cdf3d83a7277bd66bba936bc79af4aa9245354627",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -132,7 +132,7 @@
       "claude-ips": {
         "bytes": 377122,
         "commit": null,
-        "sha256": "c4b4f6ec292afe94df9ac6ea95a2197e3f78329e63a9f90568d89e80db0ea47d",
+        "sha256": "ed61e479409497163145987b146159ec801a7a783282fc76184c10235fae95e0",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
