@@ -3526,6 +3526,11 @@
     {
       "kept": "R01",
       "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple-cloudkit.com"
     },
     {
@@ -3537,11 +3542,6 @@
       "kept": "R01",
       "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apzones.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
     },
     {
       "kept": "R01",
@@ -26783,7 +26783,7 @@
     "Claude": 21,
     "DIRECT": 6217,
     "OpenAI": 25,
-    "Overseas": 36156,
+    "Overseas": 36241,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -26794,8 +26794,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42423,
-  "rules_version": "1424b34e08ee2d7d3a2757bcb2d75e4dd01b74343442f1a635aaa75698d6749a",
+  "rule_count": 42508,
+  "rules_version": "9db0fccc3f4b6a47609f0aa258d974d5477cf2bc2dce3f0e2f18a0d3f2eed99b",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -26812,7 +26812,7 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35829,
+    "global": 35914,
     "google": 698,
     "hbo": 49,
     "lan": 140,
