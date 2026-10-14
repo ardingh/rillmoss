@@ -13,7 +13,8 @@ GROUPS = {"Overseas": "V3（vless+vision+reality）", "OpenAI": "V3 Static Resid
           "Claude": "V3 Static Residential", "Muse": "V3 Static Residential"}
 AI_SOURCES = {"Claude": ("claude-page", "claude-ips"),
               "OpenAI": ("openai-base", "openai-acl")}
-MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.com"))
+MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.com"),
+              Rule("DOMAIN-SUFFIX", "meta.ai"))
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
@@ -101,7 +102,7 @@ def compose(parsed, manifest, personal):
                 add(r, policy, sid)
     muse_rules = tuple(parse.rule(text) for text in personal["muse_rules"])
     if muse_rules != MUSE_RULES:
-        raise Invalid("Muse rules must retain the two approved domain suffixes")
+        raise Invalid("Muse rules must retain the three approved domain suffixes")
     for r in muse_rules:
         add(r, "Muse", "Muse", required=True)
     # Exact personal exceptions follow the residential groups. A conflict with Claude
@@ -193,6 +194,9 @@ def constraints(entries, personal, parsed):
         "muse.ai": "Muse", "auth.muse.ai": "Muse", "api.muse.ai": "Muse",
         "security.muse.ai": "Muse", "introducing.muse.ai": "Muse",
         "metaaivm.com": "Muse", "hatch.metaaivm.com": "Muse", "check.metaaivm.com": "Muse",
+        "meta.ai": "Muse", "api.meta.ai": "Muse", "agent.meta.ai": "Muse",
+        "gateway.meta.ai": "Muse", "edge-chat.meta.ai": "Muse",
+        "edge-chat-latest.meta.ai": "Muse", "shortwave.meta.ai": "Muse",
         "humb.apple.com": "DIRECT", "guzzoni.apple.com": "DIRECT", "smoot.apple.com": "DIRECT",
         "p01-ckdatabase.icloud.com": "DIRECT", "gateway.icloud.com": "DIRECT",
         "p01-ckdatabasews.icloud.com": "DIRECT", "p01-content.icloud-content.com": "DIRECT",
@@ -216,6 +220,21 @@ def constraints(entries, personal, parsed):
         results.append(dict(target=domain, expected=policy, actual=actual, source=origin, matched=value))
         if actual != policy:
             raise Invalid(f"Routing constraint failed: {domain}: {actual}, expected {policy}")
+    # Upstream may introduce a specific Muse endpoint outside the fixed probes.
+    # It must still reach Muse; stop adoption rather than change an AI priority.
+    domain_routes = guard.DomainRoutes(entries)
+    checked_muse_hosts = set(expected)
+    for r, _, _ in entries:
+        for host in guard.domain_probes(r):
+            if host in checked_muse_hosts or not any(match_domain(muse, host) for muse in MUSE_RULES):
+                continue
+            checked_muse_hosts.add(host)
+            winner = domain_routes.match(host)
+            if winner is None or winner[1] != "Muse":
+                actual = winner[1] if winner else "unmatched"
+                raise Invalid(f"Muse routing conflict: {host}: {actual}, expected Muse")
+            results.append(dict(target=host, expected="Muse", actual="Muse", source=winner[2],
+                                matched=winner[0].value))
     for address in ("160.79.104.1", "2607:6bc0::1"):
         actual, origin, value = route(entries, address=address)
         if actual != "Claude":

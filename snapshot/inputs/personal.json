@@ -1651,7 +1651,8 @@
   },
   "muse_rules": [
     "DOMAIN-SUFFIX,muse.ai",
-    "DOMAIN-SUFFIX,metaaivm.com"
+    "DOMAIN-SUFFIX,metaaivm.com",
+    "DOMAIN-SUFFIX,meta.ai"
   ],
   "openai_required_rules": [
     "DOMAIN-SUFFIX,chat.com",

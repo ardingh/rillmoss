@@ -114,14 +114,17 @@ class PolicyTests(unittest.TestCase):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
 
-    def test_muse_routes_cover_subdomains_without_changing_meta_or_lookalikes(self):
+    def test_muse_routes_cover_meta_ai_without_changing_other_meta_or_lookalikes(self):
         self.assertEqual(self.personal["groups"]["Muse"], "V3 Static Residential")
         for host in ("muse.ai", "auth.muse.ai", "api.muse.ai", "security.muse.ai",
-                     "introducing.muse.ai", "metaaivm.com", "hatch.metaaivm.com", "vm.metaaivm.com"):
+                     "introducing.muse.ai", "metaaivm.com", "hatch.metaaivm.com", "vm.metaaivm.com",
+                     "meta.ai", "api.meta.ai", "agent.meta.ai", "gateway.meta.ai", "edge-chat.meta.ai",
+                     "edge-chat-latest.meta.ai", "shortwave.meta.ai", "deep.worker.meta.ai"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Muse")
-        for host in ("meta.ai", "meta.com", "fbcdn.net", "notmuse.ai", "muse.ai.example.com",
-                     "notmetaaivm.com", "metaaivm.com.example.com"):
+        for host in ("meta.com", "fbcdn.net", "notmuse.ai", "muse.ai.example.com",
+                     "notmetaaivm.com", "metaaivm.com.example.com", "notmeta.ai", "meta.ai.example.com",
+                     "metaaiusercontent.com", "ecto1usercontent.com", "meta-agents-apps.workers.dev"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Overseas")
 
@@ -130,9 +133,12 @@ class PolicyTests(unittest.TestCase):
         parsed["global"] = [r for r in parsed["global"] if r not in build.MUSE_RULES]
         parsed["global"].insert(0, Rule("DOMAIN", "api.muse.ai"))
         parsed["global"].insert(0, Rule("DOMAIN-SUFFIX", "hatch.metaaivm.com"))
+        parsed["global"].insert(0, Rule("DOMAIN", "api.meta.ai"))
+        parsed["global"].insert(0, Rule("DOMAIN-WILDCARD", "future-*.meta.ai"))
         entries, _, _ = build.compose(parsed, self.manifest, self.personal)
         build.constraints(entries, self.personal, parsed)
-        for host in ("muse.ai", "api.muse.ai", "metaaivm.com", "hatch.metaaivm.com"):
+        for host in ("muse.ai", "api.muse.ai", "metaaivm.com", "hatch.metaaivm.com",
+                     "meta.ai", "api.meta.ai", "future-api.meta.ai"):
             self.assertEqual(build.route(entries, host=host)[0], "Muse")
 
     def test_muse_binding_and_personal_domain_scope_cannot_be_bypassed(self):
@@ -143,7 +149,7 @@ class PolicyTests(unittest.TestCase):
                 with self.assertRaisesRegex(Invalid, "Exact group binding"):
                     build.build(self.raw, self.manifest, personal, self.counts)
         for rules in ([], self.personal["muse_rules"][:1],
-                      ["DOMAIN-SUFFIX,meta.ai", *self.personal["muse_rules"]]):
+                      ["DOMAIN-SUFFIX,meta.com", *self.personal["muse_rules"]]):
             with self.subTest(rules=rules):
                 personal = copy.deepcopy(self.personal)
                 personal["muse_rules"] = rules
@@ -156,6 +162,24 @@ class PolicyTests(unittest.TestCase):
                 entries = [(Rule("DOMAIN", "api.muse.ai"), policy, "test"), *self.entries]
                 with self.assertRaisesRegex(Invalid, "Routing constraint failed: api.muse.ai"):
                     build.constraints(entries, self.personal, self.parsed)
+
+    def test_new_ai_endpoint_inside_meta_ai_blocks_muse_priority_conflict(self):
+        for policy, sid in (("Claude", "claude-page"), ("OpenAI", "openai-base")):
+            for kind, value in (("DOMAIN", "future-service.meta.ai"),
+                                ("DOMAIN-SUFFIX", "future-service.meta.ai"),
+                                ("DOMAIN-WILDCARD", "future-*.meta.ai")):
+                with self.subTest(policy=policy, kind=kind):
+                    parsed = copy.deepcopy(self.parsed)
+                    parsed[sid].append(Rule(kind, value))
+                    entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+                    with self.assertRaisesRegex(Invalid, "Muse routing conflict"):
+                        build.constraints(entries, self.personal, parsed)
+
+    def test_direct_meta_ai_exception_cannot_override_muse(self):
+        personal = copy.deepcopy(self.personal)
+        personal["direct_routing"]["priority_rules"].append("DOMAIN,api.meta.ai")
+        with self.assertRaisesRegex(Invalid, "Direct exception conflicts with Muse"):
+            build.compose(self.parsed, self.manifest, personal)
 
     def test_claude_check_probe_is_exact_and_precedes_general_ipify(self):
         self.assertEqual(build.route(self.entries, host="api64.ipify.org")[0], "V3 Static Residential")
@@ -427,7 +451,7 @@ class BundleTests(unittest.TestCase):
         conf, _ = runner.verify(self.root)
         self.assertIn("DOMAIN,api64.ipify.org,V3 Static Residential", conf)
         self.assertIn("Muse = select,V3 Static Residential,policy-select-name=V3 Static Residential", conf)
-        for domain in ("muse.ai", "metaaivm.com"):
+        for domain in ("muse.ai", "metaaivm.com", "meta.ai"):
             self.assertIn(f"DOMAIN-SUFFIX,{domain},Muse", conf)
             self.assertNotIn(f"DOMAIN-SUFFIX,{domain},Overseas", conf)
         self.assertTrue(runner.read(self.root / "checks/latest.json")["publication_enabled"])
@@ -440,6 +464,51 @@ class BundleTests(unittest.TestCase):
             self.assertEqual(runner.update(self.root), 1)
         self.assertEqual(before, self.fingerprint())
         self.assertFalse(runner.read(self.root / "checks/latest.json")["bundle_applied"])
+
+    def test_daily_update_keeps_meta_ai_residential_with_new_global_subdomain(self):
+        self.authorize_publication()
+        real_stage = runner.stage
+        def collector(manifest, raw):
+            shutil.copytree(self.root / "snapshot/raw", raw)
+            target = raw / "global.txt"
+            target.write_text(target.read_text() + "\nHOST,future-service.meta.ai,Global\n")
+            metadata = runner.read(self.root / "snapshot/manifest.json")["upstream"]
+            metadata["sources"]["global"].update(sha256=fetch.digest(target.read_bytes()),
+                                                   bytes=target.stat().st_size)
+            return metadata
+        with patch("rillmoss.runner.stage", side_effect=lambda root, candidate:
+                   real_stage(root, candidate, collector=collector)):
+            self.assertEqual(runner.update(self.root), 0)
+        conf, _ = runner.verify(self.root)
+        lines = parse.sections(conf)["Rule"]
+        self.assertLess(lines.index("DOMAIN-SUFFIX,meta.ai,Muse"),
+                        lines.index("DOMAIN,future-service.meta.ai,Overseas"))
+        self.assertNotIn("DOMAIN-SUFFIX,meta.ai,Overseas", conf)
+        self.assertEqual(runner.read(self.root / "checks/latest.json")["status"], "passed")
+
+    def test_daily_update_muse_priority_conflict_keeps_previous_complete_bundle(self):
+        self.authorize_publication()
+        before = self.fingerprint()
+        real_stage = runner.stage
+        def collector(manifest, raw):
+            shutil.copytree(self.root / "snapshot/raw", raw)
+            target = raw / "claude-page.txt"
+            text = target.read_text()
+            marker = "DOMAIN-SUFFIX,anthropic.com"
+            self.assertIn(marker, text)
+            target.write_text(text.replace(marker, "DOMAIN,future-service.meta.ai\n" + marker, 1))
+            metadata = runner.read(self.root / "snapshot/manifest.json")["upstream"]
+            metadata["sources"]["claude-page"].update(sha256=fetch.digest(target.read_bytes()),
+                                                       bytes=target.stat().st_size)
+            return metadata
+        with patch("rillmoss.runner.stage", side_effect=lambda root, candidate:
+                   real_stage(root, candidate, collector=collector)):
+            self.assertEqual(runner.update(self.root), 1)
+        self.assertEqual(before, self.fingerprint())
+        check = runner.read(self.root / "checks/latest.json")
+        self.assertFalse(check["bundle_applied"])
+        self.assertIn("Muse routing conflict", check["error"])
+        runner.verify(self.root)
 
     def test_rollback_pauses_publication_and_restores_whole_bundle(self):
         source = Path(self.temp.name) / "accepted"

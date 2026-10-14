@@ -212,6 +212,55 @@
       "target": "check.metaaivm.com"
     },
     {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "api.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "agent.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "gateway.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "edge-chat.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "edge-chat-latest.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "shortwave.meta.ai"
+    },
+    {
       "actual": "DIRECT",
       "expected": "DIRECT",
       "matched": "humb.apple.com",
@@ -448,6 +497,27 @@
       "matched": "10jqka.com.cn",
       "source": "R03",
       "target": "5188.money.10jqka.com.cn"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "rillmoss-check.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaivm.com",
+      "source": "Muse",
+      "target": "rillmoss-check.metaaivm.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "rillmoss-check.meta.ai"
     },
     {
       "actual": "Claude",
@@ -3007,7 +3077,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4767,
+  "duplicate_count": 4768,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -16032,6 +16102,11 @@
     {
       "kept": "Muse",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,meta.ai"
+    },
+    {
+      "kept": "Muse",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,metaaivm.com"
     },
     {
@@ -26848,9 +26923,9 @@
   "policy_counts": {
     "Claude": 21,
     "DIRECT": 6217,
-    "Muse": 2,
+    "Muse": 3,
     "OpenAI": 25,
-    "Overseas": 36240,
+    "Overseas": 36239,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -26862,7 +26937,7 @@
     }
   ],
   "rule_count": 42509,
-  "rules_version": "edb5e7c31f27a99487b12686a7eae150a902f9a32ebeac3a9332e73167480c94",
+  "rules_version": "0561782dd6860311c40e028dd4d25131e260d507beb58ce13524181144ec45ce",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
