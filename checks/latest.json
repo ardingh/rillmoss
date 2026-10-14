@@ -7,11 +7,11 @@
       ]
     }
   },
-  "candidate_rules_version": "9db0fccc3f4b6a47609f0aa258d974d5477cf2bc2dce3f0e2f18a0d3f2eed99b",
-  "checked_at": "2026-10-13T06:42:43+00:00",
-  "current_rules_version": "9db0fccc3f4b6a47609f0aa258d974d5477cf2bc2dce3f0e2f18a0d3f2eed99b",
+  "candidate_rules_version": "a7d6857bf40d85f5c8ba4a4312222bf6f1b66fe8078ca7c2160bc369dcde92f2",
+  "checked_at": "2026-10-14T04:45:32+00:00",
+  "current_rules_version": "a7d6857bf40d85f5c8ba4a4312222bf6f1b66fe8078ca7c2160bc369dcde92f2",
   "publication_enabled": true,
-  "rules_changed": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/38358001795",
+  "rules_changed": true,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/38512811800",
   "status": "passed"
 }
