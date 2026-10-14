@@ -156,6 +156,62 @@
       "target": "api.sift.com"
     },
     {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "auth.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "api.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "security.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "introducing.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaivm.com",
+      "source": "Muse",
+      "target": "metaaivm.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaivm.com",
+      "source": "Muse",
+      "target": "hatch.metaaivm.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaivm.com",
+      "source": "Muse",
+      "target": "check.metaaivm.com"
+    },
+    {
       "actual": "DIRECT",
       "expected": "DIRECT",
       "matched": "humb.apple.com",
@@ -2951,7 +3007,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4765,
+  "duplicate_count": 4767,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -15974,6 +16030,11 @@
       "rule": "DOMAIN-SUFFIX,messengerdevelopers.com"
     },
     {
+      "kept": "Muse",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,metaaivm.com"
+    },
+    {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,mfg-inspector.com"
@@ -25199,6 +25260,11 @@
       "rule": "DOMAIN-SUFFIX,muscdn.com"
     },
     {
+      "kept": "Muse",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,muse.ai"
+    },
+    {
       "kept": "tiktok",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,musical.ly"
@@ -26782,8 +26848,9 @@
   "policy_counts": {
     "Claude": 21,
     "DIRECT": 6217,
+    "Muse": 2,
     "OpenAI": 25,
-    "Overseas": 36242,
+    "Overseas": 36240,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -26795,7 +26862,7 @@
     }
   ],
   "rule_count": 42509,
-  "rules_version": "a7d6857bf40d85f5c8ba4a4312222bf6f1b66fe8078ca7c2160bc369dcde92f2",
+  "rules_version": "edb5e7c31f27a99487b12686a7eae150a902f9a32ebeac3a9332e73167480c94",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

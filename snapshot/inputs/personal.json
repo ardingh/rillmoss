@@ -1645,9 +1645,14 @@
   ],
   "groups": {
     "Claude": "V3 Static Residential",
+    "Muse": "V3 Static Residential",
     "OpenAI": "V3 Static Residential",
     "Overseas": "V3（vless+vision+reality）"
   },
+  "muse_rules": [
+    "DOMAIN-SUFFIX,muse.ai",
+    "DOMAIN-SUFFIX,metaaivm.com"
+  ],
   "openai_required_rules": [
     "DOMAIN-SUFFIX,chat.com",
     "DOMAIN-SUFFIX,chatgpt.com",

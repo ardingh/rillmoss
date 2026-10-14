@@ -7,6 +7,7 @@
 | R01 苹果 | 保留完整 Apple 列表并固定 DIRECT；补充 Apple / iCloud / CloudKit 同步域名，`humb.apple.com` 明确直连。Apple 原始列表仍在原来的相对位置，只有明确核心例外前置。普通 Siri、听写、搜索不再进入混合 AI 分组。 |
 | R02 OpenAI | 替换混合 AI 入口：仅提取打底 AI 文件的 ChatGPT 段，合并 ACL4SSR OpenAi.list；统一 OpenAI 住宅分组，覆盖 ChatGPT / OpenAI / Codex 共用端点。 |
 | R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用官方入站 IPv4 `/23` 与 IPv6 `/48`、加 `no-resolve`。 |
+| Muse | 独立住宅分组，只覆盖 `muse.ai`、`metaaivm.com` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
 | Claude Check 检测 | 恢复旧规则的 `DOMAIN,api64.ipify.org,V3 Static Residential` 精确前置例外；只改变此检测域名，其他 ipify.org 域名仍按通用规则分流。个人输入保存为 `claude_check_probe`，本次不改 Claude Check 配置。 |
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
 | R04 懂球帝 | 补充 `DOMAIN-KEYWORD,apimg.qunliao.info,REJECT` 作为去广告起点。后续按广告和正常内容实测增补，不承诺单条规则去尽全部广告。 |
@@ -14,7 +15,7 @@
 | 海外服务 | 保留 YouTube、Netflix、Disney、HBO/Max、Spotify、Telegram、PayPal、Twitter、Facebook、Amazon、GitHub、Microsoft、Google、TikTok，策略归并为Overseas。 |
 | 游戏 | 保留 Sony、SteamCN、Game；删除被 Game 覆盖的 Nintendo、Epic、Steam 独立引用。SteamCN 仍代理。 |
 | 字节跳动例外 | `bytedapm.com` 及子域明确代理，早于国内通用规则；`snssdk.com` 及子域直连，移除代理侧重复。 |
-| 策略组 | 删除地区测速组与合并后的服务组，只保留三个精确绑定的固定 select 组。 |
+| 策略组 | 删除地区测速组与合并后的服务组，只保留 Overseas、OpenAI、Claude、Muse 四个精确绑定的固定 select 组。 |
 | Google 重写 | 原样保留 g.cn / google.cn → google.com 两条重写，以及 `hostname = *.google.cn`。不添加证书或解密开关。 |
 
 AI 规则先于普通 Apple 与通用国内规则；`humb.apple.com` 例外更早。其余保留来源按打底相对顺序展开。一般精确重复仍只保留最先的一条，不做父域压缩；OpenAI / Claude 之间的共享条目例外，两组分别保留独立副本，各组内仍精确去重。当前匹配顺序为 Claude 在前，共享条目优先命中 Claude；OpenAI 的独立副本完整保留。共享认证、监控、客服等依赖被其他应用使用时也走住宅。
@@ -48,3 +49,5 @@ close-if-proxy-chain-missing = true
 - Microsoft、海外游戏、`bytedapm.com` 与共享 AI 依赖继续按既定取舍代理；四条 Global/China IP 范围冲突未在缺少设备与用途证据时改成整段直连。DNS 失败代理兜底、IPv6、Google 重写、MITM 与发布开关不变。
 
 这些检查不代替手机实际解析、GeoIP、模块及 App 功能验收。更严格的检查可能使合理的上游新分类进入待审阅状态；失败保留上一完整版本。仅本地候选存在不代表 GitHub 每日任务和手机已经更新。
+
+2026-10-14：按用户要求新增 Muse 独立组，只绑定 `V3 Static Residential`。个人输入 `muse_rules` 固定两个域名后缀；每日生成先加入个人 Muse 规则，再展开通用底座并去除两个精确重复，避免恢复为 Overseas。Claude / OpenAI 的内容、相对优先级与节点绑定不变；Meta 的其他域名、共享依赖、DNS 和发布开关不变。不新增上游来源；未知的新 Muse 域名仍须核对后明确增补。

@@ -114,6 +114,49 @@ class PolicyTests(unittest.TestCase):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
 
+    def test_muse_routes_cover_subdomains_without_changing_meta_or_lookalikes(self):
+        self.assertEqual(self.personal["groups"]["Muse"], "V3 Static Residential")
+        for host in ("muse.ai", "auth.muse.ai", "api.muse.ai", "security.muse.ai",
+                     "introducing.muse.ai", "metaaivm.com", "hatch.metaaivm.com", "vm.metaaivm.com"):
+            with self.subTest(host=host):
+                self.assertEqual(build.route(self.entries, host=host)[0], "Muse")
+        for host in ("meta.ai", "meta.com", "fbcdn.net", "notmuse.ai", "muse.ai.example.com",
+                     "notmetaaivm.com", "metaaivm.com.example.com"):
+            with self.subTest(host=host):
+                self.assertEqual(build.route(self.entries, host=host)[0], "Overseas")
+
+    def test_muse_personal_routes_survive_upstream_removal_and_specific_proxy_rules(self):
+        parsed = copy.deepcopy(self.parsed)
+        parsed["global"] = [r for r in parsed["global"] if r not in build.MUSE_RULES]
+        parsed["global"].insert(0, Rule("DOMAIN", "api.muse.ai"))
+        parsed["global"].insert(0, Rule("DOMAIN-SUFFIX", "hatch.metaaivm.com"))
+        entries, _, _ = build.compose(parsed, self.manifest, self.personal)
+        build.constraints(entries, self.personal, parsed)
+        for host in ("muse.ai", "api.muse.ai", "metaaivm.com", "hatch.metaaivm.com"):
+            self.assertEqual(build.route(entries, host=host)[0], "Muse")
+
+    def test_muse_binding_and_personal_domain_scope_cannot_be_bypassed(self):
+        for node in ("DIRECT", build.GROUPS["Overseas"]):
+            with self.subTest(node=node):
+                personal = copy.deepcopy(self.personal)
+                personal["groups"]["Muse"] = node
+                with self.assertRaisesRegex(Invalid, "Exact group binding"):
+                    build.build(self.raw, self.manifest, personal, self.counts)
+        for rules in ([], self.personal["muse_rules"][:1],
+                      ["DOMAIN-SUFFIX,meta.ai", *self.personal["muse_rules"]]):
+            with self.subTest(rules=rules):
+                personal = copy.deepcopy(self.personal)
+                personal["muse_rules"] = rules
+                with self.assertRaisesRegex(Invalid, "Muse rules must retain"):
+                    build.compose(self.parsed, self.manifest, personal)
+
+    def test_muse_residential_route_cannot_be_shadowed(self):
+        for policy in ("DIRECT", "Overseas", "OpenAI"):
+            with self.subTest(policy=policy):
+                entries = [(Rule("DOMAIN", "api.muse.ai"), policy, "test"), *self.entries]
+                with self.assertRaisesRegex(Invalid, "Routing constraint failed: api.muse.ai"):
+                    build.constraints(entries, self.personal, self.parsed)
+
     def test_claude_check_probe_is_exact_and_precedes_general_ipify(self):
         self.assertEqual(build.route(self.entries, host="api64.ipify.org")[0], "V3 Static Residential")
         for host in ("ipify.org", "api.ipify.org", "other.api64.ipify.org"):
@@ -253,7 +296,7 @@ class PolicyTests(unittest.TestCase):
     def test_render_has_only_local_bindings_and_no_remote_rules(self):
         conf, _ = build.render(self.entries, self.personal)
         self.assertNotIn("RULE-SET,", conf)
-        self.assertEqual(len(parse.sections(conf)["Proxy Group"]), 3)
+        self.assertEqual(len(parse.sections(conf)["Proxy Group"]), 4)
         for group, node in build.GROUPS.items():
             self.assertIn(f"{group} = select,{node},policy-select-name={node}", conf)
         self.assertIn("^https?://(www.)?google.cn https://www.google.com 302", conf)
@@ -383,6 +426,10 @@ class BundleTests(unittest.TestCase):
             installed.assert_called_once()
         conf, _ = runner.verify(self.root)
         self.assertIn("DOMAIN,api64.ipify.org,V3 Static Residential", conf)
+        self.assertIn("Muse = select,V3 Static Residential,policy-select-name=V3 Static Residential", conf)
+        for domain in ("muse.ai", "metaaivm.com"):
+            self.assertIn(f"DOMAIN-SUFFIX,{domain},Muse", conf)
+            self.assertNotIn(f"DOMAIN-SUFFIX,{domain},Overseas", conf)
         self.assertTrue(runner.read(self.root / "checks/latest.json")["publication_enabled"])
         self.assertIsNone(runner.read(self.root / "policy/release.json")["acceptance"])
 

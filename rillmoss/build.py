@@ -10,9 +10,10 @@ from .fetch import digest
 
 
 GROUPS = {"Overseas": "V3（vless+vision+reality）", "OpenAI": "V3 Static Residential",
-          "Claude": "V3 Static Residential"}
+          "Claude": "V3 Static Residential", "Muse": "V3 Static Residential"}
 AI_SOURCES = {"Claude": ("claude-page", "claude-ips"),
               "OpenAI": ("openai-base", "openai-acl")}
+MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.com"))
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
@@ -98,7 +99,12 @@ def compose(parsed, manifest, personal):
                     removed.append(dict(source=sid, rule=r.value, reason="Apple DIRECT exception"))
                     continue
                 add(r, policy, sid)
-    # Exact personal exceptions follow both AI groups. A conflict with Claude
+    muse_rules = tuple(parse.rule(text) for text in personal["muse_rules"])
+    if muse_rules != MUSE_RULES:
+        raise Invalid("Muse rules must retain the two approved domain suffixes")
+    for r in muse_rules:
+        add(r, "Muse", "Muse", required=True)
+    # Exact personal exceptions follow the residential groups. A conflict with Claude
     # must be reported by the guard, never solved by overriding its priority.
     ai_routes = guard.DomainRoutes(entries)
     for text in personal["direct_routing"]["priority_rules"]:
@@ -107,7 +113,7 @@ def compose(parsed, manifest, personal):
             raise Invalid("Direct priority exceptions must be domain rules")
         for host in guard.domain_probes(r):
             winner = ai_routes.match(host)
-            if winner and winner[1] in {"Claude", "OpenAI"}:
+            if winner and winner[1] in {"Claude", "OpenAI", "Muse"}:
                 raise Invalid(f"Direct exception conflicts with {winner[1]}; AI unchanged: {text}")
         add(r, "DIRECT", "Direct exception", required=True)
     for domain in personal["apple_sync"]:
@@ -184,6 +190,9 @@ def constraints(entries, personal, parsed):
         "api-iam.intercom.io": "Claude", "o33249.ingest.sentry.io": "Claude",
         "claude.ai": "Claude", "api.anthropic.com": "Claude", "claudeusercontent.com": "Claude",
         "browser-intake-us5-datadoghq.com": "Claude", "api.sift.com": "Claude",
+        "muse.ai": "Muse", "auth.muse.ai": "Muse", "api.muse.ai": "Muse",
+        "security.muse.ai": "Muse", "introducing.muse.ai": "Muse",
+        "metaaivm.com": "Muse", "hatch.metaaivm.com": "Muse", "check.metaaivm.com": "Muse",
         "humb.apple.com": "DIRECT", "guzzoni.apple.com": "DIRECT", "smoot.apple.com": "DIRECT",
         "p01-ckdatabase.icloud.com": "DIRECT", "gateway.icloud.com": "DIRECT",
         "p01-ckdatabasews.icloud.com": "DIRECT", "p01-content.icloud-content.com": "DIRECT",
@@ -287,8 +296,8 @@ def build(raw, manifest, personal, baseline):
     actual_sections = parse.sections(conf)
     if any(x in conf for x in ("RULE-SET,", "DOMAIN-SET,", "[Proxy]", "private-key", "password=")):
         raise Invalid("Remote rule dependency or proxy credentials in generated configuration")
-    if len(actual_sections["Proxy Group"]) != 3:
-        raise Invalid("Expected exactly three groups")
+    if len(actual_sections["Proxy Group"]) != len(GROUPS):
+        raise Invalid("Expected exactly four groups")
     drift = {}
     approved = personal["base_sections_approved"]
     for name in sorted(set(parsed["base"]) | set(approved)):

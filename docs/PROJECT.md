@@ -9,8 +9,11 @@
 | Overseas | `V3（vless+vision+reality）` |
 | OpenAI | `V3 Static Residential` |
 | Claude | `V3 Static Residential` |
+| Muse | `V3 Static Residential` |
 
 Claude 保留完整的 19 条已审阅域名及关键词规则，以及两条官方入站 IP 规则；OpenAI 独立保留 25 条规则。两组共享条目分别保留，各自校验，不能靠另一组补齐缺失。Claude 匹配规则在 OpenAI 之前，因此共享域名优先走 Claude，包括 OpenAI 使用这些域名的请求。独立是指规则内容和节点绑定各自完整，不是按调用应用隔离同一域名的流量。
+
+Muse 独立覆盖 `muse.ai`、`metaaivm.com` 及其子域名，规则在 Claude / OpenAI 之后、通用底座之前。其他 Meta 域名仍按原有规则分流。
 
 住宅节点在设备上保持“代理通过”普通 V3。配置不含任何节点连接参数。分组没有其他候选出口；客户端在节点缺失、不可达及 UDP 场景下的实际处理仍须验收。
 
@@ -61,6 +64,6 @@ python3 -m rillmoss rebuild --bundle . --output .work/rebuilt.conf
 
 两端均使用配置模式、保持 VPN 开启，核对没有更高优先级模块覆盖。设置配置后台更新间隔为 1 天，也可手动“更新配置”。GitHub 每日台北时间 08:08 触发，设备后台加载不保证同步或准点。
 
-Apple / iCloud 及国内服务通常直连；保留 `dns-direct-fallback-proxy = true`，所以直连解析失败时允许代理兜底。OpenAI 和 Claude 没有其他代理出口。其他 AI 没有独立分类，AI 工具访问 GitHub、软件包仓库等独立目标时按目标地址正常分流。
+Apple / iCloud 及国内服务通常直连；保留 `dns-direct-fallback-proxy = true`，所以直连解析失败时允许代理兜底。OpenAI、Claude 和 Muse 没有其他代理出口。其余 AI 没有独立分类，AI 工具访问 GitHub、软件包仓库等独立目标时按目标地址正常分流。
 
 保留 Google 跳转重写与 MITM 域名声明不等于启用 HTTPS 解密。Apple / iCloud 不解密；懂球帝第一版只使用分流去广告。Apple Intelligence 与 ChatGPT 语音不纳入第一版功能验收。
