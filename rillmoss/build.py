@@ -17,7 +17,9 @@ MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.
               Rule("DOMAIN-SUFFIX", "meta.ai"),
               Rule("DOMAIN-SUFFIX", "metaaiusercontent.com"), Rule("DOMAIN-SUFFIX", "ecto1usercontent.com"),
               Rule("DOMAIN-SUFFIX", "meta-agents-apps.workers.dev"), Rule("DOMAIN-SUFFIX", "meta.com"),
-              Rule("DOMAIN-SUFFIX", "facebook.com"), Rule("DOMAIN-SUFFIX", "instagram.com"))
+              Rule("DOMAIN-SUFFIX", "facebook.com"), Rule("DOMAIN-SUFFIX", "instagram.com"),
+              Rule("DOMAIN-SUFFIX", "fbcdn.net"), Rule("DOMAIN-SUFFIX", "facebook.net"),
+              Rule("DOMAIN-SUFFIX", "fbsbx.com"))
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
@@ -105,7 +107,7 @@ def compose(parsed, manifest, personal):
                 add(r, policy, sid)
     muse_rules = tuple(parse.rule(text) for text in personal["muse_rules"])
     if muse_rules != MUSE_RULES:
-        raise Invalid("Muse rules must retain the nine approved domain suffixes")
+        raise Invalid("Muse rules must retain the twelve approved domain suffixes")
     for r in muse_rules:
         add(r, "Muse", "Muse", required=True)
     # Exact personal exceptions follow the residential groups. A conflict with Claude

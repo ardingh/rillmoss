@@ -123,17 +123,21 @@ class PolicyTests(unittest.TestCase):
                      "metaaiusercontent.com", "media.metaaiusercontent.com", "ecto1usercontent.com",
                      "files.ecto1usercontent.com", "meta-agents-apps.workers.dev",
                      "app.meta-agents-apps.workers.dev", "meta.com", "auth.meta.com",
-                     "facebook.com", "www.facebook.com", "instagram.com", "i.instagram.com"):
+                     "facebook.com", "www.facebook.com", "instagram.com", "i.instagram.com",
+                     "fbcdn.net", "static.xx.fbcdn.net", "scontent.xx.fbcdn.net",
+                     "facebook.net", "connect.facebook.net", "fbsbx.com", "lookaside.fbsbx.com"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Muse")
-        for host in ("fbcdn.net", "static.xx.fbcdn.net", "cdninstagram.com", "whatsapp.com",
+        for host in ("cdninstagram.com", "static.cdninstagram.com", "whatsapp.com",
                      "workers.dev", "other-app.workers.dev", "notmuse.ai", "muse.ai.example.com",
                      "notmetaaivm.com", "metaaivm.com.example.com", "notmeta.ai", "meta.ai.example.com",
                      "notmetaaiusercontent.com", "metaaiusercontent.com.example.com",
                      "notecto1usercontent.com", "ecto1usercontent.com.example.com",
                      "notmeta-agents-apps.workers.dev", "meta-agents-apps.workers.dev.example.com",
                      "notmeta.com", "meta.com.example.com", "notfacebook.com", "facebook.com.example.com",
-                     "notinstagram.com", "instagram.com.example.com"):
+                     "notinstagram.com", "instagram.com.example.com",
+                     "notfbcdn.net", "fbcdn.net.example.com", "notfacebook.net",
+                     "facebook.net.example.com", "notfbsbx.com", "fbsbx.com.example.com"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Overseas")
 
@@ -145,14 +149,15 @@ class PolicyTests(unittest.TestCase):
         parsed["global"].insert(0, Rule("DOMAIN", "api.meta.ai"))
         parsed["global"].insert(0, Rule("DOMAIN-WILDCARD", "future-*.meta.ai"))
         for domain in ("metaaiusercontent.com", "ecto1usercontent.com", "meta-agents-apps.workers.dev",
-                       "meta.com", "facebook.com", "instagram.com"):
+                       "meta.com", "facebook.com", "instagram.com", "fbcdn.net", "facebook.net", "fbsbx.com"):
             parsed["global"].insert(0, Rule("DOMAIN", "future." + domain))
         entries, _, _ = build.compose(parsed, self.manifest, self.personal)
         build.constraints(entries, self.personal, parsed)
         for host in ("muse.ai", "api.muse.ai", "metaaivm.com", "hatch.metaaivm.com",
                      "meta.ai", "api.meta.ai", "future-api.meta.ai", "future.metaaiusercontent.com",
                      "future.ecto1usercontent.com", "future.meta-agents-apps.workers.dev",
-                     "future.meta.com", "future.facebook.com", "future.instagram.com"):
+                     "future.meta.com", "future.facebook.com", "future.instagram.com",
+                     "future.fbcdn.net", "future.facebook.net", "future.fbsbx.com"):
             self.assertEqual(build.route(entries, host=host)[0], "Muse")
 
     def test_muse_binding_and_personal_domain_scope_cannot_be_bypassed(self):
@@ -192,7 +197,7 @@ class PolicyTests(unittest.TestCase):
     def test_direct_exception_cannot_override_any_approved_muse_domain(self):
         for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
                        "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
-                       "facebook.com", "instagram.com"):
+                       "facebook.com", "instagram.com", "fbcdn.net", "facebook.net", "fbsbx.com"):
             with self.subTest(domain=domain):
                 personal = copy.deepcopy(self.personal)
                 personal["direct_routing"]["priority_rules"].append("DOMAIN,api." + domain)
@@ -471,7 +476,7 @@ class BundleTests(unittest.TestCase):
         self.assertIn("Muse = select,V3 Static Residential,policy-select-name=V3 Static Residential", conf)
         for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
                        "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
-                       "facebook.com", "instagram.com"):
+                       "facebook.com", "instagram.com", "fbcdn.net", "facebook.net", "fbsbx.com"):
             self.assertIn(f"DOMAIN-SUFFIX,{domain},Muse", conf)
             self.assertNotIn(f"DOMAIN-SUFFIX,{domain},Overseas", conf)
         self.assertTrue(runner.read(self.root / "checks/latest.json")["publication_enabled"])
@@ -493,7 +498,7 @@ class BundleTests(unittest.TestCase):
             target = raw / "global.txt"
             domains = ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
                        "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
-                       "facebook.com", "instagram.com")
+                       "facebook.com", "instagram.com", "fbcdn.net", "facebook.net", "fbsbx.com")
             target.write_text(target.read_text() + "".join(
                 "\nHOST,future-service." + domain + ",Global\n" for domain in domains))
             metadata = runner.read(self.root / "snapshot/manifest.json")["upstream"]
@@ -507,7 +512,7 @@ class BundleTests(unittest.TestCase):
         lines = parse.sections(conf)["Rule"]
         for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
                        "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
-                       "facebook.com", "instagram.com"):
+                       "facebook.com", "instagram.com", "fbcdn.net", "facebook.net", "fbsbx.com"):
             with self.subTest(domain=domain):
                 self.assertLess(lines.index(f"DOMAIN-SUFFIX,{domain},Muse"),
                                 lines.index(f"DOMAIN,future-service.{domain},Overseas"))

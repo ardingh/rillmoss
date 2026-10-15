@@ -1658,7 +1658,10 @@
     "DOMAIN-SUFFIX,meta-agents-apps.workers.dev",
     "DOMAIN-SUFFIX,meta.com",
     "DOMAIN-SUFFIX,facebook.com",
-    "DOMAIN-SUFFIX,instagram.com"
+    "DOMAIN-SUFFIX,instagram.com",
+    "DOMAIN-SUFFIX,fbcdn.net",
+    "DOMAIN-SUFFIX,facebook.net",
+    "DOMAIN-SUFFIX,fbsbx.com"
   ],
   "openai_required_rules": [
     "DOMAIN-SUFFIX,chat.com",
