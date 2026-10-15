@@ -1652,7 +1652,13 @@
   "muse_rules": [
     "DOMAIN-SUFFIX,muse.ai",
     "DOMAIN-SUFFIX,metaaivm.com",
-    "DOMAIN-SUFFIX,meta.ai"
+    "DOMAIN-SUFFIX,meta.ai",
+    "DOMAIN-SUFFIX,metaaiusercontent.com",
+    "DOMAIN-SUFFIX,ecto1usercontent.com",
+    "DOMAIN-SUFFIX,meta-agents-apps.workers.dev",
+    "DOMAIN-SUFFIX,meta.com",
+    "DOMAIN-SUFFIX,facebook.com",
+    "DOMAIN-SUFFIX,instagram.com"
   ],
   "openai_required_rules": [
     "DOMAIN-SUFFIX,chat.com",

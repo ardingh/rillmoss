@@ -415,6 +415,104 @@
       "target": "www.douban.com"
     },
     {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "muse.ai",
+      "source": "Muse",
+      "target": "check.muse.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.ai",
+      "source": "Muse",
+      "target": "check.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaiusercontent.com",
+      "source": "Muse",
+      "target": "metaaiusercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaiusercontent.com",
+      "source": "Muse",
+      "target": "check.metaaiusercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "ecto1usercontent.com",
+      "source": "Muse",
+      "target": "ecto1usercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "ecto1usercontent.com",
+      "source": "Muse",
+      "target": "check.ecto1usercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta-agents-apps.workers.dev",
+      "source": "Muse",
+      "target": "meta-agents-apps.workers.dev"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta-agents-apps.workers.dev",
+      "source": "Muse",
+      "target": "check.meta-agents-apps.workers.dev"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.com",
+      "source": "Muse",
+      "target": "meta.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.com",
+      "source": "Muse",
+      "target": "check.meta.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "check.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagram.com",
+      "source": "Muse",
+      "target": "instagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagram.com",
+      "source": "Muse",
+      "target": "check.instagram.com"
+    },
+    {
       "actual": "DIRECT",
       "expected": "DIRECT",
       "matched": "10jqka.com.cn",
@@ -518,6 +616,97 @@
       "matched": "meta.ai",
       "source": "Muse",
       "target": "rillmoss-check.meta.ai"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "metaaiusercontent.com",
+      "source": "Muse",
+      "target": "rillmoss-check.metaaiusercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "ecto1usercontent.com",
+      "source": "Muse",
+      "target": "rillmoss-check.ecto1usercontent.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta-agents-apps.workers.dev",
+      "source": "Muse",
+      "target": "rillmoss-check.meta-agents-apps.workers.dev"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "meta.com",
+      "source": "Muse",
+      "target": "rillmoss-check.meta.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "rillmoss-check.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagram.com",
+      "source": "Muse",
+      "target": "rillmoss-check.instagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "developers.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time1.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time2.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time3.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time4.facebook.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "facebook.com",
+      "source": "Muse",
+      "target": "time5.facebook.com"
     },
     {
       "actual": "Claude",
@@ -3077,7 +3266,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4768,
+  "duplicate_count": 4771,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -3108,6 +3297,21 @@
       "kept": "disney",
       "removed": "hbo",
       "rule": "DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,facebook.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,instagram.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,meta.com"
     },
     {
       "kept": "steamcn",
@@ -23720,7 +23924,7 @@
       "rule": "DOMAIN-SUFFIX,facebook.br"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,facebook.com"
     },
@@ -25205,7 +25409,7 @@
       "rule": "DOMAIN-SUFFIX,instagr.am"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,instagram.com"
     },
@@ -25285,7 +25489,7 @@
       "rule": "DOMAIN-SUFFIX,messenger.com"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,meta.com"
     },
@@ -26923,9 +27127,9 @@
   "policy_counts": {
     "Claude": 21,
     "DIRECT": 6217,
-    "Muse": 3,
+    "Muse": 9,
     "OpenAI": 25,
-    "Overseas": 36239,
+    "Overseas": 36236,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -26936,8 +27140,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42509,
-  "rules_version": "0561782dd6860311c40e028dd4d25131e260d507beb58ce13524181144ec45ce",
+  "rule_count": 42512,
+  "rules_version": "99c009303da7139ed08d108eb5bb2d8ac0dad6d1197ebb7a78da5f9012a3d732",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

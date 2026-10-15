@@ -7,12 +7,12 @@
 | R01 苹果 | 保留完整 Apple 列表并固定 DIRECT；补充 Apple / iCloud / CloudKit 同步域名，`humb.apple.com` 明确直连。Apple 原始列表仍在原来的相对位置，只有明确核心例外前置。普通 Siri、听写、搜索不再进入混合 AI 分组。 |
 | R02 OpenAI | 替换混合 AI 入口：仅提取打底 AI 文件的 ChatGPT 段，合并 ACL4SSR OpenAi.list；统一 OpenAI 住宅分组，覆盖 ChatGPT / OpenAI / Codex 共用端点。 |
 | R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用官方入站 IPv4 `/23` 与 IPv6 `/48`、加 `no-resolve`。 |
-| Muse | 独立住宅分组，覆盖 `muse.ai`、`metaaivm.com`、`meta.ai` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
+| Muse | 独立住宅分组，覆盖 `muse.ai`、`metaaivm.com`、`meta.ai`、`metaaiusercontent.com`、`ecto1usercontent.com`、`meta-agents-apps.workers.dev`、`meta.com`、`facebook.com`、`instagram.com` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
 | Claude Check 检测 | 恢复旧规则的 `DOMAIN,api64.ipify.org,V3 Static Residential` 精确前置例外；只改变此检测域名，其他 ipify.org 域名仍按通用规则分流。个人输入保存为 `claude_check_probe`，本次不改 Claude Check 配置。 |
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
 | R04 懂球帝 | 补充 `DOMAIN-KEYWORD,apimg.qunliao.info,REJECT` 作为去广告起点。后续按广告和正常内容实测增补，不承诺单条规则去尽全部广告。 |
 | R05 国内 | 沿用打底国内专用、通用 China、GEOIP CN；哔哩哔哩固定 DIRECT。重点名单保存在 personal.json，第一版不为每个应用添加独立来源。 |
-| 海外服务 | 保留 YouTube、Netflix、Disney、HBO/Max、Spotify、Telegram、PayPal、Twitter、Facebook、Amazon、GitHub、Microsoft、Google、TikTok，策略归并为Overseas。 |
+| 海外服务 | 保留 YouTube、Netflix、Disney、HBO/Max、Spotify、Telegram、PayPal、Twitter、Amazon、GitHub、Microsoft、Google、TikTok，策略归并为Overseas。 |
 | 游戏 | 保留 Sony、SteamCN、Game；删除被 Game 覆盖的 Nintendo、Epic、Steam 独立引用。SteamCN 仍代理。 |
 | 字节跳动例外 | `bytedapm.com` 及子域明确代理，早于国内通用规则；`snssdk.com` 及子域直连，移除代理侧重复。 |
 | 策略组 | 删除地区测速组与合并后的服务组，只保留 Overseas、OpenAI、Claude、Muse 四个精确绑定的固定 select 组。 |
@@ -53,3 +53,5 @@ close-if-proxy-chain-missing = true
 2026-10-14：按用户要求新增 Muse 独立组，只绑定 `V3 Static Residential`。个人输入 `muse_rules` 固定两个域名后缀；每日生成先加入个人 Muse 规则，再展开通用底座并去除两个精确重复，避免恢复为 Overseas。Claude / OpenAI 的内容、相对优先级与节点绑定不变；Meta 的其他域名、共享依赖、DNS 和发布开关不变。不新增上游来源；未知的新 Muse 域名仍须核对后明确增补。
 
 2026-10-14 后续决定：用户要求将 `meta.ai` 及其子域改归 Muse 住宅，并防止每日更新恢复为 Overseas。个人清单和固定校验同步扩为三个后缀；普通来源的重复由生成器去重。上游的具体域名、后缀或通配表达式若在 Muse 范围内被更早规则抢先，停止采用新候选并保留上一完整版本，不调整 Claude / OpenAI 优先级来消除冲突。新增归组同时影响 Meta AI 网站/API；按用户决定不补三个内容/应用域名，不新增或切换每日来源。
+
+2026-10-15：用户要求补入此前未纳入的三个内容/应用域名，并补充 Meta、Facebook、Instagram。个人清单与固定校验扩为上述九个后缀，其中 `muse.ai` 已有，保留不重复；新加六个后缀及其子域统一归 Muse 住宅。这也改变 `auth.meta.com` 等认证端点及 Facebook/Instagram 主域下的出口，不承诺未列出的共享 CDN 或全部 App 功能均住宅。仅纳入 `meta-agents-apps.workers.dev` 这个应用范围，不扩大到其他 `workers.dev` 租户；`fbcdn.net`、`cdninstagram.com`、WhatsApp 仍按原规则。Claude / OpenAI 优先级不变，每日候选遇到已覆盖端点冲突仍拒绝采用。生成输入、固定校验、回归测试与完整快照同步；来源和设备设置不变。

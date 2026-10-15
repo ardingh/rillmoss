@@ -114,17 +114,26 @@ class PolicyTests(unittest.TestCase):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
 
-    def test_muse_routes_cover_meta_ai_without_changing_other_meta_or_lookalikes(self):
+    def test_muse_routes_cover_approved_meta_domains_without_capturing_neighbors(self):
         self.assertEqual(self.personal["groups"]["Muse"], "V3 Static Residential")
         for host in ("muse.ai", "auth.muse.ai", "api.muse.ai", "security.muse.ai",
                      "introducing.muse.ai", "metaaivm.com", "hatch.metaaivm.com", "vm.metaaivm.com",
                      "meta.ai", "api.meta.ai", "agent.meta.ai", "gateway.meta.ai", "edge-chat.meta.ai",
-                     "edge-chat-latest.meta.ai", "shortwave.meta.ai", "deep.worker.meta.ai"):
+                     "edge-chat-latest.meta.ai", "shortwave.meta.ai", "deep.worker.meta.ai",
+                     "metaaiusercontent.com", "media.metaaiusercontent.com", "ecto1usercontent.com",
+                     "files.ecto1usercontent.com", "meta-agents-apps.workers.dev",
+                     "app.meta-agents-apps.workers.dev", "meta.com", "auth.meta.com",
+                     "facebook.com", "www.facebook.com", "instagram.com", "i.instagram.com"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Muse")
-        for host in ("meta.com", "fbcdn.net", "notmuse.ai", "muse.ai.example.com",
+        for host in ("fbcdn.net", "static.xx.fbcdn.net", "cdninstagram.com", "whatsapp.com",
+                     "workers.dev", "other-app.workers.dev", "notmuse.ai", "muse.ai.example.com",
                      "notmetaaivm.com", "metaaivm.com.example.com", "notmeta.ai", "meta.ai.example.com",
-                     "metaaiusercontent.com", "ecto1usercontent.com", "meta-agents-apps.workers.dev"):
+                     "notmetaaiusercontent.com", "metaaiusercontent.com.example.com",
+                     "notecto1usercontent.com", "ecto1usercontent.com.example.com",
+                     "notmeta-agents-apps.workers.dev", "meta-agents-apps.workers.dev.example.com",
+                     "notmeta.com", "meta.com.example.com", "notfacebook.com", "facebook.com.example.com",
+                     "notinstagram.com", "instagram.com.example.com"):
             with self.subTest(host=host):
                 self.assertEqual(build.route(self.entries, host=host)[0], "Overseas")
 
@@ -135,10 +144,15 @@ class PolicyTests(unittest.TestCase):
         parsed["global"].insert(0, Rule("DOMAIN-SUFFIX", "hatch.metaaivm.com"))
         parsed["global"].insert(0, Rule("DOMAIN", "api.meta.ai"))
         parsed["global"].insert(0, Rule("DOMAIN-WILDCARD", "future-*.meta.ai"))
+        for domain in ("metaaiusercontent.com", "ecto1usercontent.com", "meta-agents-apps.workers.dev",
+                       "meta.com", "facebook.com", "instagram.com"):
+            parsed["global"].insert(0, Rule("DOMAIN", "future." + domain))
         entries, _, _ = build.compose(parsed, self.manifest, self.personal)
         build.constraints(entries, self.personal, parsed)
         for host in ("muse.ai", "api.muse.ai", "metaaivm.com", "hatch.metaaivm.com",
-                     "meta.ai", "api.meta.ai", "future-api.meta.ai"):
+                     "meta.ai", "api.meta.ai", "future-api.meta.ai", "future.metaaiusercontent.com",
+                     "future.ecto1usercontent.com", "future.meta-agents-apps.workers.dev",
+                     "future.meta.com", "future.facebook.com", "future.instagram.com"):
             self.assertEqual(build.route(entries, host=host)[0], "Muse")
 
     def test_muse_binding_and_personal_domain_scope_cannot_be_bypassed(self):
@@ -148,8 +162,8 @@ class PolicyTests(unittest.TestCase):
                 personal["groups"]["Muse"] = node
                 with self.assertRaisesRegex(Invalid, "Exact group binding"):
                     build.build(self.raw, self.manifest, personal, self.counts)
-        for rules in ([], self.personal["muse_rules"][:1],
-                      ["DOMAIN-SUFFIX,meta.com", *self.personal["muse_rules"]]):
+        for rules in ([], self.personal["muse_rules"][:1], self.personal["muse_rules"][:-1],
+                      ["DOMAIN-SUFFIX,workers.dev", *self.personal["muse_rules"]]):
             with self.subTest(rules=rules):
                 personal = copy.deepcopy(self.personal)
                 personal["muse_rules"] = rules
@@ -175,11 +189,15 @@ class PolicyTests(unittest.TestCase):
                     with self.assertRaisesRegex(Invalid, "Muse routing conflict"):
                         build.constraints(entries, self.personal, parsed)
 
-    def test_direct_meta_ai_exception_cannot_override_muse(self):
-        personal = copy.deepcopy(self.personal)
-        personal["direct_routing"]["priority_rules"].append("DOMAIN,api.meta.ai")
-        with self.assertRaisesRegex(Invalid, "Direct exception conflicts with Muse"):
-            build.compose(self.parsed, self.manifest, personal)
+    def test_direct_exception_cannot_override_any_approved_muse_domain(self):
+        for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
+                       "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
+                       "facebook.com", "instagram.com"):
+            with self.subTest(domain=domain):
+                personal = copy.deepcopy(self.personal)
+                personal["direct_routing"]["priority_rules"].append("DOMAIN,api." + domain)
+                with self.assertRaisesRegex(Invalid, "Direct exception conflicts with Muse"):
+                    build.compose(self.parsed, self.manifest, personal)
 
     def test_claude_check_probe_is_exact_and_precedes_general_ipify(self):
         self.assertEqual(build.route(self.entries, host="api64.ipify.org")[0], "V3 Static Residential")
@@ -451,7 +469,9 @@ class BundleTests(unittest.TestCase):
         conf, _ = runner.verify(self.root)
         self.assertIn("DOMAIN,api64.ipify.org,V3 Static Residential", conf)
         self.assertIn("Muse = select,V3 Static Residential,policy-select-name=V3 Static Residential", conf)
-        for domain in ("muse.ai", "metaaivm.com", "meta.ai"):
+        for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
+                       "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
+                       "facebook.com", "instagram.com"):
             self.assertIn(f"DOMAIN-SUFFIX,{domain},Muse", conf)
             self.assertNotIn(f"DOMAIN-SUFFIX,{domain},Overseas", conf)
         self.assertTrue(runner.read(self.root / "checks/latest.json")["publication_enabled"])
@@ -465,13 +485,17 @@ class BundleTests(unittest.TestCase):
         self.assertEqual(before, self.fingerprint())
         self.assertFalse(runner.read(self.root / "checks/latest.json")["bundle_applied"])
 
-    def test_daily_update_keeps_meta_ai_residential_with_new_global_subdomain(self):
+    def test_daily_update_keeps_all_muse_domains_residential_with_new_global_subdomains(self):
         self.authorize_publication()
         real_stage = runner.stage
         def collector(manifest, raw):
             shutil.copytree(self.root / "snapshot/raw", raw)
             target = raw / "global.txt"
-            target.write_text(target.read_text() + "\nHOST,future-service.meta.ai,Global\n")
+            domains = ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
+                       "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
+                       "facebook.com", "instagram.com")
+            target.write_text(target.read_text() + "".join(
+                "\nHOST,future-service." + domain + ",Global\n" for domain in domains))
             metadata = runner.read(self.root / "snapshot/manifest.json")["upstream"]
             metadata["sources"]["global"].update(sha256=fetch.digest(target.read_bytes()),
                                                    bytes=target.stat().st_size)
@@ -481,9 +505,13 @@ class BundleTests(unittest.TestCase):
             self.assertEqual(runner.update(self.root), 0)
         conf, _ = runner.verify(self.root)
         lines = parse.sections(conf)["Rule"]
-        self.assertLess(lines.index("DOMAIN-SUFFIX,meta.ai,Muse"),
-                        lines.index("DOMAIN,future-service.meta.ai,Overseas"))
-        self.assertNotIn("DOMAIN-SUFFIX,meta.ai,Overseas", conf)
+        for domain in ("muse.ai", "metaaivm.com", "meta.ai", "metaaiusercontent.com",
+                       "ecto1usercontent.com", "meta-agents-apps.workers.dev", "meta.com",
+                       "facebook.com", "instagram.com"):
+            with self.subTest(domain=domain):
+                self.assertLess(lines.index(f"DOMAIN-SUFFIX,{domain},Muse"),
+                                lines.index(f"DOMAIN,future-service.{domain},Overseas"))
+                self.assertNotIn(f"DOMAIN-SUFFIX,{domain},Overseas", conf)
         self.assertEqual(runner.read(self.root / "checks/latest.json")["status"], "passed")
 
     def test_daily_update_muse_priority_conflict_keeps_previous_complete_bundle(self):
@@ -496,7 +524,7 @@ class BundleTests(unittest.TestCase):
             text = target.read_text()
             marker = "DOMAIN-SUFFIX,anthropic.com"
             self.assertIn(marker, text)
-            target.write_text(text.replace(marker, "DOMAIN,future-service.meta.ai\n" + marker, 1))
+            target.write_text(text.replace(marker, "DOMAIN,future-service.meta-agents-apps.workers.dev\n" + marker, 1))
             metadata = runner.read(self.root / "snapshot/manifest.json")["upstream"]
             metadata["sources"]["claude-page"].update(sha256=fetch.digest(target.read_bytes()),
                                                        bytes=target.stat().st_size)

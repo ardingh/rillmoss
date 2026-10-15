@@ -14,7 +14,10 @@ GROUPS = {"Overseas": "V3（vless+vision+reality）", "OpenAI": "V3 Static Resid
 AI_SOURCES = {"Claude": ("claude-page", "claude-ips"),
               "OpenAI": ("openai-base", "openai-acl")}
 MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.com"),
-              Rule("DOMAIN-SUFFIX", "meta.ai"))
+              Rule("DOMAIN-SUFFIX", "meta.ai"),
+              Rule("DOMAIN-SUFFIX", "metaaiusercontent.com"), Rule("DOMAIN-SUFFIX", "ecto1usercontent.com"),
+              Rule("DOMAIN-SUFFIX", "meta-agents-apps.workers.dev"), Rule("DOMAIN-SUFFIX", "meta.com"),
+              Rule("DOMAIN-SUFFIX", "facebook.com"), Rule("DOMAIN-SUFFIX", "instagram.com"))
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
@@ -102,7 +105,7 @@ def compose(parsed, manifest, personal):
                 add(r, policy, sid)
     muse_rules = tuple(parse.rule(text) for text in personal["muse_rules"])
     if muse_rules != MUSE_RULES:
-        raise Invalid("Muse rules must retain the three approved domain suffixes")
+        raise Invalid("Muse rules must retain the nine approved domain suffixes")
     for r in muse_rules:
         add(r, "Muse", "Muse", required=True)
     # Exact personal exceptions follow the residential groups. A conflict with Claude
@@ -207,6 +210,8 @@ def constraints(entries, personal, parsed):
         "github.com": "Overseas", "registry.npmjs.org": "Overseas", "www.google.com": "Overseas",
         "weixin.qq.com": "DIRECT", "www.zhihu.com": "DIRECT", "www.douban.com": "DIRECT",
     }
+    for rule in MUSE_RULES:
+        expected.update({rule.value: "Muse", "check." + rule.value: "Muse"})
     expected.update({d: "DIRECT" for d in THS})
     results = []
     actual, origin, value = route(entries, host="img.dongqiudi.com")
