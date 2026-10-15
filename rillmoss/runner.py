@@ -132,11 +132,16 @@ BUNDLE_PATHS = ("rillmoss.conf", "snapshot", "reports/build.json", "version.json
 
 def install(root, bundle, replace=os.replace):
     verify(bundle)
+    install_files(root, bundle, BUNDLE_PATHS, replace)
+
+
+def install_files(root, bundle, paths, replace=os.replace):
     # Each replacement is reversible. Nothing here pushes; remote publication is one Git commit.
+    (root / ".work").mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="install-", dir=root / ".work") as temp:
         backup = Path(temp) / "backup"
         prepared = Path(temp) / "prepared"
-        for name in BUNDLE_PATHS:
+        for name in paths:
             src, dst = bundle / name, prepared / name
             dst.parent.mkdir(parents=True, exist_ok=True)
             if src.is_dir():
@@ -145,7 +150,7 @@ def install(root, bundle, replace=os.replace):
                 shutil.copy2(src, dst)
         touched = []
         try:
-            for name in BUNDLE_PATHS:
+            for name in paths:
                 target, old, new = root / name, backup / name, prepared / name
                 target.parent.mkdir(parents=True, exist_ok=True)
                 old.parent.mkdir(parents=True, exist_ok=True)
@@ -235,7 +240,32 @@ def update(root):
             result = dict(status="passed" if enabled else "passed_publication_paused",
                           candidate_rules_version=report["rules_version"],
                           rules_changed=old != report["rules_version"], publication_enabled=enabled,
+                          base_bundle_applied=enabled,
                           base_changes_not_imported=report["base_changes_not_imported"])
+            if (root / "policy/adblock.json").exists():
+                from . import adblock
+                try:
+                    ad_candidate = Path(temp) / "adblock-bundle"
+                    ad_report = adblock.stage(root, candidate, ad_candidate)
+                    if enabled:
+                        adblock.install(root, ad_candidate)
+                    result["adblock"] = dict(status="passed" if enabled else "passed_publication_paused",
+                                             rules_version=ad_report["rules_version"],
+                                             base_rules_version=ad_report["base_rules_version"],
+                                             added_rule_count=ad_report["added_rule_count"],
+                                             bundle_applied=enabled)
+                except Exception as error:
+                    message = str(error) if isinstance(error, Invalid) else f"Internal failure ({type(error).__name__})"
+                    result["status"] = "base_passed_adblock_failed"
+                    result["adblock"] = dict(status="failed", error=message, bundle_applied=False)
+                    retained = root / "adblock/version.json"
+                    if retained.exists():
+                        previous = read(retained)
+                        result["adblock"].update(retained_rules_version=previous["rules_version"],
+                                                 retained_base_rules_version=previous["base_rules_version"])
+                    record_check(root, result)
+                    print(message)
+                    return 1
             record_check(root, result)
             return 0
         except Exception as e:
@@ -260,24 +290,37 @@ def git(root, *args):
 
 
 def commit_update(root, expected_head):
-    verify(root)
+    verify_all(root)
     if git(root, "rev-parse", "HEAD") != expected_head:
         raise Invalid("Local HEAD changed during update")
     remote = git(root, "ls-remote", "origin", "refs/heads/main").split()
     if not remote or remote[0] != expected_head:
         raise Invalid("Remote main changed; stop without overwriting or rebasing")
     # This allowlist excludes .work, private logs, device backup files, and credentials.
-    git(root, "add", "--", *BUNDLE_PATHS, "checks")
+    from .adblock import BUNDLE_PATHS as AD_PATHS
+    extras = AD_PATHS if (root / "policy/adblock.json").exists() else ()
+    git(root, "add", "--", *BUNDLE_PATHS, *extras, "checks")
     changed = git(root, "diff", "--cached", "--name-only")
     if not changed:
         return
-    allowed = lambda p: p in BUNDLE_PATHS or any(p.startswith(x + "/") for x in ("snapshot", "checks"))
+    allowed = lambda p: p in (*BUNDLE_PATHS, *extras) or any(
+        p.startswith(x + "/") for x in ("snapshot", "checks", *(('adblock',) if extras else ())))
     if any(not allowed(p) for p in changed.splitlines()):
         raise Invalid("Unexpected staged file; refuse automated commit")
     git(root, "-c", "user.name=rillmoss updater", "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
         "commit", "-m", "chore: record source check and validated bundle")
     # A racing remote change makes this non-fast-forward; there is deliberately no retry/force.
     git(root, "push", "origin", "HEAD:refs/heads/main")
+
+
+def verify_all(root):
+    result = verify(root)
+    if (root / "policy/adblock.json").exists():
+        from . import adblock
+        adblock.verify(root)
+    elif (root / "rillmoss-ad.conf").exists() or (root / "adblock").exists():
+        raise Invalid("Advertising variant has no reviewed policy")
+    return result
 
 
 def main(argv=None):
@@ -287,6 +330,14 @@ def main(argv=None):
     fetch = sub.add_parser("prepare")
     fetch.add_argument("--output", type=Path, required=True)
     fetch.add_argument("--bootstrap", action="store_true")
+    ad = sub.add_parser("prepare-adblock")
+    ad.add_argument("--base-bundle", type=Path, required=True)
+    ad.add_argument("--output", type=Path, required=True)
+    for command in ("verify-adblock", "rebuild-adblock"):
+        p = sub.add_parser(command)
+        p.add_argument("--bundle", type=Path, required=True)
+        if command == "rebuild-adblock":
+            p.add_argument("--output", type=Path, required=True)
     for command in ("verify", "rebuild", "install-candidate", "adopt-candidate", "rollback"):
         p = sub.add_parser(command)
         p.add_argument("--bundle", type=Path, required=True)
@@ -304,12 +355,28 @@ def main(argv=None):
                 report = stage(root, args.output.resolve(), bootstrap=args.bootstrap)
             print(json.dumps({k: report[k] for k in ("rules_version", "rule_count", "source_counts")}, ensure_ascii=False))
         elif args.command in {"verify", "rebuild"}:
-            conf, report = verify(args.bundle.resolve())
+            conf, report = verify_all(args.bundle.resolve())
             if args.command == "rebuild":
                 # Explicit exclusive creation protects an existing user artifact.
                 with args.output.open("x") as out:
                     out.write(conf)
             print(f"Verified {report['rule_count']} rules; {report['rules_version']}")
+            if (args.bundle / "policy/adblock.json").exists():
+                from . import adblock
+                ad_report = read(args.bundle / "adblock/report.json")
+                print(f"Verified advertising variant: {ad_report['rule_count']} rules; {ad_report['rules_version']}")
+        elif args.command == "prepare-adblock":
+            from . import adblock
+            with lock(root):
+                report = adblock.stage(root, args.base_bundle.resolve(), args.output.resolve())
+            print(json.dumps({k: report[k] for k in ("rules_version", "base_rules_version", "added_rule_count")}, ensure_ascii=False))
+        elif args.command in {"verify-adblock", "rebuild-adblock"}:
+            from . import adblock
+            conf, report = adblock.verify(args.bundle.resolve())
+            if args.command == "rebuild-adblock":
+                with args.output.open("x") as out:
+                    out.write(conf)
+            print(f"Verified advertising variant: {report['rule_count']} rules; {report['rules_version']}")
         elif args.command == "install-candidate":
             with lock(root):
                 if (root / "version.json").exists():

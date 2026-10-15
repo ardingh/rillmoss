@@ -617,7 +617,7 @@ class BundleTests(unittest.TestCase):
 
 class GitPublicationTests(unittest.TestCase):
     def test_remote_divergence_stops_before_commit(self):
-        with patch("rillmoss.runner.verify"), patch("rillmoss.runner.git", side_effect=["a" * 40, "b" * 40 + "\trefs/heads/main"]) as git:
+        with patch("rillmoss.runner.verify_all"), patch("rillmoss.runner.git", side_effect=["a" * 40, "b" * 40 + "\trefs/heads/main"]) as git:
             with self.assertRaises(Invalid):
                 runner.commit_update(Path("."), "a" * 40)
             self.assertEqual(git.call_count, 2)

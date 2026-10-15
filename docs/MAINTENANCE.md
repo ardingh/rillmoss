@@ -2,15 +2,19 @@
 
 ## 每日更新
 
-GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 [Actions 页面](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)手动 **Run workflow**。每日任务已于 2026-09-10 启用。本版本按 2026-09-12 用户决定开启成品自动发布：全部检查成功才采用候选，失败时保留原成品。
+GitHub Actions 的 `Daily source check and update` 在 `Asia/Taipei` 每日 08:08 触发，也支持 [Actions 页面](https://github.com/ardingh/rillmoss/actions/workflows/update.yml)手动 **Run workflow**。每日任务已于 2026-09-10 启用。本版本按 2026-09-12 用户决定开启成品自动发布；2026-10-15 双版本变更发布后，基础版与去广告版分别验证和采用，失败保留对应完整版本，广告失败不阻断已验证的基础版更新。
 
-执行顺序：测试 → 固定各 GitHub 来源仓库的提交 → 同轮抓取全部 35 项 → 严格解析 → 检查条数与出口 → 暂存完整候选 → 记录真实检查 → 一次 Git 提交写回。HTTP 每次最多 30 秒、最多 3 次；HTTPS 下载和重定向均要求证书验证。网页保存原始字节与 SHA-256。
+执行顺序：测试 → 固定基础版 GitHub 来源提交 → 同轮抓取全部 35 项 → 严格解析并检查条数与出口 → 完整基础版候选通过校验 → 按发布开关采用基础版 → 固定 anti-AD 提交并抓取规则及许可 → 从本轮基础版生成去广告版 → 单独完整校验后按开关采用 → 记录两部分真实结果 → 一次 Git 提交写回。HTTP 每次最多 30 秒、最多 3 次；HTTPS 下载和重定向均要求证书验证。网页保存原始字节与 SHA-256。
 
-任一来源失败，不能拿旧来源拼出新配置。只新增失败检查记录，成品、个人设置、成功快照及规则版本保持原样，工作流最终必须标红。下载阶段之前的平台故障、仓库无法写回或 GitHub 完全漏跑，可能只能在 Actions 留下失败状态，不能保证仓库出现新记录。
+两个地址为 `rillmoss.conf` 和 `rillmoss-ad.conf`，各自包含对应更新地址。基础版生成输入和内容不受广告源影响。`policy/adblock.json` 的广告数量基线独立检查，减少超过 20% 或增加超过 50% 时停止广告采用。
+
+若基础版失败，两个成品均保持原样，不抓广告源。若只有广告失败，已验证基础版仍可更新；`checks/latest.json` 为 `base_passed_adblock_failed`，其中 `adblock` 保存失败原因及上次保留版本，工作流最终标红。不会把旧广告原文混入新基础版生成新成品。保留的 `adblock/base/` 是该去广告版当时使用的完整基础包，可能早于当前基础版；`adblock/version.json` 明确记录对应基础规则版本。
+
+基础版任一来源失败，不能拿旧来源拼出新配置。只新增失败检查记录，两个成品、个人设置、成功快照及规则版本保持原样，工作流最终必须标红。下载阶段之前的平台故障、仓库无法写回或 GitHub 完全漏跑，可能只能在 Actions 留下失败状态，不能保证仓库出现新记录。
 
 `checks/latest.json` 是最近实际检查；`version.json` 是当前成品。规则内容没变时不改配置首行版本或 `rules_built_at`；来源提交、网页内容或成功快照变化可独立记录。日期均采用带时区的 UTC 时间。
 
-成功候选还保留在本地 `.work/check-*/bundle/`；GitHub 工作流保存完整候选 Artifact 30 天，便于暂停发布时核对。已采用版本的永久历史由 Git 提交保存，包括对应快照。若需要长期保存尚未采用的候选，下载其完整 Artifact，不能只保存其中某份来源。
+成功基础候选保留在本地 `.work/check-*/bundle/`，广告候选为相邻的 `adblock-bundle/`；GitHub 工作流保存候选和部分失败证据 Artifact 30 天，便于暂停发布时核对。已采用版本的永久历史由 Git 提交保存，包括对应快照。若需要长期保存尚未采用的候选，下载其完整 Artifact，不能只保存其中某份来源。
 
 月度完整归档由独立 `backup.yml` 处理：每月 15 日固定当时已发布的完整提交，日期标签长期保留，不依赖 Artifact 的 30 天期限。每日来源检查结束后也会检查当月是否需要补做；上游失败仍可归档最后成功版本。归档日期、实际执行时间和规则生成时间分别记录，恢复步骤见[完整备份](BACKUP.md)。此流程随工作流发布到 main 后生效，本地文件存在不代表云端已经启用。
 
@@ -31,6 +35,17 @@ GitHub 的计划任务可能延迟、漏跑，公开仓库长期无活动也可�
 Claude 的规则及优先级不会为了直连例外而被覆盖。出现 `Direct exception conflicts with Claude; AI unchanged` 时停止生成，向用户说明冲突；用户没有确认具体取舍前不改 Claude，也不把相关直连目标的校验删除。
 
 本地审阅候选后采用：
+
+去广告候选可单独准备与核对，基础包必须先完整通过；输出目录须尚不存在：
+
+```sh
+python3 -m rillmoss prepare-adblock --base-bundle .work/review-next --output .work/review-ad-next
+python3 -m rillmoss verify-adblock --bundle .work/review-ad-next
+```
+
+上面只准备候选，不采用或推送。完整项目使用 `verify --bundle .` 同时校验两个成品；`rebuild-adblock --bundle . --output rebuilt-ad.conf` 从广告版自己的完整快照离线重建，目标文件须不存在。广告候选的采用需连同它的 `adblock/` 与 `policy/adblock.json` 一起处理，不能只替换 conf。
+
+原有基础候选准备与采用命令如下；这组命令仅采用基础包，之后仍须按新基础包准备、审阅对应的广告候选：
 
 ```sh
 python3 -m rillmoss prepare --output .work/review-next

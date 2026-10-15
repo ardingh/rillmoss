@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from rillmoss import backup
+from rillmoss import backup, runner, adblock
 from rillmoss.parse import Invalid
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,8 +21,9 @@ class MonthlyBackupTests(unittest.TestCase):
         self.base = Path(self.temp.name)
         self.root, self.remote = self.base / "checkout", self.base / "origin.git"
         self.root.mkdir()
-        for name in ("rillmoss.conf", "snapshot", "policy", "reports", "version.json", "checks", "rillmoss"):
+        for name in runner.BUNDLE_PATHS + ("policy/release.json", "checks", "rillmoss"):
             source = ROOT / name
+            (self.root / name).parent.mkdir(parents=True, exist_ok=True)
             if source.is_dir():
                 shutil.copytree(source, self.root / name, ignore=shutil.ignore_patterns("__pycache__"))
             else:
@@ -57,7 +58,7 @@ class MonthlyBackupTests(unittest.TestCase):
         restored = self.base / "restored"
         backup.git(self.base, "clone", "--branch", result["tag"], str(self.remote), str(restored))
         with patch("rillmoss.fetch.download", side_effect=AssertionError("upstream access")):
-            conf, report = backup.verify(restored)
+            conf, report = backup.verify_all(restored)
         self.assertEqual(conf, (self.root / "rillmoss.conf").read_text())
         self.assertEqual(report["rule_count"], result["rule_count"])
         self.assertTrue((restored / "rillmoss/build.py").is_file())
@@ -92,6 +93,24 @@ class MonthlyBackupTests(unittest.TestCase):
         with self.assertRaises(Invalid):
             backup.monthly(self.root, DUE)
         self.assertEqual(backup.git(self.remote, "tag", "--list"), "")
+
+    def test_backup_includes_and_validates_both_variants_without_network(self):
+        from test_adblock import policy, collector
+        runner.write(self.root / "policy/adblock.json", policy())
+        output = self.base / "ad-candidate"
+        adblock.stage(self.root, self.root, output, collector=collector)
+        adblock.install(self.root, output)
+        self.commit("add validated advertising variant")
+        with patch("rillmoss.fetch.download", side_effect=AssertionError("network access")):
+            result = backup.monthly(self.root, DUE)
+        restored = self.base / "restored-ad"
+        backup.git(self.base, "clone", "--branch", result["tag"], str(self.remote), str(restored))
+        backup.verify_all(restored)
+        self.assertEqual((restored / "rillmoss-ad.conf").read_bytes(), (self.root / "rillmoss-ad.conf").read_bytes())
+        (self.root / "rillmoss-ad.conf").write_text("broken advertising variant")
+        self.commit("corrupt advertising fixture")
+        with self.assertRaises(Invalid):
+            backup.monthly(self.root, datetime(2026, 10, 15, 1, 0, tzinfo=timezone.utc))
 
     def test_dirty_checkout_and_stale_head_stop(self):
         (self.root / "unpublished.txt").write_text("local only")

@@ -42,6 +42,12 @@
 
 保留第三方来源标识及原始内容中的声明，第三方内容的权利与使用条件仍属于其上游；本项目不替第三方内容授予额外许可。
 
+## 去广告版的独立来源
+
+`policy/adblock.json` 固定 [anti-AD](https://github.com/privacy-protection-tools/anti-AD) 的 `master/anti-ad-surge.txt`，仅接受不含策略列的字面域名后缀规则；同轮固定仓库提交并下载 `LICENSE`。原始规则、许可、URL、提交和 SHA-256 保存在 `adblock/raw/` 与 `adblock/manifest.json`。许可原文随快照保留，独立广告成品也内嵌 anti-AD 来源与许可注释；许可类型改变时停止广告生成并等待审阅。
+
+广告来源不加入基础版来源清单。仅对本轮完整验证的基础包派生，`adblock/base/` 保留全部对应基础输入与报告，支持独立离线重建。广告规则与既有路由保护的排除结果见 `adblock/report.json`；本项目优先保持住宅分组、个人例外、已验证直连范围与现有路由目标，不保证采用上游全部广告拦截。
+
 补充核对资料：
 
 - [Apple 企业网络连接要求](https://support.apple.com/zh-cn/101555)：Apple / iCloud / CloudKit 与推送的核对依据，不作为第三个 AI 自动来源。

@@ -34,7 +34,7 @@ def download(url):
     raise Invalid(f"HTTPS download failed after 3 attempts: {parsed.hostname}{parsed.path}")
 
 
-def validate_manifest(manifest):
+def validate_manifest(manifest, *, require_base=True):
     ids = set()
     refs = {}
     for source in manifest["sources"]:
@@ -51,12 +51,12 @@ def validate_manifest(manifest):
             if repo.lower() in refs and refs[repo.lower()] != ref:
                 raise Invalid("One upstream repository must use one ref")
             refs[repo.lower()] = ref
-    if "base" not in ids:
+    if require_base and "base" not in ids:
         raise Invalid("Base source is required")
 
 
-def collect(manifest, dest, transport=download):
-    validate_manifest(manifest)
+def collect(manifest, dest, transport=download, *, require_base=True):
+    validate_manifest(manifest, require_base=require_base)
     dest.mkdir(parents=True, exist_ok=False)
     pins = {}
     for source in manifest["sources"]:

@@ -7,7 +7,7 @@ import subprocess
 from zoneinfo import ZoneInfo
 
 from .parse import Invalid
-from .runner import read, verify
+from .runner import read, verify_all
 
 
 def git(root, *args, input=None):
@@ -37,7 +37,7 @@ def monthly(root, now=None):
         raise Invalid("Remote main changed; retry from a fresh checkout")
     if git(root, "tag", "--list", tag):
         raise Invalid("Local backup tag already exists; inspect before retrying")
-    _, report = verify(root)
+    _, report = verify_all(root)
     version = read(root / "version.json")
     check = read(root / "checks/latest.json")
     metadata = dict(

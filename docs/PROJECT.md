@@ -1,6 +1,8 @@
 # rillmoss · 溪苔
 
-只供本人使用的 Shadowrocket 分流配置，共用于 iPhone 与 Mac。配置由个人决定和选定的公开规则来源生成，设备只需要一份完整的 `rillmoss.conf`。
+只供本人使用的 Shadowrocket 分流配置，共用于 iPhone 与 Mac。每日先生成并校验基础版 `rillmoss.conf`，再基于同一完整基础包派生并校验加入 anti-AD 的 `rillmoss-ad.conf`。设备任选一份完整配置，两个版本各自更新。
+
+去广告优先保护既有分流，尤其是 Claude、OpenAI、Muse 及检测地址的住宅出口。广告来源失败不阻断基础版更新，去广告版保留上一完整版本并记录失败。两个[订阅入口](README.md)与[更新机制](MAINTENANCE.md)分别说明；不因添加去广告而启用 HTTPS 解密。
 
 **本版本按用户决定启用日常使用与自动发布。** 每日任务在全部来源、规则约束和完整校验通过后更新同一个 `rillmoss.conf` 地址。住宅节点缺失时可能回退普通 V3，部分设备与协议尚未完成验收；这些限制保留，详见[启用决定](RELEASE_DECISION.md)和[设备验收](ACCEPTANCE.md)。
 

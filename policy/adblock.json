@@ -1,0 +1,22 @@
+{
+  "reviewed_count": 102535,
+  "routing_priority": "existing_routes_first",
+  "schema": 1,
+  "sources": [
+    {
+      "format": "domain-suffix",
+      "id": "anti-ad",
+      "path": "anti-ad-surge.txt",
+      "ref": "master",
+      "repo": "privacy-protection-tools/anti-AD"
+    },
+    {
+      "format": "license",
+      "id": "anti-ad-license",
+      "path": "LICENSE",
+      "ref": "master",
+      "repo": "privacy-protection-tools/anti-AD"
+    }
+  ],
+  "update_url": "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss-ad.conf"
+}

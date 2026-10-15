@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.14'
-      - name: Test, fetch, validate and stage a complete update
+      - name: Validate the base first, then derive and validate the advertising variant
         id: update
         continue-on-error: true
         run: python -m rillmoss ci-check
@@ -30,14 +30,16 @@ jobs:
         env:
           EXPECTED_HEAD: ${{ github.sha }}
         run: python -m rillmoss commit-update --expected-head "$EXPECTED_HEAD"
-      - name: Retain the complete checked candidate, including while publication is paused
-        if: always() && steps.update.outcome == 'success'
+      - name: Retain base and advertising candidates, including partial failure evidence
+        if: always() && steps.update.outcome != 'skipped'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: checked-bundle-${{ github.run_id }}-${{ github.run_attempt }}
-          path: .work/check-*/bundle/
+          path: |
+            .work/check-*/bundle/
+            .work/check-*/adblock-bundle/
           include-hidden-files: true
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
       - name: Preserve failure status for native GitHub notifications
         if: always() && steps.update.outcome == 'failure'
