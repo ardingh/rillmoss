@@ -1,7 +1,10 @@
 {
   "base_changes_not_imported": {
     "General": {
-      "added": [],
+      "added": [
+        "stun-response-ip = 1.1.1.1",
+        "stun-response-ipv6 = ::1"
+      ],
       "removed": [
         "direct-dns-server ="
       ]

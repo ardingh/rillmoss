@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-15T03:57:00+00:00",
+  "checked_at": "2026-10-15T04:28:34+00:00",
   "files": {
     "policy/counts.json": "7316dd0ed6e65392ed5ccaa963c5c4f6087f51a327c5beb4fceb06041168c061",
     "policy/personal.json": "b6cde11a4710c1d7036f7b8ae67a112a84c6d52f0dd7e34ad6db161995c1f039",
     "policy/sources.json": "822277245633dffd5580548de7ddb96524aa65cf6e2de3451f06bb2872c3b3ad",
-    "reports/build.json": "86efd040ce10c71eeaea5c006767f7a05bb5da523050ed90687069c83f91ab6f",
+    "reports/build.json": "3b963662f501c472240c6713f79e541200db6310bac2cee869ae212da91651b0",
     "rillmoss.conf": "ca8f37a4bf5312d5df54f54e29aa7d968258fb47ec67fe25f755d754168a88de",
     "snapshot/inputs/counts.json": "7316dd0ed6e65392ed5ccaa963c5c4f6087f51a327c5beb4fceb06041168c061",
     "snapshot/inputs/personal.json": "b6cde11a4710c1d7036f7b8ae67a112a84c6d52f0dd7e34ad6db161995c1f039",
@@ -12,10 +12,10 @@
     "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
     "snapshot/raw/apple.txt": "5beba6036776de5a38b4b2f5e19e8e94ab94b3a8cdd50b5db2b4ad6bbd0b1bf0",
     "snapshot/raw/baidu.txt": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
-    "snapshot/raw/base.txt": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
+    "snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "a1ef16ebef16f0f85f6e20bae7a4743cdffa52ac7707bda598546bb3c5a9de53",
+    "snapshot/raw/claude-ips.txt": "4c18c0601bbc0c6d9c975bf838539aedf228c58222b91f24dc6f701f4b7869c7",
     "snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -31,7 +31,7 @@
     "snapshot/raw/neteasemusic.txt": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
     "snapshot/raw/netflix.txt": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
     "snapshot/raw/openai-acl.txt": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-    "snapshot/raw/openai-base.txt": "df6ba416f8a5c38c31e8f43435e9a8d2a2184dc338305fe7503225c754b6289a",
+    "snapshot/raw/openai-base.txt": "364ebecf25dd7709e8f2dfbaaf2c664f6d91b5c7f5826dd3e41ad145ed8f9fd0",
     "snapshot/raw/paypal.txt": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
     "snapshot/raw/sina.txt": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
     "snapshot/raw/sony.txt": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
@@ -47,7 +47,7 @@
   },
   "rules_version": "20350c2c94c2c46b57e91dcad9921045ec9196e19d30003c8d1102197ad26c71",
   "schema": 1,
-  "snapshot_id": "38a5f93ac676f4ba540b294251fd0adc173eb977a3146e35eeb574d3d87beabe",
+  "snapshot_id": "a7b42100ffe41e39a7d0a9f013a32479fa892fef0b0c73494cb3a30f3cbee0e8",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -89,8 +89,8 @@
     "pins": {
       "acl4ssr/acl4ssr": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
       "blackmatrix7/ios_rule_script": "d8363caa2c1e47fb735615316032bed3f475ee57",
-      "iab0x00/proxyrules": "521f67548a61f932e92a4a832e0ab1e329899d1b",
-      "lowertop/shadowrocket": "8c2d9949fbc5a25cfbcd6ca3952934e82ff4bd58"
+      "iab0x00/proxyrules": "27fe722f48d8ba7acee582398f45b34297b65dd6",
+      "lowertop/shadowrocket": "e1ee7d7a201fe55cfa3ec8f93d70fd6a76a33a3f"
     },
     "sources": {
       "amazon": {
@@ -112,10 +112,10 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Shadowrocket/Baidu/Baidu.list"
       },
       "base": {
-        "bytes": 28052,
-        "commit": "8c2d9949fbc5a25cfbcd6ca3952934e82ff4bd58",
-        "sha256": "56e3576a2fb8d0462383ddf4575822c7c018da3b09801377b97ea9909e816bab",
-        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/8c2d9949fbc5a25cfbcd6ca3952934e82ff4bd58/lazy_group.conf"
+        "bytes": 28060,
+        "commit": "e1ee7d7a201fe55cfa3ec8f93d70fd6a76a33a3f",
+        "sha256": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
+        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/e1ee7d7a201fe55cfa3ec8f93d70fd6a76a33a3f/lazy_group.conf"
       },
       "bilibili": {
         "bytes": 4523,
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 320105,
+        "bytes": 351080,
         "commit": null,
-        "sha256": "a1ef16ebef16f0f85f6e20bae7a4743cdffa52ac7707bda598546bb3c5a9de53",
+        "sha256": "4c18c0601bbc0c6d9c975bf838539aedf228c58222b91f24dc6f701f4b7869c7",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
@@ -226,10 +226,10 @@
         "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
-        "bytes": 1936,
-        "commit": "521f67548a61f932e92a4a832e0ab1e329899d1b",
-        "sha256": "df6ba416f8a5c38c31e8f43435e9a8d2a2184dc338305fe7503225c754b6289a",
-        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/521f67548a61f932e92a4a832e0ab1e329899d1b/Rule/AI.txt"
+        "bytes": 2256,
+        "commit": "27fe722f48d8ba7acee582398f45b34297b65dd6",
+        "sha256": "364ebecf25dd7709e8f2dfbaaf2c664f6d91b5c7f5826dd3e41ad145ed8f9fd0",
+        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/27fe722f48d8ba7acee582398f45b34297b65dd6/Rule/AI.txt"
       },
       "paypal": {
         "bytes": 7859,

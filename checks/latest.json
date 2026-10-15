@@ -1,17 +1,20 @@
 {
   "base_changes_not_imported": {
     "General": {
-      "added": [],
+      "added": [
+        "stun-response-ip = 1.1.1.1",
+        "stun-response-ipv6 = ::1"
+      ],
       "removed": [
         "direct-dns-server ="
       ]
     }
   },
-  "candidate_rules_version": "a7d6857bf40d85f5c8ba4a4312222bf6f1b66fe8078ca7c2160bc369dcde92f2",
-  "checked_at": "2026-10-14T04:45:32+00:00",
-  "current_rules_version": "a7d6857bf40d85f5c8ba4a4312222bf6f1b66fe8078ca7c2160bc369dcde92f2",
+  "candidate_rules_version": "20350c2c94c2c46b57e91dcad9921045ec9196e19d30003c8d1102197ad26c71",
+  "checked_at": "2026-10-15T04:28:41+00:00",
+  "current_rules_version": "20350c2c94c2c46b57e91dcad9921045ec9196e19d30003c8d1102197ad26c71",
   "publication_enabled": true,
-  "rules_changed": true,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/38512811800",
+  "rules_changed": false,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/38681369565",
   "status": "passed"
 }
