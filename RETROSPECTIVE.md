@@ -25,3 +25,5 @@
 - 修正：测试固定 run ID 和时间，显式给两轮不同的检查内容，并先断言待提交文件存在。继续使用真实临时 Git 仓库，在远端检查后确定性插入另一个提交，验证非快进拒绝与远端内容保留；不修改生成程序或放宽出口要求。
 - 证据：首次失败运行 https://github.com/ardingh/rillmoss/actions/runs/34475810231；修正后的本地 34 项测试及云端复核见 `reports/github-publication-20260910.json`。
 - 范围与归位：仅本项目测试。已查重本项目规则、复盘和本地经验索引，无同项；不晋级全局规则或新增 Skill。
+
+2026-10-15 补充：双版本发布测试在本机通过，首次云端 91 项中该项报错，克隆后的 `snapshot/manifest.json` 不存在。根因是新测试的临时 bare 仓库未指定初始分支，本机默认 main、云端默认 master；推入 main 后，远端 HEAD 仍指不存在的 master。使用仅作用于测试进程的 `init.defaultBranch=master` 可复现。修正为显式 `git init --bare --initial-branch=main`，测试内继续强制默认分支为 master，并断言远端 HEAD 与克隆后的分支均为 main；仍实际提交、推送、克隆并完整验证两个版本。配置、生成逻辑及原断言保持。证据为云端运行 https://github.com/ardingh/rillmoss/actions/runs/38688235790 和本机忽略目录中的 ci-branch-reproduction.log / ci-branch-fixed.log。不晋级全局规则，继续以确定性临时仓库隔离个人 Git 设置。

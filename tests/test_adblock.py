@@ -251,12 +251,14 @@ class AdvertisingTests(unittest.TestCase):
     def test_daily_commit_publishes_and_rechecks_both_variants_in_one_commit(self):
         remote = Path(self.temp_case.name) / "remote.git"
         def git(cwd, *args):
-            return subprocess.run(["git", "-c", "user.name=Test", "-c", "user.email=test@example.invalid", *args],
+            return subprocess.run(["git", "-c", "user.name=Test", "-c", "user.email=test@example.invalid",
+                                   "-c", "init.defaultBranch=master", *args],
                                   cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
         git(self.root, "init", "--initial-branch=main")
         git(self.root, "add", ".")
         git(self.root, "commit", "-m", "fixture")
-        git(self.root, "init", "--bare", str(remote))
+        git(self.root, "init", "--bare", "--initial-branch=main", str(remote))
+        self.assertEqual(git(remote, "symbolic-ref", "HEAD"), "refs/heads/main")
         git(self.root, "remote", "add", "origin", str(remote))
         git(self.root, "push", "origin", "HEAD:main")
         head = git(self.root, "rev-parse", "HEAD")
@@ -265,6 +267,7 @@ class AdvertisingTests(unittest.TestCase):
         self.assertEqual(git(self.root, "rev-list", "--count", head + "..HEAD"), "1")
         restored = Path(self.temp_case.name) / "restored"
         git(self.root, "clone", str(remote), str(restored))
+        self.assertEqual(git(restored, "branch", "--show-current"), "main")
         runner.verify_all(restored)
         self.assertEqual((restored / "rillmoss-ad.conf").read_bytes(), (self.root / "rillmoss-ad.conf").read_bytes())
 
