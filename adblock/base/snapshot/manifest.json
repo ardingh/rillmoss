@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-16T04:28:58+00:00",
+  "checked_at": "2026-10-17T04:19:44+00:00",
   "files": {
     "policy/counts.json": "2fd771fa41fdd82c840f466c708fe898b973f5c0427319b52c0d59aaf69cf466",
     "policy/personal.json": "b6cde11a4710c1d7036f7b8ae67a112a84c6d52f0dd7e34ad6db161995c1f039",
     "policy/sources.json": "822277245633dffd5580548de7ddb96524aa65cf6e2de3451f06bb2872c3b3ad",
     "reports/build.json": "0e0213f7bef567490eae39007466dd96aee2c852cf394700ee50573864e367e6",
     "rillmoss.conf": "bb2b934fdbbdb8959cd9d0f0fb925afe7f334d5670f474c301673244b405f737",
-    "snapshot/inputs/counts.json": "7316dd0ed6e65392ed5ccaa963c5c4f6087f51a327c5beb4fceb06041168c061",
+    "snapshot/inputs/counts.json": "2fd771fa41fdd82c840f466c708fe898b973f5c0427319b52c0d59aaf69cf466",
     "snapshot/inputs/personal.json": "b6cde11a4710c1d7036f7b8ae67a112a84c6d52f0dd7e34ad6db161995c1f039",
     "snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
     "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "1bd0a9537d76ccfd71e677879c29e9a8df11ee137bf3b1d0684d0711648c794b",
+    "snapshot/raw/claude-ips.txt": "39c87c6e4506bc9c0d6fa82669e12ca12b00da82c08f551cc5b3e44a1bd6bb30",
     "snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -47,7 +47,7 @@
   },
   "rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
   "schema": 1,
-  "snapshot_id": "ae09e0c595691f8f234b3810b8c97c1696ed3925557e09af0aa2c691547e044a",
+  "snapshot_id": "05244bd1880b28bca3f14d9114ed0bdc435d3e22af1e4a9276911425bc72a019",
   "source_counts": {
     "amazon": 205,
     "apple": 1881,
@@ -87,7 +87,7 @@
   },
   "upstream": {
     "pins": {
-      "acl4ssr/acl4ssr": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+      "acl4ssr/acl4ssr": "575637df38884575bfa523e95c17d0ee3be1676c",
       "blackmatrix7/ios_rule_script": "933875d42861a7fdfd9f945cd18605d74fa7e943",
       "iab0x00/proxyrules": "27fe722f48d8ba7acee582398f45b34297b65dd6",
       "lowertop/shadowrocket": "e1ee7d7a201fe55cfa3ec8f93d70fd6a76a33a3f"
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 364056,
+        "bytes": 364224,
         "commit": null,
-        "sha256": "1bd0a9537d76ccfd71e677879c29e9a8df11ee137bf3b1d0684d0711648c794b",
+        "sha256": "39c87c6e4506bc9c0d6fa82669e12ca12b00da82c08f551cc5b3e44a1bd6bb30",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
@@ -221,9 +221,9 @@
       },
       "openai-acl": {
         "bytes": 539,
-        "commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "commit": "575637df38884575bfa523e95c17d0ee3be1676c",
         "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/OpenAi.list"
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/575637df38884575bfa523e95c17d0ee3be1676c/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
         "bytes": 2256,

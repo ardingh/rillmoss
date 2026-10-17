@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 99700,
+  "added_rule_count": 100059,
   "base_conf_sha256": "bb2b934fdbbdb8959cd9d0f0fb925afe7f334d5670f474c301673244b405f737",
   "base_rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
   "checked_existing_hosts": 80656,
@@ -3479,11 +3479,6 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,alime-pic.oss-cn-hangzhou.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -10033,11 +10028,6 @@
       "rule": "DOMAIN-SUFFIX,icons.mydrivers.com,REJECT"
     },
     {
-      "matched": "DOMAIN-SUFFIX,cn-east-3.myhuaweicloud.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,teslaamg.obs.cn-east-3.myhuaweicloud.com,REJECT"
-    },
-    {
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ad-1258444056.cos.accelerate.myqcloud.com,REJECT"
@@ -12172,11 +12162,6 @@
       "target": "redlightcenter.com"
     },
     {
-      "matched": "DOMAIN-KEYWORD,baidu,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,sjbaiduadv1.redou.com,REJECT"
-    },
-    {
       "matched": "DOMAIN-SUFFIX,renren.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ebp.renren.com,REJECT"
@@ -13482,6 +13467,11 @@
       "matched": "DOMAIN-SUFFIX,suning.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,dfp.suning.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,suning.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,ossapp.suning.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -16279,7 +16269,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2835,
+  "excluded_rule_count": 2833,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16287,11 +16277,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36236,
-    "REJECT": 99701,
+    "REJECT": 100060,
     "V3 Static Residential": 1
   },
-  "rule_count": 142215,
-  "rules_version": "15233e06cf4602b5e3b2c6812489106997ff28e8b003d05e99af91d07817f7a6",
+  "rule_count": 142574,
+  "rules_version": "2e3050075d95557c635e5e7d5fd3525e0d8416484bf02ad5588931da84756ec0",
   "schema": 1,
-  "source_rule_count": 102535
+  "source_rule_count": 102892
 }
