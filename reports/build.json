@@ -16385,16 +16385,6 @@
       "rule": "DOMAIN-SUFFIX,messengerdevelopers.com"
     },
     {
-      "kept": "Muse",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,meta.ai"
-    },
-    {
-      "kept": "Muse",
-      "removed": "global",
-      "rule": "DOMAIN-SUFFIX,metaaivm.com"
-    },
-    {
       "kept": "google",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,mfg-inspector.com"
@@ -25572,7 +25562,17 @@
     {
       "kept": "Muse",
       "removed": "global",
+      "rule": "DOMAIN-SUFFIX,meta.ai"
+    },
+    {
+      "kept": "Muse",
+      "removed": "global",
       "rule": "DOMAIN-SUFFIX,meta.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,metaaivm.com"
     },
     {
       "kept": "microsoft",
@@ -27210,7 +27210,7 @@
     "DIRECT": 6217,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36236,
+    "Overseas": 36242,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27221,8 +27221,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42515,
-  "rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
+  "rule_count": 42521,
+  "rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -27239,7 +27239,7 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35915,
+    "global": 35921,
     "google": 698,
     "hbo": 49,
     "lan": 140,

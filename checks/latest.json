@@ -1,9 +1,9 @@
 {
   "adblock": {
     "added_rule_count": 100059,
-    "base_rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
+    "base_rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
     "bundle_applied": true,
-    "rules_version": "2e3050075d95557c635e5e7d5fd3525e0d8416484bf02ad5588931da84756ec0",
+    "rules_version": "08fb85daf819d4ad96eb6c61454b98db356c5dcb135e1ffc8105661e42b29e67",
     "status": "passed"
   },
   "base_bundle_applied": true,
@@ -18,11 +18,11 @@
       ]
     }
   },
-  "candidate_rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
-  "checked_at": "2026-10-17T04:21:08+00:00",
-  "current_rules_version": "72c1887e0b8db1c6b7f5d8056eb9609e313b57d317dda1cbecc52a60408fe5b2",
+  "candidate_rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
+  "checked_at": "2026-10-18T04:24:13+00:00",
+  "current_rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
   "publication_enabled": true,
-  "rules_changed": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/39001676471",
+  "rules_changed": true,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/39096628905",
   "status": "passed"
 }
