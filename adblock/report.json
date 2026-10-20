@@ -1,8 +1,8 @@
 {
-  "added_rule_count": 100059,
-  "base_conf_sha256": "092c9c4fb6f707fa8d8ecf220013f04ece2230925cf865a31e1a7f333cd10942",
-  "base_rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
-  "checked_existing_hosts": 80668,
+  "added_rule_count": 100842,
+  "base_conf_sha256": "318e3cbb737a68e788a38aed213c5f98fa95e54ee3ccdd5ddf79b187648fcee2",
+  "base_rules_version": "1574d8dde69b18446ee4e1f2f0f9c0328cd86bc94107a340de118d5a32d29557",
+  "checked_existing_hosts": 80702,
   "checks": [
     {
       "actual": "Overseas",
@@ -784,7 +784,7 @@
   ],
   "device_acceptance": "pending; static checks only",
   "direct_routing": {
-    "checked_source_domain_probes": 12025,
+    "checked_source_domain_probes": 12027,
     "claude_conflicts": [],
     "conflicts": [
       {
@@ -3649,6 +3649,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xz-development.oss-cn-beijing.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,ziio.oss-ap-southeast-1.aliyuncs.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -14526,6 +14531,11 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,aass111.tos-cn-beijing.volces.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,qqwwaa.tos-cn-hongkong.volces.com,REJECT"
     },
     {
@@ -16269,19 +16279,19 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2833,
+  "excluded_rule_count": 2835,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
-    "DIRECT": 6217,
+    "DIRECT": 6219,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36242,
-    "REJECT": 100060,
+    "Overseas": 36259,
+    "REJECT": 100843,
     "V3 Static Residential": 1
   },
-  "rule_count": 142580,
-  "rules_version": "08fb85daf819d4ad96eb6c61454b98db356c5dcb135e1ffc8105661e42b29e67",
+  "rule_count": 143382,
+  "rules_version": "2b1837d9a9b8a3088fb6ce51964373c37ebda88cbb55dd8f699a32f052e9cef2",
   "schema": 1,
-  "source_rule_count": 102892
+  "source_rule_count": 103677
 }

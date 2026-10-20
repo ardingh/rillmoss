@@ -2037,7 +2037,7 @@
   ],
   "device_acceptance": "pending; static checks only",
   "direct_routing": {
-    "checked_source_domain_probes": 12025,
+    "checked_source_domain_probes": 12027,
     "claude_conflicts": [],
     "conflicts": [
       {
@@ -3332,7 +3332,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4774,
+  "duplicate_count": 4775,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -3917,7 +3917,27 @@
     {
       "kept": "R01",
       "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud-content.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple-dns.net"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
     },
     {
       "kept": "R01",
@@ -3937,27 +3957,7 @@
     {
       "kept": "R01",
       "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,cdn-apple.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud-content.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,icloud-content.com.cn"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
     },
     {
       "kept": "Direct exception",
@@ -19655,6 +19655,11 @@
       "rule": "DOMAIN-SUFFIX,pullstring.net"
     },
     {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,pv-cdn.net"
+    },
+    {
       "kept": "game",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,pvp.net"
@@ -27207,10 +27212,10 @@
   ],
   "policy_counts": {
     "Claude": 21,
-    "DIRECT": 6217,
+    "DIRECT": 6219,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36242,
+    "Overseas": 36259,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27221,8 +27226,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42521,
-  "rules_version": "b6c6f2aa2cf8b28e7e8a3448edb9d2efd152a178de0fa384626001dccfc8effc",
+  "rule_count": 42540,
+  "rules_version": "1574d8dde69b18446ee4e1f2f0f9c0328cd86bc94107a340de118d5a32d29557",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -27239,10 +27244,10 @@
     "facebook": 570,
     "game": 597,
     "github": 31,
-    "global": 35921,
+    "global": 35939,
     "google": 698,
     "hbo": 49,
-    "lan": 140,
+    "lan": 142,
     "microsoft": 671,
     "neteasemusic": 30,
     "netflix": 1157,
