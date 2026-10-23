@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 100842,
+  "added_rule_count": 101615,
   "base_conf_sha256": "318e3cbb737a68e788a38aed213c5f98fa95e54ee3ccdd5ddf79b187648fcee2",
   "base_rules_version": "1574d8dde69b18446ee4e1f2f0f9c0328cd86bc94107a340de118d5a32d29557",
   "checked_existing_hosts": 80702,
@@ -3643,17 +3643,7 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,wwwiiisss.oss-ap-northeast-1.aliyuncs.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xz-development.oss-cn-beijing.aliyuncs.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,ziio.oss-ap-southeast-1.aliyuncs.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -14531,11 +14521,6 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,aass111.tos-cn-beijing.volces.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,qqwwaa.tos-cn-hongkong.volces.com,REJECT"
     },
     {
@@ -16244,6 +16229,11 @@
       "rule": "DOMAIN-SUFFIX,log.zongheng.com,REJECT"
     },
     {
+      "matched": "DOMAIN-SUFFIX,zongheng.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,static.zongheng.com,REJECT"
+    },
+    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,zononi.com,REJECT",
       "target": "rillmoss-check.zononi.com"
@@ -16279,7 +16269,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2835,
+  "excluded_rule_count": 2833,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16287,11 +16277,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36259,
-    "REJECT": 100843,
+    "REJECT": 101616,
     "V3 Static Residential": 1
   },
-  "rule_count": 143382,
-  "rules_version": "2b1837d9a9b8a3088fb6ce51964373c37ebda88cbb55dd8f699a32f052e9cef2",
+  "rule_count": 144155,
+  "rules_version": "d75e6b4da38252fd6363d92bc956e2e4321fa89dca4367d55ed1f6abb970e8cf",
   "schema": 1,
-  "source_rule_count": 103677
+  "source_rule_count": 104448
 }
