@@ -19,10 +19,10 @@
     }
   },
   "candidate_rules_version": "473b45a9b89984533005f6f981cce0e8c942dec415fdc4156bdc10956a4a196c",
-  "checked_at": "2026-10-24T04:35:01+00:00",
+  "checked_at": "2026-10-25T04:34:30+00:00",
   "current_rules_version": "473b45a9b89984533005f6f981cce0e8c942dec415fdc4156bdc10956a4a196c",
   "publication_enabled": true,
-  "rules_changed": true,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/40062246147",
+  "rules_changed": false,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/40162027273",
   "status": "passed"
 }

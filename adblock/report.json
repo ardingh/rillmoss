@@ -8321,11 +8321,6 @@
       "rule": "DOMAIN-SUFFIX,v9-dc-ad.ixigua.com,REJECT"
     },
     {
-      "reason": "existing routing target",
-      "rule": "DOMAIN-SUFFIX,izatcloud.net,REJECT",
-      "target": "izatcloud.net"
-    },
-    {
       "matched": "DOMAIN-SUFFIX,jandan.net,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,a3.jandan.net,REJECT"
@@ -16269,7 +16264,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2833,
+  "excluded_rule_count": 2832,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16283,5 +16278,5 @@
   "rule_count": 144222,
   "rules_version": "64595ce996e5b5a17dbd1c177117b7833389a4970ca883403d863f009dbcd4ff",
   "schema": 1,
-  "source_rule_count": 104448
+  "source_rule_count": 104447
 }
