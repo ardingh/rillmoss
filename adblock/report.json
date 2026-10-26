@@ -1,8 +1,8 @@
 {
-  "added_rule_count": 101615,
-  "base_conf_sha256": "f807e43daafb31a74d98a74c5606851a5cfceb3f5b96ff41131a8f4274b81332",
-  "base_rules_version": "473b45a9b89984533005f6f981cce0e8c942dec415fdc4156bdc10956a4a196c",
-  "checked_existing_hosts": 80808,
+  "added_rule_count": 102359,
+  "base_conf_sha256": "c325be7db65c271343fdcd36d32a192d75cf59c50d321d869117c37a190ae4de",
+  "base_rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
+  "checked_existing_hosts": 80826,
   "checks": [
     {
       "actual": "Overseas",
@@ -784,7 +784,7 @@
   ],
   "device_acceptance": "pending; static checks only",
   "direct_routing": {
-    "checked_source_domain_probes": 12027,
+    "checked_source_domain_probes": 12025,
     "claude_conflicts": [],
     "conflicts": [
       {
@@ -3624,6 +3624,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,jiayi1.oss-cn-shanghai.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,kuakuawenjian.oss-cn-hangzhou.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -16264,19 +16269,19 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2832,
+  "excluded_rule_count": 2833,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
-    "DIRECT": 6219,
+    "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36326,
-    "REJECT": 101616,
+    "Overseas": 36336,
+    "REJECT": 102360,
     "V3 Static Residential": 1
   },
-  "rule_count": 144222,
-  "rules_version": "64595ce996e5b5a17dbd1c177117b7833389a4970ca883403d863f009dbcd4ff",
+  "rule_count": 144975,
+  "rules_version": "347039a903587919ff07105a506ed2eda4e71ba7cf0ed78452b065ebe630290b",
   "schema": 1,
-  "source_rule_count": 104447
+  "source_rule_count": 105192
 }

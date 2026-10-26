@@ -1,0 +1,28 @@
+{
+  "adblock": {
+    "added_rule_count": 102359,
+    "base_rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
+    "bundle_applied": true,
+    "rules_version": "347039a903587919ff07105a506ed2eda4e71ba7cf0ed78452b065ebe630290b",
+    "status": "passed"
+  },
+  "base_bundle_applied": true,
+  "base_changes_not_imported": {
+    "General": {
+      "added": [
+        "stun-response-ip = 1.1.1.1",
+        "stun-response-ipv6 = ::1"
+      ],
+      "removed": [
+        "direct-dns-server ="
+      ]
+    }
+  },
+  "candidate_rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
+  "checked_at": "2026-10-26T04:40:06+00:00",
+  "current_rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
+  "publication_enabled": true,
+  "rules_changed": true,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/40269607380",
+  "status": "passed"
+}

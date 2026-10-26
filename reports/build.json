@@ -2037,7 +2037,7 @@
   ],
   "device_acceptance": "pending; static checks only",
   "direct_routing": {
-    "checked_source_domain_probes": 12027,
+    "checked_source_domain_probes": 12025,
     "claude_conflicts": [],
     "conflicts": [
       {
@@ -3917,6 +3917,21 @@
     {
       "kept": "R01",
       "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud-content.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
+      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
+    },
+    {
+      "kept": "R01",
+      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,apple-dns.net"
     },
     {
@@ -3942,22 +3957,7 @@
     {
       "kept": "R01",
       "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud-content.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
       "rule": "DOMAIN-SUFFIX,icloud-content.com.cn"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com"
-    },
-    {
-      "kept": "R01",
-      "removed": "apple",
-      "rule": "DOMAIN-SUFFIX,icloud.com.cn"
     },
     {
       "kept": "Direct exception",
@@ -27222,10 +27222,10 @@
   ],
   "policy_counts": {
     "Claude": 21,
-    "DIRECT": 6219,
+    "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36326,
+    "Overseas": 36336,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27236,12 +27236,12 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42607,
-  "rules_version": "473b45a9b89984533005f6f981cce0e8c942dec415fdc4156bdc10956a4a196c",
+  "rule_count": 42616,
+  "rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
-    "apple": 1881,
+    "apple": 1880,
     "baidu": 251,
     "base": 39,
     "bilibili": 127,
@@ -27254,7 +27254,7 @@
     "facebook": 570,
     "game": 612,
     "github": 31,
-    "global": 35993,
+    "global": 36003,
     "google": 698,
     "hbo": 49,
     "lan": 142,
