@@ -3332,7 +3332,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4777,
+  "duplicate_count": 4775,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -4045,11 +4045,6 @@
       "rule": "DOMAIN,lookup-api.apple.com"
     },
     {
-      "kept": "netflix",
-      "removed": "global",
-      "rule": "DOMAIN,netflix.com.edgesuite.net"
-    },
-    {
       "kept": "apple",
       "removed": "global",
       "rule": "DOMAIN,news-assets.apple.com"
@@ -4098,11 +4093,6 @@
       "kept": "claude-page",
       "removed": "global",
       "rule": "DOMAIN,servd-anthropic-website.b-cdn.net"
-    },
-    {
-      "kept": "spotify",
-      "removed": "global",
-      "rule": "DOMAIN,spotify.com.edgesuite.net"
     },
     {
       "kept": "spotify",
@@ -27225,7 +27215,7 @@
     "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36336,
+    "Overseas": 36349,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27236,8 +27226,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42616,
-  "rules_version": "8fb859a23d9be7e4ef9118346f2d532c3dc23744d8cf0771f48e0af9fb77f0d9",
+  "rule_count": 42629,
+  "rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -27254,7 +27244,7 @@
     "facebook": 570,
     "game": 612,
     "github": 31,
-    "global": 36003,
+    "global": 36014,
     "google": 698,
     "hbo": 49,
     "lan": 142,
