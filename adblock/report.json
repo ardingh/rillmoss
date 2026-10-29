@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 102359,
+  "added_rule_count": 97867,
   "base_conf_sha256": "409d33a57e7ef3ff16211810f5afd2124fc61c14c2e7056d7dbbfe6cf6eda0b7",
   "base_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
   "checked_existing_hosts": 80844,
@@ -2348,11 +2348,6 @@
     {
       "matched": "DOMAIN-SUFFIX,163.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,crash.163.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,163.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,crashlytics.163.com,REJECT"
     },
     {
@@ -2429,6 +2424,11 @@
       "matched": "DOMAIN-SUFFIX,163.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,yaolu.yuedu.163.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,163.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,crash.163.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,music.163.com,DIRECT",
@@ -2624,11 +2624,6 @@
       "matched": "DOMAIN-SUFFIX,360tpcdn.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,softdl.360tpcdn.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,360tpcdn.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,softdl2.360tpcdn.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -3588,6 +3583,11 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,boitim.oss-eu-west-2.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com,REJECT"
     },
     {
@@ -3633,6 +3633,11 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,mmns.oss-me-east-1.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,mobaders.oss-cn-beijing.aliyuncs.com,REJECT"
     },
     {
@@ -3644,6 +3649,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,weco2.oss-me-east-1.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,xiaozzz.oss-me-east-1.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -6863,46 +6873,6 @@
       "rule": "DOMAIN-SUFFIX,smetrics.sandbox.ford.com,REJECT"
     },
     {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,log3-applog-hl.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,log3-applog.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,log5-applog-hl.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,log5-applog.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,rtlog3-applog-hl.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,rtlog3-applog.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,rtlog5-applog-hl.fqnovel.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,fqnovel.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,rtlog5-applog.fqnovel.com,REJECT"
-    },
-    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,freeadultcomix.com,REJECT",
       "target": "freeadultcomix.com"
@@ -9674,11 +9644,6 @@
     {
       "matched": "DOMAIN-SUFFIX,mi.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,sentry.d.mi.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,mi.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,union.mi.com,REJECT"
     },
     {
@@ -10111,6 +10076,11 @@
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,www999999safagqwhg-1327129302.cos.ap-chengdu.myqcloud.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,xz-1507771301.cos.ap-singapore.myqcloud.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -11938,16 +11908,6 @@
     {
       "matched": "DOMAIN-SUFFIX,qq.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,report.qqweb.qq.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,qq.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,rmonitor.qq.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,qq.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,scdown.qq.com,REJECT"
     },
     {
@@ -12195,11 +12155,6 @@
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,rtbasia.com,REJECT",
       "target": "rillmoss-check.rtbasia.com"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,ruanmei.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,down.ruanmei.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,ruguoapp.com,DIRECT",
@@ -13706,16 +13661,6 @@
     {
       "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,adashx4ae.ut.taobao.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,adsh.m.taobao.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ai.m.taobao.com,REJECT"
     },
     {
@@ -13861,11 +13806,6 @@
     {
       "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,v6-adashx.ut.taobao.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,youku-acs.m.taobao.com,REJECT"
     },
     {
@@ -13882,6 +13822,11 @@
       "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,acs.wapa.taobao.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,v6-adashx.ut.taobao.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,taobao.com,DIRECT",
@@ -14521,6 +14466,11 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,aass1122.tos-cn-beijing.volces.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,qqwwaa.tos-cn-hongkong.volces.com,REJECT"
     },
     {
@@ -14971,11 +14921,6 @@
     {
       "matched": "DOMAIN-SUFFIX,xiaomi.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,data.mistat.intl.xiaomi.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,xiaomi.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ppurifier.game.xiaomi.com,REJECT"
     },
     {
@@ -14991,7 +14936,7 @@
     {
       "matched": "DOMAIN-SUFFIX,xiaomi.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,stats.music.xiaomi.com,REJECT"
+      "rule": "DOMAIN-SUFFIX,data.mistat.intl.xiaomi.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,xiaomi.net,DIRECT",
@@ -15781,22 +15726,12 @@
     {
       "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,s-adashx.ut.youku.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,sdk.m.youku.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,service.danmu.youku.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,statis.api.3g.youku.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
@@ -15817,11 +15752,6 @@
       "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,v2html.atm.youku.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,v6-adashx.ut.youku.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,youku.com,DIRECT",
@@ -16269,7 +16199,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2833,
+  "excluded_rule_count": 2819,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16277,11 +16207,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 102360,
+    "REJECT": 97868,
     "V3 Static Residential": 1
   },
-  "rule_count": 144988,
-  "rules_version": "0c57ef9fd6c6b2a17081918ebcd82fd87e87134a73fd1f5ecf2732fa4b7bd353",
+  "rule_count": 140496,
+  "rules_version": "847b9bb809ebaff7cda5648c2c01f483790c83c2e191b188fe4b01afec73c0db",
   "schema": 1,
-  "source_rule_count": 105192
+  "source_rule_count": 100686
 }
