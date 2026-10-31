@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 97867,
+  "added_rule_count": 97866,
   "base_conf_sha256": "409d33a57e7ef3ff16211810f5afd2124fc61c14c2e7056d7dbbfe6cf6eda0b7",
   "base_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
   "checked_existing_hosts": 80844,
@@ -9176,11 +9176,6 @@
       "target": "rillmoss-check.tongji.linezing.com"
     },
     {
-      "reason": "existing routing target",
-      "rule": "DOMAIN-SUFFIX,litix.io,REJECT",
-      "target": "litix.io"
-    },
-    {
       "matched": "DOMAIN-SUFFIX,liuxiaoer.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,fan.liuxiaoer.com,REJECT"
@@ -10236,11 +10231,6 @@
       "matched": "DOMAIN-SUFFIX,okooo.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,baid1.okooo.com,REJECT"
-    },
-    {
-      "reason": "existing routing target",
-      "rule": "DOMAIN-SUFFIX,omtrdc.net,REJECT",
-      "target": "appleworldwidedeveloper.hb-api.omtrdc.net"
     },
     {
       "reason": "existing routing target",
@@ -12260,11 +12250,6 @@
       "matched": "DOMAIN-SUFFIX,sdo.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,snyu.sdo.com,REJECT"
-    },
-    {
-      "reason": "existing routing target",
-      "rule": "DOMAIN-SUFFIX,segment.com,REJECT",
-      "target": "cdn.segment.com"
     },
     {
       "reason": "existing routing target",
@@ -16199,7 +16184,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2819,
+  "excluded_rule_count": 2816,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16207,11 +16192,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 97868,
+    "REJECT": 97867,
     "V3 Static Residential": 1
   },
-  "rule_count": 140496,
-  "rules_version": "847b9bb809ebaff7cda5648c2c01f483790c83c2e191b188fe4b01afec73c0db",
+  "rule_count": 140495,
+  "rules_version": "c748efcc71d1eb01417efd9f533da6f0ca7c3b5b6c8f3b96fd61e41c691de64d",
   "schema": 1,
-  "source_rule_count": 100686
+  "source_rule_count": 100682
 }
