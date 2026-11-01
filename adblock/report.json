@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 97866,
+  "added_rule_count": 98699,
   "base_conf_sha256": "409d33a57e7ef3ff16211810f5afd2124fc61c14c2e7056d7dbbfe6cf6eda0b7",
   "base_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
   "checked_existing_hosts": 80844,
@@ -2626,6 +2626,11 @@
       "rule": "DOMAIN-SUFFIX,softdl.360tpcdn.com,REJECT"
     },
     {
+      "matched": "DOMAIN-SUFFIX,360tpcdn.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,softdl2.360tpcdn.com,REJECT"
+    },
+    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,365dmp.com,REJECT",
       "target": "365dmp.com"
@@ -3579,6 +3584,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,baolongwes.oss-ap-southeast-1.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,bitbrowse.oss-cn-hongkong.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -10065,6 +10075,11 @@
     {
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,winx64-letskauliian-1374029367.cos.ap-tokyo.myqcloud.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,www999999asgasg-1327129302.cos.ap-chengdu.myqcloud.com,REJECT"
     },
     {
@@ -12145,6 +12160,11 @@
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,rtbasia.com,REJECT",
       "target": "rillmoss-check.rtbasia.com"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,ruanmei.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,down.ruanmei.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,ruguoapp.com,DIRECT",
@@ -14451,7 +14471,7 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,aass1122.tos-cn-beijing.volces.com,REJECT"
+      "rule": "DOMAIN-SUFFIX,ooppxz.tos-cn-beijing.volces.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
@@ -16144,11 +16164,6 @@
       "rule": "DOMAIN-SUFFIX,log.zongheng.com,REJECT"
     },
     {
-      "matched": "DOMAIN-SUFFIX,zongheng.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,static.zongheng.com,REJECT"
-    },
-    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,zononi.com,REJECT",
       "target": "rillmoss-check.zononi.com"
@@ -16184,7 +16199,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2816,
+  "excluded_rule_count": 2819,
   "insertion_after_base_rules": 145,
   "policy_counts": {
     "Claude": 21,
@@ -16192,11 +16207,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 97867,
+    "REJECT": 98700,
     "V3 Static Residential": 1
   },
-  "rule_count": 140495,
-  "rules_version": "c748efcc71d1eb01417efd9f533da6f0ca7c3b5b6c8f3b96fd61e41c691de64d",
+  "rule_count": 141328,
+  "rules_version": "87518a59b7857314423de5c1799986e0e6acc032a91e1eb5e767693d0ff8a067",
   "schema": 1,
-  "source_rule_count": 100682
+  "source_rule_count": 101518
 }
