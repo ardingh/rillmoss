@@ -1,0 +1,9 @@
+{
+  "bundle_applied": false,
+  "checked_at": "2026-11-03T06:41:10+00:00",
+  "current_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
+  "error": "claude-ips: Official Claude inbound ranges changed; review required",
+  "publication_enabled": true,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/41590551062",
+  "status": "failed"
+}
