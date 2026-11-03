@@ -784,6 +784,20 @@
     {
       "actual": "Claude",
       "expected": "Claude",
+      "matched": "153.61.224.0/22",
+      "source": "claude-ips",
+      "target": "153.61.224.0"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "153.61.224.0/22",
+      "source": "claude-ips",
+      "target": "153.61.227.255"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
       "matched": "2607:6bc0::/48",
       "source": "claude-ips",
       "target": "2607:6bc0::1"
@@ -27211,7 +27225,7 @@
     }
   ],
   "policy_counts": {
-    "Claude": 21,
+    "Claude": 22,
     "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
@@ -27226,8 +27240,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42629,
-  "rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
+  "rule_count": 42630,
+  "rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
@@ -27236,7 +27250,7 @@
     "base": 39,
     "bilibili": 127,
     "china": 3753,
-    "claude-ips": 2,
+    "claude-ips": 3,
     "claude-page": 19,
     "disney": 173,
     "douban": 3,

@@ -12,7 +12,7 @@
 |---|---|
 | R01 苹果 | 保留完整 Apple 列表并固定 DIRECT；补充 Apple / iCloud / CloudKit 同步域名，`humb.apple.com` 明确直连。Apple 原始列表仍在原来的相对位置，只有明确核心例外前置。普通 Siri、听写、搜索不再进入混合 AI 分组。 |
 | R02 OpenAI | 替换混合 AI 入口：仅提取打底 AI 文件的 ChatGPT 段，合并 ACL4SSR OpenAi.list；统一 OpenAI 住宅分组，覆盖 ChatGPT / OpenAI / Codex 共用端点。 |
-| R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用官方入站 IPv4 `/23` 与 IPv6 `/48`、加 `no-resolve`。 |
+| R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用已审核的官方入站 IPv4 `160.79.104.0/23`、`153.61.224.0/22` 与 IPv6 `2607:6bc0::/48`，加 `no-resolve`。 |
 | Muse | 独立住宅分组，覆盖 `muse.ai`、`metaaivm.com`、`meta.ai`、`metaaiusercontent.com`、`ecto1usercontent.com`、`meta-agents-apps.workers.dev`、`meta.com`、`facebook.com`、`instagram.com`、`fbcdn.net`、`facebook.net`、`fbsbx.com` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
 | Claude Check 检测 | 恢复旧规则的 `DOMAIN,api64.ipify.org,V3 Static Residential` 精确前置例外；只改变此检测域名，其他 ipify.org 域名仍按通用规则分流。个人输入保存为 `claude_check_probe`，本次不改 Claude Check 配置。 |
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
@@ -63,3 +63,5 @@ close-if-proxy-chain-missing = true
 2026-10-15：用户要求补入此前未纳入的三个内容/应用域名，并补充 Meta、Facebook、Instagram。个人清单与固定校验扩为上述九个后缀，其中 `muse.ai` 已有，保留不重复；新加六个后缀及其子域统一归 Muse 住宅。这也改变 `auth.meta.com` 等认证端点及 Facebook/Instagram 主域下的出口，不承诺未列出的共享 CDN 或全部 App 功能均住宅。仅纳入 `meta-agents-apps.workers.dev` 这个应用范围，不扩大到其他 `workers.dev` 租户；`fbcdn.net`、`cdninstagram.com`、WhatsApp 仍按原规则。Claude / OpenAI 优先级不变，每日候选遇到已覆盖端点冲突仍拒绝采用。生成输入、固定校验、回归测试与完整快照同步；来源和设备设置不变。
 
 2026-10-15 后续补充：用户要求把缺少的 `fbcdn.net`、`facebook.net`、`fbsbx.com` 及全部子域从 Overseas 改归 Muse，唯一绑定 `V3 Static Residential`，个人清单与固定校验共十二后缀。这三个共享后缀被其他应用或网页访问时也走住宅；`cdninstagram.com`、WhatsApp 与其他未列出的域名仍按原规则，不将此次修改解释为所有 Muse 依赖已经完整覆盖。同步生成输入、固定校验、每日重建回归和完整包，保留 Claude / OpenAI 优先级、原有其他规则与来源，不操作设备。
+
+2026-11-03：用户确认修复官方入站网段变化导致的每日更新中断。仅新增官方入站 `153.61.224.0/22`，保留原两段，仍归 Claude 并唯一绑定 `V3 Static Residential`；不导入官方出站网段或第三方网页的 IP / ASN 建议。批准列表仍须与官方入站列表精确一致，未来变化继续停止采用。同步新增网段首尾保护、相邻地址及双版本保留回归，生成完整基础与去广告候选。此决定授权本地修复，公开发布另行确认；设备效果未据静态校验填为通过。

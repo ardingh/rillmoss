@@ -1,7 +1,7 @@
 {
   "added_rule_count": 98965,
-  "base_conf_sha256": "409d33a57e7ef3ff16211810f5afd2124fc61c14c2e7056d7dbbfe6cf6eda0b7",
-  "base_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
+  "base_conf_sha256": "a7326d44c3426fdedc001a0def714fdbb9dda1828080e0d7a064c8ee1a13d37d",
+  "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "checked_existing_hosts": 80844,
   "checks": [
     {
@@ -773,6 +773,20 @@
       "matched": "160.79.104.0/23",
       "source": "claude-ips",
       "target": "160.79.104.1"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "153.61.224.0/22",
+      "source": "claude-ips",
+      "target": "153.61.224.0"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "153.61.224.0/22",
+      "source": "claude-ips",
+      "target": "153.61.227.255"
     },
     {
       "actual": "Claude",
@@ -16205,9 +16219,9 @@
     }
   ],
   "excluded_rule_count": 2820,
-  "insertion_after_base_rules": 145,
+  "insertion_after_base_rules": 146,
   "policy_counts": {
-    "Claude": 21,
+    "Claude": 22,
     "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
@@ -16215,8 +16229,8 @@
     "REJECT": 98966,
     "V3 Static Residential": 1
   },
-  "rule_count": 141594,
-  "rules_version": "eda8dbc38d698118a594bcbe8c9c53ad1acd91b5dce55a57d17130dfdaead96f",
+  "rule_count": 141595,
+  "rules_version": "489aeaeb294101d02d7c33cec5d1983a6c48df5029bbe189f99d9fa9a378fa2e",
   "schema": 1,
   "source_rule_count": 101785
 }

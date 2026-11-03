@@ -38,7 +38,7 @@
 | `lan` | [rule/Shadowrocket/Lan/Lan.list](https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Lan/Lan.list) | 展开规则，规范化类型与参数；策略由个人清单指定 |
 | `openai-acl` | [Clash/Ruleset/OpenAi.list](https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/OpenAi.list) | 展开规则，规范化类型与参数；策略由个人清单指定 |
 | `claude-page` | [claude-page](https://ip.net.coffee/claude/site.html) | 类型前缀块中的域名规则；排除网页 IP / ASN / NTP 建议 |
-| `claude-ips` | [claude-ips](https://platform.claude.com/docs/en/api/ip-addresses) | 仅官方入站 /23 与 /48；变化则停止核对 |
+| `claude-ips` | [claude-ips](https://platform.claude.com/docs/en/api/ip-addresses) | 仅已审核的官方入站 `160.79.104.0/23`、`153.61.224.0/22` 与 `2607:6bc0::/48`；变化则停止核对 |
 
 保留第三方来源标识及原始内容中的声明，第三方内容的权利与使用条件仍属于其上游；本项目不替第三方内容授予额外许可。
 

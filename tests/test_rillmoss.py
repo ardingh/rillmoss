@@ -53,11 +53,22 @@ IP-ASN,399358,no-resolve</pre>"""
             parse.claude(text.replace("IP-ASN", "UNKNOWN"))
 
     def test_official_inbound_is_scoped_and_pinned(self):
-        text = '<h2 id="inbound-ip-addresses">Inbound</h2><code>160.79.104.0/23</code><code>2607:6bc0::/48</code><h2 id="outbound-ip-addresses">Outbound</h2><code>160.79.104.0/21</code>'
-        expected = ["160.79.104.0/23", "2607:6bc0::/48"]
+        text = ('<h2 id="inbound-ip-addresses">Inbound</h2>'
+                '<code>160.79.104.0/23</code><code>153.61.224.0/22</code><code>2607:6bc0::/48</code>'
+                '<h2 id="outbound-ip-addresses">Outbound</h2>'
+                '<code>160.79.104.0/21</code><code>153.61.208.0/20</code>')
+        expected = ["160.79.104.0/23", "153.61.224.0/22", "2607:6bc0::/48"]
         self.assertEqual([r.value for r in parse.inbound(text, expected)], expected)
-        for bad in (text.replace("/23", "/21"), text.replace('id="inbound-ip-addresses"', 'id="changed"')):
-            with self.assertRaises(Invalid):
+        with self.assertRaisesRegex(Invalid, "Official Claude inbound ranges changed"):
+            parse.inbound(text, ["160.79.104.0/23", "2607:6bc0::/48"])
+        for bad in (text.replace("/23", "/21"), text.replace("153.61.224.0/22", "153.61.224.0/21"),
+                    text.replace('<code>153.61.224.0/22</code>', ''),
+                    text.replace('<code>160.79.104.0/23</code>', ''),
+                    text.replace('<code>2607:6bc0::/48</code>', ''),
+                    text.replace('<code>153.61.224.0/22</code>', '<code>153.61.224.0/22</code>' * 2),
+                    text.replace('<code>153.61.224.0/22</code>', '<code>153.61.224.0/22</code><code>192.0.2.0/24</code>'),
+                    text.replace('id="inbound-ip-addresses"', 'id="changed"')):
+            with self.subTest(text=bad), self.assertRaises(Invalid):
                 parse.inbound(bad, expected)
 
     def test_unknown_base_rules_cannot_be_silently_skipped(self):
@@ -113,6 +124,27 @@ class PolicyTests(unittest.TestCase):
     def test_actual_snapshot_routes(self):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
+
+    def test_claude_new_inbound_range_preserves_its_exact_boundaries(self):
+        new_rule = Rule("IP-CIDR", "153.61.224.0/22", ("no-resolve",))
+        self.assertIn((new_rule, "Claude", "claude-ips"), self.entries)
+        without_new = [entry for entry in self.entries if entry[0] != new_rule]
+        for address in ("153.61.224.0", "153.61.225.128", "153.61.227.255"):
+            with self.subTest(address=address):
+                self.assertEqual(build.route(self.entries, address=address),
+                                 ("Claude", "claude-ips", "153.61.224.0/22"))
+        for address in ("153.61.223.255", "153.61.228.0"):
+            with self.subTest(address=address):
+                self.assertEqual(build.route(self.entries, address=address),
+                                 build.route(without_new, address=address))
+
+    def test_claude_new_inbound_loss_or_partial_shadowing_blocks_generation(self):
+        missing = [entry for entry in self.entries if entry[0].value != "153.61.224.0/22"]
+        shadowed = [(Rule("IP-CIDR", "153.61.226.0/23"), "Overseas", "future-proxy")] + self.entries
+        for entries in (missing, shadowed):
+            with self.subTest(entries=entries is missing), self.assertRaisesRegex(
+                    Invalid, "Claude inbound IP constraint failed"):
+                build.constraints(entries, self.personal, self.parsed)
 
     def test_muse_routes_cover_approved_meta_domains_without_capturing_neighbors(self):
         self.assertEqual(self.personal["groups"]["Muse"], "V3 Static Residential")

@@ -242,7 +242,7 @@ def constraints(entries, personal, parsed):
                 raise Invalid(f"Muse routing conflict: {host}: {actual}, expected Muse")
             results.append(dict(target=host, expected="Muse", actual="Muse", source=winner[2],
                                 matched=winner[0].value))
-    for address in ("160.79.104.1", "2607:6bc0::1"):
+    for address in ("160.79.104.1", "153.61.224.0", "153.61.227.255", "2607:6bc0::1"):
         actual, origin, value = route(entries, address=address)
         if actual != "Claude":
             raise Invalid("Claude inbound IP constraint failed")

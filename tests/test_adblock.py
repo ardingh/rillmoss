@@ -119,6 +119,9 @@ class AdvertisingTests(unittest.TestCase):
         for host, expected in targets.items():
             with self.subTest(host=host):
                 self.assertEqual(routes.match(host)[1], expected)
+        for address in ("153.61.224.0", "153.61.225.128", "153.61.227.255"):
+            with self.subTest(address=address):
+                self.assertEqual(build.route(entries, address=address)[0], "Claude")
         self.assertEqual(build.route(entries, address="160.79.104.8")[0], "Claude")
         self.assertEqual(build.route(entries, address="2607:6bc0::8")[0], "Claude")
 
@@ -214,6 +217,28 @@ class AdvertisingTests(unittest.TestCase):
             self.assertEqual(runner.update(self.root), 1)
         ads.assert_not_called()
         self.assertEqual(before, self.fingerprint(runner.BUNDLE_PATHS + adblock.BUNDLE_PATHS))
+
+    def test_future_official_inbound_change_preserves_both_complete_variants(self):
+        before = self.fingerprint(runner.BUNDLE_PATHS + adblock.BUNDLE_PATHS)
+        real_stage = runner.stage
+        def changed_collector(manifest, raw):
+            metadata = self.base_collector(manifest, raw)
+            path = raw / "claude-ips.txt"
+            original = path.read_text()
+            changed = original.replace("153.61.224.0/22", "153.61.228.0/22")
+            self.assertNotEqual(changed, original)
+            path.write_text(changed)
+            metadata["sources"]["claude-ips"].update(
+                sha256=fetch.digest(path.read_bytes()), bytes=path.stat().st_size)
+            return metadata
+        with patch("rillmoss.runner.stage", side_effect=lambda root, out:
+                   real_stage(root, out, collector=changed_collector)), patch("rillmoss.adblock.stage") as ads:
+            self.assertEqual(runner.update(self.root), 1)
+        ads.assert_not_called()
+        self.assertEqual(before, self.fingerprint(runner.BUNDLE_PATHS + adblock.BUNDLE_PATHS))
+        check = runner.read(self.root / "checks/latest.json")
+        self.assertFalse(check["bundle_applied"])
+        self.assertEqual(check["error"], "claude-ips: Official Claude inbound ranges changed; review required")
 
     def test_pause_prevents_both_installs_and_keeps_both_candidates(self):
         control = runner.read(self.root / "policy/release.json")
