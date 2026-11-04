@@ -1,9 +1,28 @@
 {
-  "bundle_applied": false,
-  "checked_at": "2026-11-03T06:41:10+00:00",
-  "current_rules_version": "acd74b1b78b368fd37c816d7e43d87ea9019c21b76c6e2801d8b67033622f7d1",
-  "error": "claude-ips: Official Claude inbound ranges changed; review required",
+  "adblock": {
+    "added_rule_count": 98965,
+    "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
+    "bundle_applied": true,
+    "rules_version": "489aeaeb294101d02d7c33cec5d1983a6c48df5029bbe189f99d9fa9a378fa2e",
+    "status": "passed"
+  },
+  "base_bundle_applied": true,
+  "base_changes_not_imported": {
+    "General": {
+      "added": [
+        "stun-response-ip = 1.1.1.1",
+        "stun-response-ipv6 = ::1"
+      ],
+      "removed": [
+        "direct-dns-server ="
+      ]
+    }
+  },
+  "candidate_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
+  "checked_at": "2026-11-04T06:11:38+00:00",
+  "current_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "publication_enabled": true,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/41590551062",
-  "status": "failed"
+  "rules_changed": false,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/41782843629",
+  "status": "passed"
 }
