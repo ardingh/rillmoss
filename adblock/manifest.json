@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-04T06:10:44+00:00",
+  "checked_at": "2026-11-05T06:34:39+00:00",
   "files": {
     "adblock/base/policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "adblock/base/policy/personal.json": "a11200d3348ef41a881184b4379469a0d8a648c562125337d99b19cca46f050b",
@@ -9,14 +9,14 @@
     "adblock/base/snapshot/inputs/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "adblock/base/snapshot/inputs/personal.json": "a11200d3348ef41a881184b4379469a0d8a648c562125337d99b19cca46f050b",
     "adblock/base/snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
-    "adblock/base/snapshot/manifest.json": "054b6de735cc991144ed86021545a076a07dffee6b8e97f885a9c8de1ecec6d3",
+    "adblock/base/snapshot/manifest.json": "ccd09f153062b927735a294d47f3b30c02d922b7650dd440411181ac603dc2f6",
     "adblock/base/snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
     "adblock/base/snapshot/raw/apple.txt": "966cb314803464ea516243104ed97aaa695d44da71f46b4c72bf8a14e7c67931",
     "adblock/base/snapshot/raw/baidu.txt": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
     "adblock/base/snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "adblock/base/snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "adblock/base/snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "adblock/base/snapshot/raw/claude-ips.txt": "8d306f37d7c709cb8516915e25388f46930441b463b495d905dedfd6c7e58b84",
+    "adblock/base/snapshot/raw/claude-ips.txt": "009b0354aab64141a697a5818c07bf6bf08f3d698eb6b0e6350dc154d488ce5e",
     "adblock/base/snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "adblock/base/snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "adblock/base/snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -45,32 +45,32 @@
     "adblock/base/snapshot/raw/xiaohongshu.txt": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
     "adblock/base/snapshot/raw/youtube.txt": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
     "adblock/base/snapshot/raw/zhihu.txt": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33",
-    "adblock/base/version.json": "cc97a07f8bc806da54a3eb36a11681e4684ea9370d04d9438758f471669e0ae7",
+    "adblock/base/version.json": "3cc4ccbb0bee1c328c1fa410395a1d17774ae2bd08d46047caef3f9d0513c34c",
     "adblock/inputs/policy.json": "60ee68337023e5c51f243878f92f9f00435169a4fe169e8a561a4d08a2799be5",
     "adblock/raw/anti-ad-license.txt": "e38459549a64f11ecf1477053768ef89eb2939a9aa5573f51a31461086357a34",
-    "adblock/raw/anti-ad.txt": "76b96fd8cae1bc9601876440e91e0c8e42db777f09a56103c0131fe359cef88a",
-    "adblock/report.json": "b473d58449c13783f61f91a0cd379676509c687a97aa1bc749d3ec3e98a92b7f",
-    "policy/adblock.json": "60ee68337023e5c51f243878f92f9f00435169a4fe169e8a561a4d08a2799be5",
-    "rillmoss-ad.conf": "a55a56947c296790f4659ad75fbd66879a3044e39ceece222c31bed4e7c36c6f"
+    "adblock/raw/anti-ad.txt": "af287fa147deb8a1d15ff5ef9dd709e55630290cebfc189eb19cf5d037bdf019",
+    "adblock/report.json": "f67ae54abffcd920e4377964a2ed088e0c1f87f6dfd3705ee97766a6de467983",
+    "policy/adblock.json": "ad4396ac8d83d360da638ce3afb7a3bf6ce0642dd260604fa0c9a98a77a9ba28",
+    "rillmoss-ad.conf": "5f9099a774b39642c1c6abd01334eb77d92072863feb8ac4b1ded1146b63ce2a"
   },
   "schema": 1,
-  "snapshot_id": "2517e7f7a5902f4184a6669b06a2169d456dd0696d8e3edff4bc45546b49222d",
+  "snapshot_id": "48eae8158c53bb1a8de14c40b9041f87ac7006027fc4d46e3ea596f3cb26a34a",
   "upstream": {
     "pins": {
-      "privacy-protection-tools/anti-ad": "9bbc98fae9be597e9e853c14e2da1a6983d88523"
+      "privacy-protection-tools/anti-ad": "97c344c19e6bf0286b9b8dd95d80f5ce67ab4d64"
     },
     "sources": {
       "anti-ad": {
-        "bytes": 3369720,
-        "commit": "9bbc98fae9be597e9e853c14e2da1a6983d88523",
-        "sha256": "76b96fd8cae1bc9601876440e91e0c8e42db777f09a56103c0131fe359cef88a",
-        "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/9bbc98fae9be597e9e853c14e2da1a6983d88523/anti-ad-surge.txt"
+        "bytes": 3391410,
+        "commit": "97c344c19e6bf0286b9b8dd95d80f5ce67ab4d64",
+        "sha256": "af287fa147deb8a1d15ff5ef9dd709e55630290cebfc189eb19cf5d037bdf019",
+        "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/97c344c19e6bf0286b9b8dd95d80f5ce67ab4d64/anti-ad-surge.txt"
       },
       "anti-ad-license": {
         "bytes": 1068,
-        "commit": "9bbc98fae9be597e9e853c14e2da1a6983d88523",
+        "commit": "97c344c19e6bf0286b9b8dd95d80f5ce67ab4d64",
         "sha256": "e38459549a64f11ecf1477053768ef89eb2939a9aa5573f51a31461086357a34",
-        "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/9bbc98fae9be597e9e853c14e2da1a6983d88523/LICENSE"
+        "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/97c344c19e6bf0286b9b8dd95d80f5ce67ab4d64/LICENSE"
       }
     }
   }

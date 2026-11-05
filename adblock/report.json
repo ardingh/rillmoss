@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 98965,
+  "added_rule_count": 99623,
   "base_conf_sha256": "a7326d44c3426fdedc001a0def714fdbb9dda1828080e0d7a064c8ee1a13d37d",
   "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "checked_existing_hosts": 80844,
@@ -10089,11 +10089,6 @@
     {
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,winx64-letskauliian-1374029367.cos.ap-tokyo.myqcloud.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,www999999asgasg-1327129302.cos.ap-chengdu.myqcloud.com,REJECT"
     },
     {
@@ -14485,11 +14480,6 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,ooppxz.tos-cn-beijing.volces.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,qqwwaa.tos-cn-hongkong.volces.com,REJECT"
     },
     {
@@ -16178,11 +16168,6 @@
       "rule": "DOMAIN-SUFFIX,log.zongheng.com,REJECT"
     },
     {
-      "matched": "DOMAIN-SUFFIX,zongheng.com,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,static.zongheng.com,REJECT"
-    },
-    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,zononi.com,REJECT",
       "target": "rillmoss-check.zononi.com"
@@ -16218,7 +16203,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2820,
+  "excluded_rule_count": 2817,
   "insertion_after_base_rules": 146,
   "policy_counts": {
     "Claude": 22,
@@ -16226,11 +16211,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 98966,
+    "REJECT": 99624,
     "V3 Static Residential": 1
   },
-  "rule_count": 141595,
-  "rules_version": "489aeaeb294101d02d7c33cec5d1983a6c48df5029bbe189f99d9fa9a378fa2e",
+  "rule_count": 142253,
+  "rules_version": "60992af38d7220f649d523cdd676d625e6f176386a5484c3f63eb876355647c8",
   "schema": 1,
-  "source_rule_count": 101785
+  "source_rule_count": 102440
 }
