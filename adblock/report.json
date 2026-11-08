@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 99623,
+  "added_rule_count": 100251,
   "base_conf_sha256": "a7326d44c3426fdedc001a0def714fdbb9dda1828080e0d7a064c8ee1a13d37d",
   "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "checked_existing_hosts": 80844,
@@ -3587,11 +3587,6 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,26usdm.oss-cn-beijing.aliyuncs.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,adash.man.aliyuncs.com,REJECT"
     },
     {
@@ -3668,6 +3663,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ruikeja-mobileoffice.oss-cn-hangzhou.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,sosogou.oss-cn-hongkong.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -16211,11 +16211,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 99624,
+    "REJECT": 100252,
     "V3 Static Residential": 1
   },
-  "rule_count": 142253,
-  "rules_version": "60992af38d7220f649d523cdd676d625e6f176386a5484c3f63eb876355647c8",
+  "rule_count": 142881,
+  "rules_version": "297f599fc652303cff452da70f40cd47ed2674a4370996e0862ad6edaa3202a5",
   "schema": 1,
-  "source_rule_count": 102440
+  "source_rule_count": 103068
 }
