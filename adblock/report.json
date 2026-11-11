@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 100251,
+  "added_rule_count": 98816,
   "base_conf_sha256": "a7326d44c3426fdedc001a0def714fdbb9dda1828080e0d7a064c8ee1a13d37d",
   "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "checked_existing_hosts": 80844,
@@ -3583,6 +3583,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xpjcg.oss-accelerate.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,26usdm.oss-cn-beijing.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -7605,6 +7610,11 @@
       "matched": "DOMAIN-SUFFIX,huanqiu.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,ipengtai.huanqiu.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,huaweicloud.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,repo.huaweicloud.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,hujiang.com,DIRECT",
@@ -16168,6 +16178,11 @@
       "rule": "DOMAIN-SUFFIX,log.zongheng.com,REJECT"
     },
     {
+      "matched": "DOMAIN-SUFFIX,zongheng.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,static.zongheng.com,REJECT"
+    },
+    {
       "reason": "existing routing target",
       "rule": "DOMAIN-SUFFIX,zononi.com,REJECT",
       "target": "rillmoss-check.zononi.com"
@@ -16203,7 +16218,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2817,
+  "excluded_rule_count": 2820,
   "insertion_after_base_rules": 146,
   "policy_counts": {
     "Claude": 22,
@@ -16211,11 +16226,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 100252,
+    "REJECT": 98817,
     "V3 Static Residential": 1
   },
-  "rule_count": 142881,
-  "rules_version": "297f599fc652303cff452da70f40cd47ed2674a4370996e0862ad6edaa3202a5",
+  "rule_count": 141446,
+  "rules_version": "f25846b9acf78c2b4f5ff23e02f97721a45ffa5719690bd939f01c7330e038c5",
   "schema": 1,
-  "source_rule_count": 103068
+  "source_rule_count": 101636
 }
