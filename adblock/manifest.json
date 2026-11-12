@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-11T06:06:29+00:00",
+  "checked_at": "2026-11-12T07:04:18+00:00",
   "files": {
     "adblock/base/policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "adblock/base/policy/personal.json": "a11200d3348ef41a881184b4379469a0d8a648c562125337d99b19cca46f050b",
@@ -9,14 +9,14 @@
     "adblock/base/snapshot/inputs/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "adblock/base/snapshot/inputs/personal.json": "a11200d3348ef41a881184b4379469a0d8a648c562125337d99b19cca46f050b",
     "adblock/base/snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
-    "adblock/base/snapshot/manifest.json": "c5c0c72e567b2be8f4dae80ecc95dec9d06ca45323fad9011360e835ef0a81c6",
+    "adblock/base/snapshot/manifest.json": "4a693a7773900f22ce7b2cb07e990cbc4e4a37e87b4f1cc034741c75d5ce6ebc",
     "adblock/base/snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
     "adblock/base/snapshot/raw/apple.txt": "966cb314803464ea516243104ed97aaa695d44da71f46b4c72bf8a14e7c67931",
     "adblock/base/snapshot/raw/baidu.txt": "ac49361bba37ccd12f46dff78885ef07218d9dc9deb254d71d1c0431a7eb921a",
     "adblock/base/snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "adblock/base/snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "adblock/base/snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "adblock/base/snapshot/raw/claude-ips.txt": "c570a7c3e0cc2b15b82b9ced41446060c1011e1a18797127b83ec1734b6f63a8",
+    "adblock/base/snapshot/raw/claude-ips.txt": "b9df4a57d04927e699f17ff9bc9605485309372ab655ad713aa61fb694eb4258",
     "adblock/base/snapshot/raw/claude-page.txt": "29aaf164c8da645dd4cbca3c4f52ba8094ff8e93c3626f33a86c44b40dc69ff5",
     "adblock/base/snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "adblock/base/snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -45,8 +45,8 @@
     "adblock/base/snapshot/raw/xiaohongshu.txt": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
     "adblock/base/snapshot/raw/youtube.txt": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
     "adblock/base/snapshot/raw/zhihu.txt": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33",
-    "adblock/base/version.json": "347eb7f34b5d6144622b0911c554e32f0a8de3d5c73a3cc377053c68c9c511d3",
-    "adblock/inputs/policy.json": "192660b8e166d26de75dc156bbd7cd909e687345700d9c0b81e737ff5d8bb58a",
+    "adblock/base/version.json": "a81743f2f7c24b3fc1898d6e3d9acd26a66ba03c26b72a90139919149167e0af",
+    "adblock/inputs/policy.json": "5eabe70e7248ac806b338c4a1905df07bac2aa1e86ae3254ebd3f0f01b2b12c2",
     "adblock/raw/anti-ad-license.txt": "e38459549a64f11ecf1477053768ef89eb2939a9aa5573f51a31461086357a34",
     "adblock/raw/anti-ad.txt": "ba0efcff7ef0af9d06ad9266f2a8110756d3e0a0d771076430fe602b64ce7bb6",
     "adblock/report.json": "4e934a81bf81c966fe1a05f73edac71b54186d576939dece025e7105ea3cf51b",
@@ -54,7 +54,7 @@
     "rillmoss-ad.conf": "25db5c09e23d5df5b428964b94e06469d92bd5ca7b85b84e71a1a4abcf3571ed"
   },
   "schema": 1,
-  "snapshot_id": "66d6318fa187bd310efe1ae37ed2e275a58c7a40e93fd346c8bebae8ae4a0d6c",
+  "snapshot_id": "a81b1372ae76835f76d492be799f43e708af05c46b06aec8d1a9fbfc157d1f3a",
   "upstream": {
     "pins": {
       "privacy-protection-tools/anti-ad": "0686847ddffc07a35689fc1839ec020a526b9aed"
