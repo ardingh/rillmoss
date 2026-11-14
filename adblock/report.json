@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 98816,
+  "added_rule_count": 99835,
   "base_conf_sha256": "a7326d44c3426fdedc001a0def714fdbb9dda1828080e0d7a064c8ee1a13d37d",
   "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
   "checked_existing_hosts": 80844,
@@ -3672,11 +3672,6 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,sosogou.oss-cn-hongkong.aliyuncs.com,REJECT"
-    },
-    {
-      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
-      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,weco2.oss-me-east-1.aliyuncs.com,REJECT"
     },
     {
@@ -3688,6 +3683,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xz-development.oss-cn-beijing.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,yifayiapp.oss-cn-hongkong.aliyuncs.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -10109,6 +10109,11 @@
     {
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,xss-1253555722.cos.ap-singapore.myqcloud.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xz-1507771301.cos.ap-singapore.myqcloud.com,REJECT"
     },
     {
@@ -16218,7 +16223,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2820,
+  "excluded_rule_count": 2821,
   "insertion_after_base_rules": 146,
   "policy_counts": {
     "Claude": 22,
@@ -16226,11 +16231,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36349,
-    "REJECT": 98817,
+    "REJECT": 99836,
     "V3 Static Residential": 1
   },
-  "rule_count": 141446,
-  "rules_version": "f25846b9acf78c2b4f5ff23e02f97721a45ffa5719690bd939f01c7330e038c5",
+  "rule_count": 142465,
+  "rules_version": "2b92dc4e2335ce76ba730bb8b324d863fdeb7ff9779f39c5b5726e0551c3461b",
   "schema": 1,
-  "source_rule_count": 101636
+  "source_rule_count": 102656
 }

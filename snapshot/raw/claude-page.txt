@@ -238,6 +238,17 @@
       </tbody>
     </table>
 
+    <h2>KYC认证（如遇KYC，必看）</h2>
+
+    <table class="domain-table">
+      <thead><tr><th>域名</th><th>用途</th><th>类型</th></tr></thead>
+      <tbody>
+        <tr><td><code>maps.googleapis.com</code></td><td>Google 地图与位置解析</td><td><span class="tag" style="background: #fee2e2; color: #b91c1c;">KYC</span></td></tr>
+        <tr><td><code>withpersona.com</code></td><td>证件 / 自拍身份核验</td><td><span class="tag" style="background: #fee2e2; color: #b91c1c;">KYC</span></td></tr>
+        <tr><td><code>frompersona.com</code></td><td>KYC 认证邮件通知</td><td><span class="tag" style="background: #fee2e2; color: #b91c1c;">KYC</span></td></tr>
+      </tbody>
+    </table>
+
     <h2>监控和数据上报</h2>
 
     <p>Claude Code 在运行时会向这些服务上报性能数据和错误日志。如果它们没走代理，上报的 IP 和 Claude 请求的 IP 不一致，可能触发异常检测。</p>
