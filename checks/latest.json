@@ -1,28 +1,9 @@
 {
-  "adblock": {
-    "added_rule_count": 99007,
-    "base_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
-    "bundle_applied": true,
-    "rules_version": "b748be47b4283c9863ea6e06b1743d3a772ea28743ea3fe74c693f3a20e71583",
-    "status": "passed"
-  },
-  "base_bundle_applied": true,
-  "base_changes_not_imported": {
-    "General": {
-      "added": [
-        "stun-response-ip = 1.1.1.1",
-        "stun-response-ipv6 = ::1"
-      ],
-      "removed": [
-        "direct-dns-server ="
-      ]
-    }
-  },
-  "candidate_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
-  "checked_at": "2026-11-17T07:55:01+00:00",
+  "bundle_applied": false,
+  "checked_at": "2026-11-18T07:16:02+00:00",
   "current_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
+  "error": "HTTPS download failed after 3 attempts: api.github.com/repos/lowertop/Shadowrocket/commits/main",
   "publication_enabled": true,
-  "rules_changed": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/44041089385",
-  "status": "passed"
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/44256792465",
+  "status": "failed"
 }

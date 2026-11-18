@@ -1,0 +1,9 @@
+{
+  "bundle_applied": false,
+  "checked_at": "2026-11-18T07:16:02+00:00",
+  "current_rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
+  "error": "HTTPS download failed after 3 attempts: api.github.com/repos/lowertop/Shadowrocket/commits/main",
+  "publication_enabled": true,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/44256792465",
+  "status": "failed"
+}
