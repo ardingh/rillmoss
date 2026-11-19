@@ -125,6 +125,25 @@ class PolicyTests(unittest.TestCase):
         checks = build.constraints(self.entries, self.personal, self.parsed)
         self.assertGreater(len(checks), 45)
 
+    def test_claude_app_uses_the_residential_route_independently_of_global_rules(self):
+        suffix = Rule("DOMAIN-SUFFIX", "claude.app")
+        changed = self.parsed.copy()
+        changed["global"] = [
+            Rule("DOMAIN", "preview.livepreview.claude.app"),
+            *(rule for rule in self.parsed["global"] if rule != suffix),
+        ]
+        rebuilt, _, _ = build.compose(changed, self.manifest, self.personal)
+        for entries in (self.entries, rebuilt):
+            self.assertIn((suffix, "Claude", "Claude personal"), entries)
+            self.assertFalse(any(rule == suffix and policy == "Overseas" for rule, policy, _ in entries))
+            for host in ("claude.app", "preview.livepreview.claude.app"):
+                with self.subTest(host=host):
+                    self.assertEqual(build.route(entries, host=host),
+                                     ("Claude", "Claude personal", "claude.app"))
+            for host in ("notclaude.app", "claude.app.example.com"):
+                with self.subTest(host=host):
+                    self.assertEqual(build.route(entries, host=host)[0], "Overseas")
+
     def test_claude_new_inbound_range_preserves_its_exact_boundaries(self):
         new_rule = Rule("IP-CIDR", "153.61.224.0/22", ("no-resolve",))
         self.assertIn((new_rule, "Claude", "claude-ips"), self.entries)

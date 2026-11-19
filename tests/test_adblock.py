@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ("DOMAIN-SUFFIX,ads.rillmoss-ad-test.net\n"
         "DOMAIN-SUFFIX,sentry.io\n"
         "DOMAIN-SUFFIX,statsigapi.net\n"
+        "DOMAIN-SUFFIX,preview.livepreview.claude.app\n"
         "DOMAIN-SUFFIX,future-telemetry.meta.ai\n"
         "DOMAIN-SUFFIX,future-telemetry.fbcdn.net\n"
         "DOMAIN-SUFFIX,ad.new-child.bilibili.com\n"
@@ -98,7 +99,7 @@ class AdvertisingTests(unittest.TestCase):
         self.assertEqual(report["base_rules_version"], base_report["rules_version"])
         self.assertEqual((ROOT / "rillmoss.conf").read_bytes(), (self.root / "rillmoss.conf").read_bytes())
         self.assertEqual(count, 2)
-        self.assertEqual(report["source_rule_count"], 8)
+        self.assertEqual(report["source_rule_count"], 9)
         self.assertIn("# MIT License\n# Copyright (c) Synthetic test fixture", conf)
 
     def test_residential_and_direct_scopes_survive_future_ad_domains(self):
@@ -110,6 +111,7 @@ class AdvertisingTests(unittest.TestCase):
                 entries.append((parse.rule(",".join(fields[:2] + fields[3:])), fields[2], "fixture"))
         routes = guard.DomainRoutes(entries)
         targets = {"sentry.io": "Claude", "events.statsigapi.net": "Claude",
+                   "preview.livepreview.claude.app": "Claude",
                    "api.statsig.com": "OpenAI", "api64.ipify.org": "V3 Static Residential",
                    "future-telemetry.meta.ai": "Muse", "future-telemetry.fbcdn.net": "Muse",
                    "deep.future-telemetry.meta.ai": "Muse", "api.anthropic.com": "Claude",

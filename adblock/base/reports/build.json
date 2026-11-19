@@ -418,6 +418,20 @@
       "target": "www.douban.com"
     },
     {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "claude.app",
+      "source": "Claude personal",
+      "target": "claude.app"
+    },
+    {
+      "actual": "Claude",
+      "expected": "Claude",
+      "matched": "claude.app",
+      "source": "Claude personal",
+      "target": "check.claude.app"
+    },
+    {
       "actual": "Muse",
       "expected": "Muse",
       "matched": "muse.ai",
@@ -3346,7 +3360,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4775,
+  "duplicate_count": 4776,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -9572,6 +9586,11 @@
       "kept": "claude-page",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,claude.ai"
+    },
+    {
+      "kept": "Claude personal",
+      "removed": "global",
+      "rule": "DOMAIN-SUFFIX,claude.app"
     },
     {
       "kept": "claude-page",
@@ -27225,11 +27244,11 @@
     }
   ],
   "policy_counts": {
-    "Claude": 22,
+    "Claude": 23,
     "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36349,
+    "Overseas": 36348,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27241,7 +27260,7 @@
     }
   ],
   "rule_count": 42630,
-  "rules_version": "3c18d18e32ecaf390662bc29818f82195f2d50f7b4025d8b0c1b14ee4d0fb751",
+  "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

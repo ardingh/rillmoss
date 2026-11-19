@@ -118,6 +118,9 @@
     "domain": "api64.ipify.org",
     "policy": "V3 Static Residential"
   },
+  "claude_domain_suffixes": [
+    "claude.app"
+  ],
   "claude_inbound": [
     "160.79.104.0/23",
     "153.61.224.0/22",
@@ -126,6 +129,7 @@
   "claude_required_rules": [
     "DOMAIN-SUFFIX,anthropic.com",
     "DOMAIN-SUFFIX,claude.ai",
+    "DOMAIN-SUFFIX,claude.app",
     "DOMAIN-SUFFIX,claude.com",
     "DOMAIN-SUFFIX,clau.de",
     "DOMAIN-SUFFIX,claudemcpclient.com",

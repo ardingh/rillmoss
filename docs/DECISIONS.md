@@ -65,3 +65,5 @@ close-if-proxy-chain-missing = true
 2026-10-15 后续补充：用户要求把缺少的 `fbcdn.net`、`facebook.net`、`fbsbx.com` 及全部子域从 Overseas 改归 Muse，唯一绑定 `V3 Static Residential`，个人清单与固定校验共十二后缀。这三个共享后缀被其他应用或网页访问时也走住宅；`cdninstagram.com`、WhatsApp 与其他未列出的域名仍按原规则，不将此次修改解释为所有 Muse 依赖已经完整覆盖。同步生成输入、固定校验、每日重建回归和完整包，保留 Claude / OpenAI 优先级、原有其他规则与来源，不操作设备。
 
 2026-11-03：用户确认修复官方入站网段变化导致的每日更新中断。仅新增官方入站 `153.61.224.0/22`，保留原两段，仍归 Claude 并唯一绑定 `V3 Static Residential`；不导入官方出站网段或第三方网页的 IP / ASN 建议。批准列表仍须与官方入站列表精确一致，未来变化继续停止采用。同步新增网段首尾保护、相邻地址及双版本保留回归，生成完整基础与去广告候选。此决定授权本地修复，公开发布另行确认；设备效果未据静态校验填为通过。
+
+2026-11-19：按用户要求将 `claude.app` 及其子域从 Overseas 改归 Claude 住宅组。个人输入 `claude_domain_suffixes` 在通用来源之前生成后缀规则，两版均保留这条路由。[Claude 桌面端网络要求](https://code.claude.com/docs/en/desktop#network-access-requirements)

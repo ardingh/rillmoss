@@ -98,6 +98,8 @@ def compose(parsed, manifest, personal):
     order = personal["ai_rule_order"]
     if order != ["Claude", "OpenAI"]:
         raise Invalid("AI rule order must preserve the approved Claude-first priority")
+    for domain in personal.get("claude_domain_suffixes", []):
+        add(parse.rule(f"DOMAIN-SUFFIX,{domain}"), "Claude", "Claude personal", required=True)
     for policy in order:
         for sid in AI_SOURCES[policy]:
             for r in parsed[sid]:
@@ -212,6 +214,8 @@ def constraints(entries, personal, parsed):
         "github.com": "Overseas", "registry.npmjs.org": "Overseas", "www.google.com": "Overseas",
         "weixin.qq.com": "DIRECT", "www.zhihu.com": "DIRECT", "www.douban.com": "DIRECT",
     }
+    for domain in personal.get("claude_domain_suffixes", []):
+        expected.update({domain: "Claude", "check." + domain: "Claude"})
     for rule in MUSE_RULES:
         expected.update({rule.value: "Muse", "check." + rule.value: "Muse"})
     expected.update({d: "DIRECT" for d in THS})
