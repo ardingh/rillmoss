@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-19T09:33:02+00:00",
+  "checked_at": "2026-11-20T07:08:00+00:00",
   "files": {
     "policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "policy/personal.json": "3628dc13a826cde151bc5f8928e97ecfc91597c72db31ebdadc7e344e4d81035",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "cab2080b68b54332761e493b57a5da69ac8d6c9a9b982a096153ddf49f2d9455",
+    "snapshot/raw/claude-ips.txt": "ed026321a2ad7cc00bcf46a703fe6bd3300db861aa5d9cc178eba4df354cc733",
     "snapshot/raw/claude-page.txt": "f1e776c7765e2c3532e223443b9d3fe9447755effd411da1bb39f03cbc685beb",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -31,7 +31,7 @@
     "snapshot/raw/neteasemusic.txt": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
     "snapshot/raw/netflix.txt": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
     "snapshot/raw/openai-acl.txt": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-    "snapshot/raw/openai-base.txt": "7124d8be989026b52d5ed1b30f485f180960850b20fd68056deafd4a2f7d316d",
+    "snapshot/raw/openai-base.txt": "1f940f4199901c7b660d42861a362db6b3bcbf897172114ec9a208cc205f5db4",
     "snapshot/raw/paypal.txt": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
     "snapshot/raw/sina.txt": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
     "snapshot/raw/sony.txt": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
@@ -47,7 +47,7 @@
   },
   "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "schema": 1,
-  "snapshot_id": "e88dc8a8217d45c525ab88317cbe37e955ba63ccae21027085d1d341385d862b",
+  "snapshot_id": "8b6854a5819e6806ca06004c83d4cf34e748c97a0a67ad7382b453463d43275c",
   "source_counts": {
     "amazon": 205,
     "apple": 1880,
@@ -87,9 +87,9 @@
   },
   "upstream": {
     "pins": {
-      "acl4ssr/acl4ssr": "e2f257307bf0ee31921ac948036e942a29a35b35",
+      "acl4ssr/acl4ssr": "a77a123f5df30a7503605c24a78d63a5be35eae3",
       "blackmatrix7/ios_rule_script": "0b6897dc17e0c513d25449c935a9694818e32f0c",
-      "iab0x00/proxyrules": "24e254aef332a961b501d2c5df6f9200e09a3e0b",
+      "iab0x00/proxyrules": "0cc361034a81747791830aca547e816f699df0f9",
       "lowertop/shadowrocket": "9ff0cc1564d528b9e77a863b39fc443b08cf98ae"
     },
     "sources": {
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 535677,
+        "bytes": 535605,
         "commit": null,
-        "sha256": "cab2080b68b54332761e493b57a5da69ac8d6c9a9b982a096153ddf49f2d9455",
+        "sha256": "ed026321a2ad7cc00bcf46a703fe6bd3300db861aa5d9cc178eba4df354cc733",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
@@ -221,15 +221,15 @@
       },
       "openai-acl": {
         "bytes": 539,
-        "commit": "e2f257307bf0ee31921ac948036e942a29a35b35",
+        "commit": "a77a123f5df30a7503605c24a78d63a5be35eae3",
         "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/e2f257307bf0ee31921ac948036e942a29a35b35/Clash/Ruleset/OpenAi.list"
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/a77a123f5df30a7503605c24a78d63a5be35eae3/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
-        "bytes": 2503,
-        "commit": "24e254aef332a961b501d2c5df6f9200e09a3e0b",
-        "sha256": "7124d8be989026b52d5ed1b30f485f180960850b20fd68056deafd4a2f7d316d",
-        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/24e254aef332a961b501d2c5df6f9200e09a3e0b/Rule/AI.txt"
+        "bytes": 2530,
+        "commit": "0cc361034a81747791830aca547e816f699df0f9",
+        "sha256": "1f940f4199901c7b660d42861a362db6b3bcbf897172114ec9a208cc205f5db4",
+        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/0cc361034a81747791830aca547e816f699df0f9/Rule/AI.txt"
       },
       "paypal": {
         "bytes": 7859,

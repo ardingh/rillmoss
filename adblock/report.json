@@ -1,5 +1,5 @@
 {
-  "added_rule_count": 99007,
+  "added_rule_count": 99911,
   "base_conf_sha256": "de2aa2b991cf556b8d4a6ba2e221af6ed7f5974acfa108703ba7fcf3b0233f2d",
   "base_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "checked_existing_hosts": 80845,
@@ -3606,6 +3606,11 @@
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,3byy0j.oss-cn-beijing.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,adash.man.aliyuncs.com,REJECT"
     },
     {
@@ -3632,6 +3637,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,cootek-dialer-download.oss-cn-hangzhou.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,dashijie2026.oss-ap-southeast-7.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -3667,6 +3677,11 @@
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,kuakuawenjian.oss-cn-hangzhou.aliyuncs.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,mm2027.oss-cn-hangzhou.aliyuncs.com,REJECT"
     },
     {
       "matched": "DOMAIN-SUFFIX,aliyuncs.com,DIRECT",
@@ -7391,11 +7406,6 @@
       "rule": "DOMAIN-SUFFIX,wb.gtimg.com,REJECT"
     },
     {
-      "matched": "DOMAIN-KEYWORD,aliyun,DIRECT",
-      "reason": "existing direct domain scope",
-      "rule": "DOMAIN-SUFFIX,guanfangxiazai-oss-cn-singapore-aliyuncs.top,REJECT"
-    },
-    {
       "matched": "DOMAIN-KEYWORD,baidu,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,union.baidustatic.guannin.com,REJECT"
@@ -10078,6 +10088,11 @@
     {
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,hll912-1484535448.cos.ap-hongkong.myqcloud.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,j-0-09g-9bh-h-ggf-1324992141.cos.ap-bangkok.myqcloud.com,REJECT"
     },
     {
@@ -10129,6 +10144,11 @@
       "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
       "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,xz-1507771301.cos.ap-singapore.myqcloud.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,myqcloud.com,DIRECT",
+      "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,yy-1511015798.cos.ap-guangzhou.myqcloud.com,REJECT"
     },
     {
       "reason": "existing routing target",
@@ -14519,6 +14539,11 @@
     {
       "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
       "reason": "existing direct domain scope",
+      "rule": "DOMAIN-SUFFIX,gator.volces.com,REJECT"
+    },
+    {
+      "matched": "DOMAIN-SUFFIX,volces.com,DIRECT",
+      "reason": "existing direct domain scope",
       "rule": "DOMAIN-SUFFIX,mssdk.volces.com,REJECT"
     },
     {
@@ -16257,7 +16282,7 @@
       "rule": "DOMAIN-SUFFIX,mf02.zybang.com,REJECT"
     }
   ],
-  "excluded_rule_count": 2825,
+  "excluded_rule_count": 2830,
   "insertion_after_base_rules": 147,
   "policy_counts": {
     "Claude": 23,
@@ -16265,11 +16290,11 @@
     "Muse": 12,
     "OpenAI": 25,
     "Overseas": 36348,
-    "REJECT": 99008,
+    "REJECT": 99912,
     "V3 Static Residential": 1
   },
-  "rule_count": 141637,
-  "rules_version": "1c1e1d8f1b1504cc758d590d779f129c9ac5ebd066b4a618d1a8ab8ae9960c81",
+  "rule_count": 142541,
+  "rules_version": "40270988ed8d82c4317b37dd49450f1c0c0b3984035fca10ffab95029dce8728",
   "schema": 1,
-  "source_rule_count": 101832
+  "source_rule_count": 102741
 }
