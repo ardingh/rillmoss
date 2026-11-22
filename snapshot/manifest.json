@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-21T07:01:16+00:00",
+  "checked_at": "2026-11-22T06:36:04+00:00",
   "files": {
     "policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "policy/personal.json": "3628dc13a826cde151bc5f8928e97ecfc91597c72db31ebdadc7e344e4d81035",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "4bab9b3f35083d63469a423ee38b737a8f3822371320d82000776616aeb2dc93",
+    "snapshot/raw/claude-ips.txt": "fc8332f9234cec7afb4aa6f4325f8fddb51f20a02699ca219045004206f234e0",
     "snapshot/raw/claude-page.txt": "f1e776c7765e2c3532e223443b9d3fe9447755effd411da1bb39f03cbc685beb",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -30,7 +30,7 @@
     "snapshot/raw/microsoft.txt": "22df1a1017ad5d41755bf020ca8eb9afeedc7bdc2c649ed2074b255227a7ed8e",
     "snapshot/raw/neteasemusic.txt": "da8638a8414224a63dd29d7b45446956ed98c67f88d3b530c80b6c978191fc09",
     "snapshot/raw/netflix.txt": "ec37f90727e7db062d754487c4bed68ae8bba28f349aef0995f10c06f5e8b231",
-    "snapshot/raw/openai-acl.txt": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
+    "snapshot/raw/openai-acl.txt": "3fde01190c82d9911cb247d99e941cb3b8e53c410e574240bc7d2a9227b153ab",
     "snapshot/raw/openai-base.txt": "1f940f4199901c7b660d42861a362db6b3bcbf897172114ec9a208cc205f5db4",
     "snapshot/raw/paypal.txt": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
     "snapshot/raw/sina.txt": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
@@ -47,7 +47,7 @@
   },
   "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "schema": 1,
-  "snapshot_id": "790f1aa63dee796a635c2eb8a98647d2a8100c0ecab73488f81de21ad66daca9",
+  "snapshot_id": "d6429785f49582cdd149570839f09e88d90e3a13da282cfd58431ed044b12c6e",
   "source_counts": {
     "amazon": 205,
     "apple": 1880,
@@ -87,9 +87,9 @@
   },
   "upstream": {
     "pins": {
-      "acl4ssr/acl4ssr": "c45d484ffc43ea0b64db63d847741c1e94586d73",
+      "acl4ssr/acl4ssr": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
       "blackmatrix7/ios_rule_script": "0b6897dc17e0c513d25449c935a9694818e32f0c",
-      "iab0x00/proxyrules": "0cc361034a81747791830aca547e816f699df0f9",
+      "iab0x00/proxyrules": "96cfe3360e70a2031b034fa0e8dd8228d1a7c3c7",
       "lowertop/shadowrocket": "9ff0cc1564d528b9e77a863b39fc443b08cf98ae"
     },
     "sources": {
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 543617,
+        "bytes": 545242,
         "commit": null,
-        "sha256": "4bab9b3f35083d63469a423ee38b737a8f3822371320d82000776616aeb2dc93",
+        "sha256": "fc8332f9234cec7afb4aa6f4325f8fddb51f20a02699ca219045004206f234e0",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
@@ -220,16 +220,16 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/Shadowrocket/Netflix/Netflix.list"
       },
       "openai-acl": {
-        "bytes": 539,
-        "commit": "c45d484ffc43ea0b64db63d847741c1e94586d73",
-        "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
-        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/c45d484ffc43ea0b64db63d847741c1e94586d73/Clash/Ruleset/OpenAi.list"
+        "bytes": 538,
+        "commit": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
+        "sha256": "3fde01190c82d9911cb247d99e941cb3b8e53c410e574240bc7d2a9227b153ab",
+        "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7/Clash/Ruleset/OpenAi.list"
       },
       "openai-base": {
         "bytes": 2530,
-        "commit": "0cc361034a81747791830aca547e816f699df0f9",
+        "commit": "96cfe3360e70a2031b034fa0e8dd8228d1a7c3c7",
         "sha256": "1f940f4199901c7b660d42861a362db6b3bcbf897172114ec9a208cc205f5db4",
-        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/0cc361034a81747791830aca547e816f699df0f9/Rule/AI.txt"
+        "url": "https://raw.githubusercontent.com/iab0x00/ProxyRules/96cfe3360e70a2031b034fa0e8dd8228d1a7c3c7/Rule/AI.txt"
       },
       "paypal": {
         "bytes": 7859,
