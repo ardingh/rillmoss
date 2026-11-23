@@ -1,28 +1,8 @@
 {
-  "adblock": {
-    "added_rule_count": 99911,
-    "base_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-    "bundle_applied": true,
-    "rules_version": "40270988ed8d82c4317b37dd49450f1c0c0b3984035fca10ffab95029dce8728",
-    "status": "passed"
-  },
-  "base_bundle_applied": true,
-  "base_changes_not_imported": {
-    "General": {
-      "added": [
-        "stun-response-ip = 1.1.1.1",
-        "stun-response-ipv6 = ::1"
-      ],
-      "removed": [
-        "direct-dns-server ="
-      ]
-    }
-  },
-  "candidate_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-  "checked_at": "2026-11-22T06:36:55+00:00",
+  "checked_at": "2026-11-23T07:26:16+00:00",
   "current_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-  "publication_enabled": true,
-  "rules_changed": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/44994098173",
-  "status": "passed"
+  "error": "Automated tests failed",
+  "publication_enabled": false,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/45130519577",
+  "status": "failed"
 }
