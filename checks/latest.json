@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-23T07:26:16+00:00",
+  "checked_at": "2026-11-24T09:47:57+00:00",
   "current_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "error": "Automated tests failed",
   "publication_enabled": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/45130519577",
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/45367692502",
   "status": "failed"
 }
