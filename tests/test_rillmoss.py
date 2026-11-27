@@ -623,7 +623,9 @@ class BundleTests(unittest.TestCase):
         def collector(manifest, raw):
             shutil.copytree(self.root / "snapshot/raw", raw)
             target = raw / "openai-acl.txt"
-            target.write_text(target.read_text() + "DOMAIN-SUFFIX,more.example\n" * 20)
+            # Exercise snapshots whose last rule has no trailing newline.
+            source = target.read_text().rstrip("\n")
+            target.write_text(source + "\n" + "DOMAIN-SUFFIX,more.example\n" * 20)
             return runner.read(self.root / "snapshot/manifest.json")["upstream"]
         with self.assertRaisesRegex(Invalid, "abnormal rule count"):
             runner.stage(self.root, self.root / ".work/huge", collector=collector)
