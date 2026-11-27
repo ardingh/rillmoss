@@ -2422,34 +2422,34 @@
       },
       {
         "actual": "Overseas",
-        "matched": "IP-CIDR,101.32.96.0/20,Overseas",
+        "matched": "IP-CIDR,101.32.96.0/20,Overseas,no-resolve",
         "origin": "global",
         "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
-        "rule": "IP-CIDR,101.32.104.0/21,DIRECT",
+        "rule": "IP-CIDR,101.32.104.0/21,DIRECT,no-resolve",
         "source": "china"
       },
       {
         "actual": "Overseas",
-        "matched": "IP-CIDR,101.32.118.0/23,Overseas",
+        "matched": "IP-CIDR,101.32.118.0/23,Overseas,no-resolve",
         "origin": "global",
         "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
-        "rule": "IP-CIDR,101.32.118.0/23,DIRECT",
+        "rule": "IP-CIDR,101.32.118.0/23,DIRECT,no-resolve",
         "source": "china"
       },
       {
         "actual": "Overseas",
-        "matched": "IP-CIDR,101.32.96.0/20,Overseas",
+        "matched": "IP-CIDR,101.32.96.0/20,Overseas,no-resolve",
         "origin": "global",
         "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
-        "rule": "IP-CIDR,101.32.96.0/20,DIRECT",
+        "rule": "IP-CIDR,101.32.96.0/20,DIRECT,no-resolve",
         "source": "china"
       },
       {
         "actual": "Overseas",
-        "matched": "IP-CIDR,129.226.0.0/16,Overseas",
+        "matched": "IP-CIDR,129.226.0.0/16,Overseas,no-resolve",
         "origin": "global",
         "reason": "保留既有 Global/China IP 重叠；未取得改变整段出口的设备与用途证据。",
-        "rule": "IP-CIDR,129.226.0.0/16,DIRECT",
+        "rule": "IP-CIDR,129.226.0.0/16,DIRECT,no-resolve",
         "source": "china"
       },
       {
@@ -3360,7 +3360,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4776,
+  "duplicate_count": 4820,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -26443,6 +26443,226 @@
       "rule": "USER-AGENT,com.apple.trustd*"
     },
     {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,108.175.32.0/20"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR,109.239.140.0/24"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,119.235.236.0/23"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,129.134.0.0/17"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,13.32.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,13.35.0.0/17"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR,149.154.160.0/20"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,157.240.0.0/17"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,169.45.248.118/32"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
+      "rule": "IP-CIDR,173.194.0.0/16"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,173.252.64.0/18"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,18.184.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,18.194.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,18.208.0.0/13"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,18.232.0.0/14"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,192.173.64.0/18"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,198.38.96.0/19"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,198.45.48.0/20"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,23.246.0.0/18"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,3.123.36.126/32"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,31.13.64.0/18"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,35.157.215.84/32"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,35.157.217.255/32"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,37.77.184.0/21"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,45.57.0.0/17"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,52.200.0.0/13"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,52.58.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,52.74.0.0/16"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,52.77.0.0/16"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,52.84.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,54.156.0.0/14"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,54.162.243.80/32"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,54.173.34.141/32"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,54.226.0.0/15"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,54.230.156.0/22"
+    },
+    {
+      "kept": "facebook",
+      "removed": "global",
+      "rule": "IP-CIDR,54.235.23.242/32"
+    },
+    {
+      "kept": "amazon",
+      "removed": "global",
+      "rule": "IP-CIDR,54.93.0.0/16"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,64.120.128.0/17"
+    },
+    {
+      "kept": "netflix",
+      "removed": "global",
+      "rule": "IP-CIDR,66.197.128.0/17"
+    },
+    {
+      "kept": "google",
+      "removed": "global",
+      "rule": "IP-CIDR,74.125.0.0/16"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR,91.108.0.0/16"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR6,2001:67c:4e8::/48"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR6,2001:b28:f23c::/47"
+    },
+    {
+      "kept": "telegram",
+      "removed": "global",
+      "rule": "IP-CIDR6,2001:b28:f23f::/48"
+    },
+    {
       "kept": "neteasemusic",
       "removed": "china",
       "rule": "DOMAIN-SUFFIX,163yun.com"
@@ -27248,7 +27468,7 @@
     "DIRECT": 6218,
     "Muse": 12,
     "OpenAI": 25,
-    "Overseas": 36348,
+    "Overseas": 36304,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27259,8 +27479,8 @@
       "source": "tiktok"
     }
   ],
-  "rule_count": 42630,
-  "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+  "rule_count": 42586,
+  "rules_version": "87c24b448dc496cb0824f0fddbec4162d3db154eb9fef540ca81bab1e16ba8e6",
   "schema": 1,
   "source_counts": {
     "amazon": 205,

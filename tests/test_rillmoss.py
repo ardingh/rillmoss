@@ -5,7 +5,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import call, patch
 
 from rillmoss import parse, fetch, build, runner
 from rillmoss.parse import Invalid, Rule
@@ -80,10 +80,11 @@ IP-ASN,399358,no-resolve</pre>"""
 class DownloadTests(unittest.TestCase):
     def test_transport_retries_and_verifies_tls(self):
         bad = subprocess.CompletedProcess([], 28, b"partial", b"private error detail")
-        with patch("rillmoss.fetch.subprocess.run", return_value=bad) as run:
+        with patch("rillmoss.fetch.subprocess.run", return_value=bad) as run, patch("rillmoss.fetch.time.sleep") as sleep:
             with self.assertRaises(Invalid) as error:
                 fetch.download("https://example.com/rules")
             self.assertEqual(run.call_count, 3)
+            self.assertEqual(sleep.call_args_list, [call(2), call(5)])
             self.assertNotIn("private error", str(error.exception))
             args = run.call_args.args[0]
             self.assertIn("--max-time", args)
@@ -91,6 +92,43 @@ class DownloadTests(unittest.TestCase):
             self.assertNotIn("-k", args)
             self.assertNotIn("--insecure", args)
             self.assertEqual(args[1], "--disable")
+            self.assertIsNone(run.call_args.kwargs.get("input"))
+
+    @patch.dict("os.environ", {"GITHUB_TOKEN": "ghs_testToken12345"}, clear=False)
+    def test_github_token_only_sent_to_api_github_com_via_stdin(self):
+        ok = subprocess.CompletedProcess([], 0, b'{"sha":"' + b"a" * 40 + b'"}', b"")
+        with patch("rillmoss.fetch.subprocess.run", return_value=ok) as run:
+            fetch.download("https://api.github.com/repos/a/b/commits/main")
+            api_args = run.call_args.args[0]
+            api_input = run.call_args.kwargs.get("input")
+            self.assertIn("--config", api_args)
+            self.assertNotIn("ghs_testToken12345", " ".join(api_args))
+            self.assertIn(b"Authorization: Bearer ghs_testToken12345", api_input)
+        for url in ("https://raw.githubusercontent.com/a/b/main/file.txt", "https://example.com/rules"):
+            with self.subTest(url=url), patch("rillmoss.fetch.subprocess.run", return_value=ok) as run:
+                fetch.download(url)
+                args = run.call_args.args[0]
+                self.assertNotIn("--config", args)
+                self.assertIsNone(run.call_args.kwargs.get("input"))
+
+    def test_git_ls_remote_commit_lookup_and_fallback(self):
+        sha = "c" * 40
+        ls_ok = subprocess.CompletedProcess([], 0, f"{sha}\trefs/heads/main\n", "")
+        with patch("rillmoss.fetch.subprocess.run", return_value=ls_ok) as run:
+            self.assertEqual(fetch.resolve_commit_git("a/b", "main"), sha)
+            self.assertEqual(run.call_args.args[0][:3], ["git", "ls-remote", "--quiet"])
+        sources = dict(sources=[dict(id="base", repo="a/b", ref="main", path="one", format="base")])
+        def fake_download(url):
+            if "api.github.com" in url:
+                raise Invalid("HTTPS download failed after 3 attempts: api.github.com/repos/a/b/commits/main")
+            return b"DOMAIN,example.com"
+        with tempfile.TemporaryDirectory() as temp, patch(
+                "rillmoss.fetch.download", side_effect=fake_download), patch(
+                "rillmoss.fetch.resolve_commit_git", return_value=sha) as fallback:
+            metadata = fetch.collect(sources, Path(temp) / "raw", transport=fetch.download)
+            fallback.assert_called_once_with("a/b", "main")
+            self.assertEqual(metadata["pins"]["a/b"], sha)
+            self.assertIn(sha, metadata["sources"]["base"]["url"])
 
     def test_https_only(self):
         for url in ("http://example.com/file", "https://user:secret@example.com/file"):
@@ -399,6 +437,17 @@ class PolicyTests(unittest.TestCase):
             self.assertIn(f"{group} = select,{node},policy-select-name={node}", conf)
         self.assertIn("^https?://(www.)?google.cn https://www.google.com 302", conf)
         self.assertIn("hostname = *.google.cn", conf)
+
+    def test_all_ip_and_asn_rules_enforce_no_resolve(self):
+        ip_entries = [(r, p, o) for r, p, o in self.entries if r.kind in build.IP_KINDS]
+        self.assertGreater(len(ip_entries), 1000)
+        for r, policy, origin in ip_entries:
+            self.assertIn("no-resolve", r.flags, f"{origin}: {r.render(policy)}")
+        for bad_rule in (Rule("IP-CIDR", "203.0.113.0/24"),
+                         Rule("IP-CIDR6", "2001:db8::/32"),
+                         Rule("IP-ASN", "132203")):
+            with self.subTest(rule=bad_rule), self.assertRaisesRegex(Invalid, "no-resolve"):
+                build.constraints([*self.entries, (bad_rule, "DIRECT", "test")], self.personal, self.parsed)
 
 
 class BundleTests(unittest.TestCase):

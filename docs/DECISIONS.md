@@ -67,3 +67,7 @@ close-if-proxy-chain-missing = true
 2026-11-03：用户确认修复官方入站网段变化导致的每日更新中断。仅新增官方入站 `153.61.224.0/22`，保留原两段，仍归 Claude 并唯一绑定 `V3 Static Residential`；不导入官方出站网段或第三方网页的 IP / ASN 建议。批准列表仍须与官方入站列表精确一致，未来变化继续停止采用。同步新增网段首尾保护、相邻地址及双版本保留回归，生成完整基础与去广告候选。此决定授权本地修复，公开发布另行确认；设备效果未据静态校验填为通过。
 
 2026-11-19：按用户要求将 `claude.app` 及其子域从 Overseas 改归 Claude 住宅组。个人输入 `claude_domain_suffixes` 在通用来源之前生成后缀规则，两版均保留这条路由。[Claude 桌面端网络要求](https://code.claude.com/docs/en/desktop#network-access-requirements)
+
+2026-11-27：修复两项 P0 工程问题（不动 Claude、OpenAI/Codex 与 Muse 的任何规则及优先级）：
+1. 补齐 `no-resolve`：QuantumultX 格式来源（`apple`、`wechat`、`global`、`china`）不含 `no-resolve`，导致中间区块的 `IP-CIDR` / `IP-CIDR6` / `IP-ASN` 规则触发后续 3 万余条海外域名的本地 DNS 解析。生成器现在在解析与组合阶段统一为所有 `IP-CIDR` / `IP-CIDR6` / `IP-ASN` 补齐 `no-resolve`（同时自动消除 44 条仅因缺失 `no-resolve` 未被精确去重的重复 IP-CIDR），并在 `constraints` 增加硬性门禁禁止 `GEOIP,CN` 前出现无 `no-resolve` 的 IP/ASN 规则；同步更新 `direct_routing.reviewed_conflicts` 中 4 条既有 IP 冲突的字符串格式。
+2. 提升上游提交固定可靠性：`fetch.download` 仅在访问 `api.github.com` 时通过 stdin (`--config -`) 附带只读 `GITHUB_TOKEN`（不进入命令行参数或公开日志），重试间加入 2s/5s 退避等待；当 `api.github.com` 仍不可用（如匿名限流）时回退 `git ls-remote` 获取精确 commit SHA；`.github/workflows/update.yml` 为 `ci-check` 传入 `GITHUB_TOKEN`。

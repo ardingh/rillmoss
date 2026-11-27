@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-27T08:22:49+00:00",
+  "checked_at": "2026-11-27T10:17:48+00:00",
   "files": {
     "policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
-    "policy/personal.json": "3628dc13a826cde151bc5f8928e97ecfc91597c72db31ebdadc7e344e4d81035",
+    "policy/personal.json": "452a13bb91263f4c8b4bbc18cb9816fe1b5b03657678b9bc426da48278fe97af",
     "policy/sources.json": "822277245633dffd5580548de7ddb96524aa65cf6e2de3451f06bb2872c3b3ad",
-    "reports/build.json": "415251d66b5ba972d2b199a1e1bc84de6d4304fb4c63bff1089ad46ecdafc625",
-    "rillmoss.conf": "de2aa2b991cf556b8d4a6ba2e221af6ed7f5974acfa108703ba7fcf3b0233f2d",
+    "reports/build.json": "9ea827624353da0e798cffb18039c815a92939578c8e2f50c96e70fc747a4650",
+    "rillmoss.conf": "ad1e7938b3fa635c192474e05309523cc4510e883a1911121e7b796ab25af362",
     "snapshot/inputs/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
-    "snapshot/inputs/personal.json": "3628dc13a826cde151bc5f8928e97ecfc91597c72db31ebdadc7e344e4d81035",
+    "snapshot/inputs/personal.json": "452a13bb91263f4c8b4bbc18cb9816fe1b5b03657678b9bc426da48278fe97af",
     "snapshot/inputs/sources.json": "41255b8ca068a60d621f73f13a0efb973a8ec499a92e483dedff9fc8c870515e",
     "snapshot/raw/amazon.txt": "83e604479e651e17734e965425969d475732463e3d3c942f22afa159532f27d4",
     "snapshot/raw/apple.txt": "966cb314803464ea516243104ed97aaa695d44da71f46b4c72bf8a14e7c67931",
@@ -45,9 +45,9 @@
     "snapshot/raw/youtube.txt": "f764cd91a779982225b3553ece8033c86a6545f4990f5fefd356805de962aee9",
     "snapshot/raw/zhihu.txt": "450c53b3762b1aa2f63631f8d07c7237338c8c691aeb475ed07583cfea9d5e33"
   },
-  "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+  "rules_version": "87c24b448dc496cb0824f0fddbec4162d3db154eb9fef540ca81bab1e16ba8e6",
   "schema": 1,
-  "snapshot_id": "0d188702c381cc7ceac3dd14819c57c323bca36755337aa2610c2d3faeabe5fe",
+  "snapshot_id": "e2f47b73332b212009bb14c0ef4f097402e636b1f3344b13fe8e6867f2c27515",
   "source_counts": {
     "amazon": 205,
     "apple": 1880,

@@ -24,6 +24,8 @@ jobs:
       - name: Validate the base first, then derive and validate the advertising variant
         id: update
         continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m rillmoss ci-check
       - name: Commit the real check result and any complete validated bundle
         if: always() && steps.update.outcome != 'skipped'

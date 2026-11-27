@@ -1,7 +1,7 @@
 {
-  "base_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-  "rules_built_at": "2026-11-20T07:08:38+00:00",
-  "rules_version": "40270988ed8d82c4317b37dd49450f1c0c0b3984035fca10ffab95029dce8728",
+  "base_rules_version": "87c24b448dc496cb0824f0fddbec4162d3db154eb9fef540ca81bab1e16ba8e6",
+  "rules_built_at": "2026-11-27T10:18:04+00:00",
+  "rules_version": "93845452593130bfd63efda5bcd26f48eec876578411b0609b3d8c199a2f15f7",
   "schema": 1,
-  "snapshot_id": "caa43d0c68d4fa89a330c25d78df81feb36befe2ec55fa7f829b525d04868fc0"
+  "snapshot_id": "70baa38b12183605bfb817c0eb19a05d1e2de8509cc35b84b5845fd2c6c302dd"
 }

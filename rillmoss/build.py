@@ -23,6 +23,13 @@ MUSE_RULES = (Rule("DOMAIN-SUFFIX", "muse.ai"), Rule("DOMAIN-SUFFIX", "metaaivm.
 UPDATE_URL = "https://raw.githubusercontent.com/ardingh/rillmoss/main/rillmoss.conf"
 THS = ["10jqka.com.cn", "hexin.cn"] + [f"{x}.10jqka.com.cn" for x in
        ("data", "t", "news", "q", "basic", "moni", "upass", "user", "search", "5188.money")]
+IP_KINDS = {"IP-CIDR", "IP-CIDR6", "IP-ASN"}
+
+
+def ensure_no_resolve(r):
+    if r.kind in IP_KINDS and "no-resolve" not in r.flags:
+        return Rule(r.kind, r.value, (*r.flags, "no-resolve"))
+    return r
 
 
 def canonical(data):
@@ -48,7 +55,10 @@ def parse_sources(raw, manifest, personal):
                 result = parse.inbound(text, personal["claude_inbound"])
                 count = len(result)
             elif fmt == "rules":
-                result = parse.rules(text, policy_column="/QuantumultX/" in source.get("path", ""))
+                # Quantumult X lists omit no-resolve on IP/ASN rules; normalize for Shadowrocket
+                # so mid-file IP rules never trigger local DNS resolution for later domain rules.
+                result = [ensure_no_resolve(r) for r in
+                          parse.rules(text, policy_column="/QuantumultX/" in source.get("path", ""))]
                 count = len(result)
             else:
                 raise Invalid("Unknown source format")
@@ -76,6 +86,7 @@ def compose(parsed, manifest, personal):
     retained_policies = set()
 
     def add(r, policy, origin, required=False):
+        r = ensure_no_resolve(r)
         # Parent-domain compaction is intentionally absent: THS keeps all 12 rows.
         # AI groups keep separate copies of shared rules regardless of priority.
         # Removing either group must not remove the other's coverage.
@@ -290,6 +301,9 @@ def constraints(entries, personal, parsed):
     for target in personal["required_ai_targets"]:
         if route(entries, host=target)[0] not in {"OpenAI", "Claude"}:
             raise Invalid(f"Known AI endpoint lost its residential route: {target}")
+    for r, policy, origin in entries:
+        if r.kind in IP_KINDS and "no-resolve" not in r.flags:
+            raise Invalid(f"IP/ASN rule before GEOIP must include no-resolve: {r.render(policy)} ({origin})")
     return results
 
 
