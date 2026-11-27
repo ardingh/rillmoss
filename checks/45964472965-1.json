@@ -1,0 +1,28 @@
+{
+  "adblock": {
+    "bundle_applied": false,
+    "error": "HTTPS download failed after 3 attempts: api.github.com/repos/privacy-protection-tools/anti-AD/commits/master",
+    "retained_base_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+    "retained_rules_version": "40270988ed8d82c4317b37dd49450f1c0c0b3984035fca10ffab95029dce8728",
+    "status": "failed"
+  },
+  "base_bundle_applied": true,
+  "base_changes_not_imported": {
+    "General": {
+      "added": [
+        "stun-response-ip = 1.1.1.1",
+        "stun-response-ipv6 = ::1"
+      ],
+      "removed": [
+        "direct-dns-server ="
+      ]
+    }
+  },
+  "candidate_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+  "checked_at": "2026-11-27T08:22:56+00:00",
+  "current_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+  "publication_enabled": true,
+  "rules_changed": false,
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/45964472965",
+  "status": "base_passed_adblock_failed"
+}

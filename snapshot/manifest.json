@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T06:36:04+00:00",
+  "checked_at": "2026-11-27T08:22:49+00:00",
   "files": {
     "policy/counts.json": "3c1d1fce423574080a18e6a236c58aa0a4b55fd1a57019a188ec9992e14f103d",
     "policy/personal.json": "3628dc13a826cde151bc5f8928e97ecfc91597c72db31ebdadc7e344e4d81035",
@@ -15,7 +15,7 @@
     "snapshot/raw/base.txt": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
     "snapshot/raw/bilibili.txt": "9b22a7bdf97792346bf480771841b6cd1097ec7ad034b34528c14f3798107854",
     "snapshot/raw/china.txt": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
-    "snapshot/raw/claude-ips.txt": "fc8332f9234cec7afb4aa6f4325f8fddb51f20a02699ca219045004206f234e0",
+    "snapshot/raw/claude-ips.txt": "c5c4feb338afa8750d7cbe8e680b11453d09512b92bd31f61b5f52da829d41bd",
     "snapshot/raw/claude-page.txt": "f1e776c7765e2c3532e223443b9d3fe9447755effd411da1bb39f03cbc685beb",
     "snapshot/raw/disney.txt": "65ededc7b608e440f3d918f6e95b19ca52460c8fe368dbd9e840b4bc8669f753",
     "snapshot/raw/douban.txt": "49b368896f4e38f4a31ac911b8e13fee923575884afe0d27a3cb1a0735551742",
@@ -47,7 +47,7 @@
   },
   "rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
   "schema": 1,
-  "snapshot_id": "d6429785f49582cdd149570839f09e88d90e3a13da282cfd58431ed044b12c6e",
+  "snapshot_id": "0d188702c381cc7ceac3dd14819c57c323bca36755337aa2610c2d3faeabe5fe",
   "source_counts": {
     "amazon": 205,
     "apple": 1880,
@@ -90,7 +90,7 @@
       "acl4ssr/acl4ssr": "a7bdd9c97c3c4a1d01a7259bba7c23c275794cc7",
       "blackmatrix7/ios_rule_script": "0b6897dc17e0c513d25449c935a9694818e32f0c",
       "iab0x00/proxyrules": "96cfe3360e70a2031b034fa0e8dd8228d1a7c3c7",
-      "lowertop/shadowrocket": "9ff0cc1564d528b9e77a863b39fc443b08cf98ae"
+      "lowertop/shadowrocket": "374e0c33d7ad64a7bb635f9bc03792c119319c6b"
     },
     "sources": {
       "amazon": {
@@ -113,9 +113,9 @@
       },
       "base": {
         "bytes": 28060,
-        "commit": "9ff0cc1564d528b9e77a863b39fc443b08cf98ae",
+        "commit": "374e0c33d7ad64a7bb635f9bc03792c119319c6b",
         "sha256": "2b9a7e621301fcf4cf5ff572a6d00fda52186495c138577c6035c3b912279a86",
-        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/9ff0cc1564d528b9e77a863b39fc443b08cf98ae/lazy_group.conf"
+        "url": "https://raw.githubusercontent.com/lowertop/Shadowrocket/374e0c33d7ad64a7bb635f9bc03792c119319c6b/lazy_group.conf"
       },
       "bilibili": {
         "bytes": 4523,
@@ -130,9 +130,9 @@
         "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/QuantumultX/China/China.list"
       },
       "claude-ips": {
-        "bytes": 545242,
+        "bytes": 555384,
         "commit": null,
-        "sha256": "fc8332f9234cec7afb4aa6f4325f8fddb51f20a02699ca219045004206f234e0",
+        "sha256": "c5c4feb338afa8750d7cbe8e680b11453d09512b92bd31f61b5f52da829d41bd",
         "url": "https://platform.claude.com/docs/en/api/ip-addresses"
       },
       "claude-page": {
