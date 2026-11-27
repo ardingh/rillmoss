@@ -18,6 +18,7 @@ DATA = ("DOMAIN-SUFFIX,ads.rillmoss-ad-test.net\n"
         "DOMAIN-SUFFIX,preview.livepreview.claude.app\n"
         "DOMAIN-SUFFIX,future-telemetry.meta.ai\n"
         "DOMAIN-SUFFIX,future-telemetry.fbcdn.net\n"
+        "DOMAIN-SUFFIX,future-telemetry.cdninstagram.com\n"
         "DOMAIN-SUFFIX,ad.new-child.bilibili.com\n"
         "DOMAIN-SUFFIX,baidu.greenxf.cn\n"
         "DOMAIN-SUFFIX,ads.rillmoss-ad-test.cn\n").encode()
@@ -99,7 +100,7 @@ class AdvertisingTests(unittest.TestCase):
         self.assertEqual(report["base_rules_version"], base_report["rules_version"])
         self.assertEqual((ROOT / "rillmoss.conf").read_bytes(), (self.root / "rillmoss.conf").read_bytes())
         self.assertEqual(count, 2)
-        self.assertEqual(report["source_rule_count"], 9)
+        self.assertEqual(report["source_rule_count"], 10)
         self.assertIn("# MIT License\n# Copyright (c) Synthetic test fixture", conf)
 
     def test_residential_and_direct_scopes_survive_future_ad_domains(self):
@@ -114,6 +115,7 @@ class AdvertisingTests(unittest.TestCase):
                    "preview.livepreview.claude.app": "Claude",
                    "api.statsig.com": "OpenAI", "api64.ipify.org": "V3 Static Residential",
                    "future-telemetry.meta.ai": "Muse", "future-telemetry.fbcdn.net": "Muse",
+                   "future-telemetry.cdninstagram.com": "Muse",
                    "deep.future-telemetry.meta.ai": "Muse", "api.anthropic.com": "Claude",
                    "ad.new-child.bilibili.com": "DIRECT", "baidu.greenxf.cn": "DIRECT",
                    "ads.rillmoss-ad-test.net": "REJECT", "child.ads.rillmoss-ad-test.net": "REJECT",

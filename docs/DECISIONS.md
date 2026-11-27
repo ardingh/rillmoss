@@ -13,7 +13,7 @@
 | R01 苹果 | 保留完整 Apple 列表并固定 DIRECT；补充 Apple / iCloud / CloudKit 同步域名，`humb.apple.com` 明确直连。Apple 原始列表仍在原来的相对位置，只有明确核心例外前置。普通 Siri、听写、搜索不再进入混合 AI 分组。 |
 | R02 OpenAI | 替换混合 AI 入口：仅提取打底 AI 文件的 ChatGPT 段，合并 ACL4SSR OpenAi.list；统一 OpenAI 住宅分组，覆盖 ChatGPT / OpenAI / Codex 共用端点。 |
 | R02 Claude | 新增独立住宅分组。只采用指定页面的类型前缀规则块中的域名规则；采用已审核的官方入站 IPv4 `160.79.104.0/23`、`153.61.224.0/22` 与 IPv6 `2607:6bc0::/48`，加 `no-resolve`。 |
-| Muse | 独立住宅分组，覆盖 `muse.ai`、`metaaivm.com`、`meta.ai`、`metaaiusercontent.com`、`ecto1usercontent.com`、`meta-agents-apps.workers.dev`、`meta.com`、`facebook.com`、`instagram.com`、`fbcdn.net`、`facebook.net`、`fbsbx.com` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
+| Muse | 独立住宅分组，覆盖 `muse.ai`、`metaaivm.com`、`meta.ai`、`metaaiusercontent.com`、`ecto1usercontent.com`、`meta-agents-apps.workers.dev`、`meta.com`、`facebook.com`、`instagram.com`、`fbcdn.net`、`facebook.net`、`fbsbx.com`、`cdninstagram.com`、`igcdn.com`、`instagr.am` 及其子域；放在 Claude / OpenAI 之后、普通底座之前。 |
 | Claude Check 检测 | 恢复旧规则的 `DOMAIN,api64.ipify.org,V3 Static Residential` 精确前置例外；只改变此检测域名，其他 ipify.org 域名仍按通用规则分流。个人输入保存为 `claude_check_probe`，本次不改 Claude Check 配置。 |
 | R03 同花顺 | 补充原始 12 条 DIRECT；不因父域覆盖删掉子域条目。 |
 | R04 懂球帝 | 补充 `DOMAIN-KEYWORD,apimg.qunliao.info,REJECT` 作为去广告起点。后续按广告和正常内容实测增补，不承诺单条规则去尽全部广告。 |
@@ -71,3 +71,7 @@ close-if-proxy-chain-missing = true
 2026-11-27：修复两项 P0 工程问题（不动 Claude、OpenAI/Codex 与 Muse 的任何规则及优先级）：
 1. 补齐 `no-resolve`：QuantumultX 格式来源（`apple`、`wechat`、`global`、`china`）不含 `no-resolve`，导致中间区块的 `IP-CIDR` / `IP-CIDR6` / `IP-ASN` 规则触发后续 3 万余条海外域名的本地 DNS 解析。生成器现在在解析与组合阶段统一为所有 `IP-CIDR` / `IP-CIDR6` / `IP-ASN` 补齐 `no-resolve`（同时自动消除 44 条仅因缺失 `no-resolve` 未被精确去重的重复 IP-CIDR），并在 `constraints` 增加硬性门禁禁止 `GEOIP,CN` 前出现无 `no-resolve` 的 IP/ASN 规则；同步更新 `direct_routing.reviewed_conflicts` 中 4 条既有 IP 冲突的字符串格式。
 2. 提升上游提交固定可靠性：`fetch.download` 仅在访问 `api.github.com` 时通过 stdin (`--config -`) 附带只读 `GITHUB_TOKEN`（不进入命令行参数或公开日志），重试间加入 2s/5s 退避等待；当 `api.github.com` 仍不可用（如匿名限流）时回退 `git ls-remote` 获取精确 commit SHA；`.github/workflows/update.yml` 为 `ci-check` 传入 `GITHUB_TOKEN`。
+
+2026-11-27 后续更新（不动 Claude、OpenAI/Codex 任何规则与优先级）：
+1. Muse 补齐 Instagram CDN 与短链（方案 A）：按用户批准将 `cdninstagram.com`、`igcdn.com`、`instagr.am` 及其子域加入 `muse_rules`（共 15 个后缀），消除 Instagram 主站与媒体 CDN 跨出口割裂风险；WhatsApp 及其他未列出的域名仍按原规则。
+2. 零风险 `[General]` 清理：从 `sections.General` 移除空值 `direct-dns-server =` 以及已被 `224.0.0.0/4` 包含的重复项 `239.255.255.250/32`。

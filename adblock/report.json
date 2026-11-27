@@ -1,8 +1,8 @@
 {
   "added_rule_count": 99911,
-  "base_conf_sha256": "ad1e7938b3fa635c192474e05309523cc4510e883a1911121e7b796ab25af362",
-  "base_rules_version": "87c24b448dc496cb0824f0fddbec4162d3db154eb9fef540ca81bab1e16ba8e6",
-  "checked_existing_hosts": 80845,
+  "base_conf_sha256": "d04f4b06b4e762c2ffb1b97f373c7aff92b43719e05e21c39817f5961ec0fe86",
+  "base_rules_version": "ae2c39f57cbe91a437a2ed6c42137804c828cf4532cd4267a33208bb76e3e3df",
+  "checked_existing_hosts": 80848,
   "checks": [
     {
       "actual": "Overseas",
@@ -565,6 +565,48 @@
       "target": "check.fbsbx.com"
     },
     {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "check.cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "check.igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "instagr.am"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "check.instagr.am"
+    },
+    {
       "actual": "DIRECT",
       "expected": "DIRECT",
       "matched": "10jqka.com.cn",
@@ -731,6 +773,27 @@
       "matched": "fbsbx.com",
       "source": "Muse",
       "target": "rillmoss-check.fbsbx.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "rillmoss-check.cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "rillmoss-check.igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "rillmoss-check.instagr.am"
     },
     {
       "actual": "Muse",
@@ -16283,18 +16346,18 @@
     }
   ],
   "excluded_rule_count": 2830,
-  "insertion_after_base_rules": 147,
+  "insertion_after_base_rules": 150,
   "policy_counts": {
     "Claude": 23,
     "DIRECT": 6218,
-    "Muse": 12,
+    "Muse": 15,
     "OpenAI": 25,
-    "Overseas": 36304,
+    "Overseas": 36301,
     "REJECT": 99912,
     "V3 Static Residential": 1
   },
   "rule_count": 142497,
-  "rules_version": "93845452593130bfd63efda5bcd26f48eec876578411b0609b3d8c199a2f15f7",
+  "rules_version": "b93fd2e8b762ad155963a3b04011776da2db5a018814bee1dfda1845a48ea22c",
   "schema": 1,
   "source_rule_count": 102741
 }

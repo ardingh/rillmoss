@@ -572,6 +572,48 @@
       "target": "check.fbsbx.com"
     },
     {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "check.cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "check.igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "instagr.am"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "check.instagr.am"
+    },
+    {
       "actual": "DIRECT",
       "expected": "DIRECT",
       "matched": "10jqka.com.cn",
@@ -738,6 +780,27 @@
       "matched": "fbsbx.com",
       "source": "Muse",
       "target": "rillmoss-check.fbsbx.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "cdninstagram.com",
+      "source": "Muse",
+      "target": "rillmoss-check.cdninstagram.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "igcdn.com",
+      "source": "Muse",
+      "target": "rillmoss-check.igcdn.com"
+    },
+    {
+      "actual": "Muse",
+      "expected": "Muse",
+      "matched": "instagr.am",
+      "source": "Muse",
+      "target": "rillmoss-check.instagr.am"
     },
     {
       "actual": "Muse",
@@ -3360,7 +3423,7 @@
     "domestic_target_count": 56,
     "protected_priority_rules": 59
   },
-  "duplicate_count": 4820,
+  "duplicate_count": 4823,
   "duplicates": [
     {
       "kept": "openai-base",
@@ -3395,6 +3458,11 @@
     {
       "kept": "Muse",
       "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,cdninstagram.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
       "rule": "DOMAIN-SUFFIX,facebook.com"
     },
     {
@@ -3411,6 +3479,16 @@
       "kept": "Muse",
       "removed": "facebook",
       "rule": "DOMAIN-SUFFIX,fbsbx.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,igcdn.com"
+    },
+    {
+      "kept": "Muse",
+      "removed": "facebook",
+      "rule": "DOMAIN-SUFFIX,instagr.am"
     },
     {
       "kept": "Muse",
@@ -14323,7 +14401,7 @@
       "rule": "DOMAIN-SUFFIX,ig.me"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,igcdn.com"
     },
@@ -23878,7 +23956,7 @@
       "rule": "DOMAIN-SUFFIX,cdn-telegram.org"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,cdninstagram.com"
     },
@@ -25513,7 +25591,7 @@
       "rule": "DOMAIN-SUFFIX,imdb.com"
     },
     {
-      "kept": "facebook",
+      "kept": "Muse",
       "removed": "global",
       "rule": "DOMAIN-SUFFIX,instagr.am"
     },
@@ -27466,9 +27544,9 @@
   "policy_counts": {
     "Claude": 23,
     "DIRECT": 6218,
-    "Muse": 12,
+    "Muse": 15,
     "OpenAI": 25,
-    "Overseas": 36304,
+    "Overseas": 36301,
     "REJECT": 1,
     "V3 Static Residential": 1
   },
@@ -27480,7 +27558,7 @@
     }
   ],
   "rule_count": 42586,
-  "rules_version": "87c24b448dc496cb0824f0fddbec4162d3db154eb9fef540ca81bab1e16ba8e6",
+  "rules_version": "ae2c39f57cbe91a437a2ed6c42137804c828cf4532cd4267a33208bb76e3e3df",
   "schema": 1,
   "source_counts": {
     "amazon": 205,
