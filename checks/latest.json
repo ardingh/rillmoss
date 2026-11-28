@@ -1,10 +1,10 @@
 {
   "adblock": {
-    "bundle_applied": false,
-    "error": "HTTPS download failed after 3 attempts: api.github.com/repos/privacy-protection-tools/anti-AD/commits/master",
-    "retained_base_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-    "retained_rules_version": "40270988ed8d82c4317b37dd49450f1c0c0b3984035fca10ffab95029dce8728",
-    "status": "failed"
+    "added_rule_count": 99772,
+    "base_rules_version": "ae2c39f57cbe91a437a2ed6c42137804c828cf4532cd4267a33208bb76e3e3df",
+    "bundle_applied": true,
+    "rules_version": "558840475269daa7bedcb65cf3a918e533fa85cf68695ad87a253d58b1471ec5",
+    "status": "passed"
   },
   "base_bundle_applied": true,
   "base_changes_not_imported": {
@@ -18,11 +18,11 @@
       ]
     }
   },
-  "candidate_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
-  "checked_at": "2026-11-27T08:22:56+00:00",
-  "current_rules_version": "23d94da1bd81bcf065c541aa82b153eb3c03c620757869b204a6ea8c944f2a27",
+  "candidate_rules_version": "ae2c39f57cbe91a437a2ed6c42137804c828cf4532cd4267a33208bb76e3e3df",
+  "checked_at": "2026-11-28T07:41:16+00:00",
+  "current_rules_version": "ae2c39f57cbe91a437a2ed6c42137804c828cf4532cd4267a33208bb76e3e3df",
   "publication_enabled": true,
   "rules_changed": false,
-  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/45964472965",
-  "status": "base_passed_adblock_failed"
+  "run_url": "https://github.com/ardingh/rillmoss/actions/runs/46121769015",
+  "status": "passed"
 }
